@@ -1,0 +1,5 @@
+<forms>
+   <form name="pks_list" class="com.webfin.pks.form.PerjanjianKerjasamaListForm" view="perjanjianKerjasamaList.jsp" />
+   <form name="pks_edit" class="com.webfin.pks.form.PerjanjianKerjasamaForm" view="perjanjianKerjasamaForm.jsp" />
+   <form name="pks_editadd" class="com.webfin.pks.form.PerjanjianKerjasamaForm" view="perjanjianKerjasamaAddForm.jsp" />
+ </forms>

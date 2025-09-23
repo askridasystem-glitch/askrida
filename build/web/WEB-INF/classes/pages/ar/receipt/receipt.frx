@@ -1,0 +1,37 @@
+<forms>
+   <form name="receiptform" class="com.webfin.ar.forms.ReceiptForm" view="receiptForm.jsp" />
+   <form name="receiptlist" class="com.webfin.ar.forms.ReceiptListForm" view="receiptList.jsp" />
+   <form name="receiptform3" class="com.webfin.ar.forms.ReceiptForm" view="receiptForm3.jsp" />
+   <form name="receiptlist3" class="com.webfin.ar.forms.ReceiptListForm" view="receiptList3.jsp" />
+   <form name="receipttitipanform" class="com.webfin.ar.forms.ReceiptForm" view="receiptTitipanForm.jsp" />
+   <form name="receipttitipanlist" class="com.webfin.ar.forms.ReceiptListForm" view="receiptTitipanList.jsp" />
+   <form name="titipanpremiform" class="com.webfin.ar.forms.ARTitipanPremiForm" view="titipanPremiForm.jsp" />
+   <form name="titipanpremilist" class="com.webfin.ar.forms.ARTitipanPremiListForm" view="titipanPremiList.jsp" />
+   <form name="receiptpembayaranreasform" class="com.webfin.ar.forms.ReceiptForm" view="receiptPembayaranReasForm.jsp" />
+   <form name="receiptpembayaranreaslist" class="com.webfin.ar.forms.ReceiptListForm" view="receiptPembayaranReasList.jsp" />
+   <form name="receiptpembayarankomisiform" class="com.webfin.ar.forms.ReceiptForm" view="receiptPembayaranKomisiForm.jsp" />
+   <form name="receiptpembayarankomisilist" class="com.webfin.ar.forms.ReceiptListForm" view="receiptPembayaranKomisiList.jsp" />
+   <form name="receiptpembayaranpajakform" class="com.webfin.ar.forms.ReceiptForm" view="receiptPembayaranPajakForm.jsp" />
+   <form name="receiptpembayaranpajaklist" class="com.webfin.ar.forms.ReceiptListForm" view="receiptPembayaranPajakList.jsp" />
+   <form name="claimform" class="com.webfin.ar.forms.ReceiptForm" view="claimReceiptForm.jsp" />
+   <form name="claimlist" class="com.webfin.ar.forms.ReceiptListForm" view="claimReceiptList.jsp" />
+   <form name="receiptpembayaranrealisasititipanform" class="com.webfin.ar.forms.ReceiptPembayaranRealisasiTitipanForm" view="receiptPembayaranRealisasiTitipanForm.jsp" />
+   <form name="receiptpembayaranrealisasititipanlist" class="com.webfin.ar.forms.ReceiptPembayaranRealisasiTitipanListForm" view="receiptPembayaranRealisasiTitipanList.jsp" />
+   <form name="receiptpembayaranklaimform" class="com.webfin.ar.forms.ReceiptPembayaranKlaimForm" view="receiptPembayaranKlaimForm.jsp" />
+   <form name="receiptpembayaranklaimlist" class="com.webfin.ar.forms.ReceiptPembayaranKlaimListForm" view="receiptPembayaranKlaimList.jsp" />
+   <form name="receiptreadonlylist" class="com.webfin.ar.forms.ReceiptListForm" view="receiptReadOnlyList.jsp" />
+   <form name="proposal_list" class="com.webfin.ar.forms.RequestFeeList" view="anggaranProposalList.jsp" />
+   <form name="proposal_form" class="com.webfin.ar.forms.RequestFeeForm" view="anggaranProposalForm.jsp" />
+   <form name="realized_list" class="com.webfin.ar.forms.RequestFeeList" view="anggaranRealizedList.jsp" />
+   <form name="realized_form" class="com.webfin.ar.forms.RequestFeeForm" view="anggaranRealizedForm.jsp" />
+   <form name="realizedpaid_form" class="com.webfin.ar.forms.RequestFeeForm" view="anggaranRealizedPaidForm.jsp" />
+   <form name="validate_list" class="com.webfin.ar.forms.RequestFeeList" view="anggaranValidateList.jsp" />
+   <form name="cashflowclaim_form" class="com.webfin.ar.forms.CashflowKlaimForm" view="cashflowKlaimForm.jsp" />
+   <form name="cashflowclaim_list" class="com.webfin.ar.forms.CashflowKlaimListForm" view="cashflowKlaimList.jsp" />
+   <form name="titipanpremireinsuranceform" class="com.webfin.ar.forms.ARTitipanPremiForm" view="titipanPremiReinsuranceForm.jsp" />
+   <form name="titipanpremireinsurancelist" class="com.webfin.ar.forms.ARTitipanPremiListForm" view="titipanPremiReinsuranceList.jsp" />
+   <form name="receiptpembayaran_poliskhususform" class="com.webfin.ar.forms.ReceiptPembayaranRealisasiTitipanForm" view="receiptRealisasiPolisKhususForm.jsp" />
+   <form name="receiptpembayaran_poliskhususlist" class="com.webfin.ar.forms.ReceiptPembayaranRealisasiTitipanListForm" view="receiptRealisasiPolisKhususList.jsp" />
+   <form name="receiptrealisasi_tpreinsurancesform" class="com.webfin.ar.forms.ReceiptPembayaranRealisasiTitipanForm" view="receiptRealisasiTPReinsuranceForm.jsp" />
+   <form name="receiptrealisasi_tpreinsurancelist" class="com.webfin.ar.forms.ReceiptPembayaranRealisasiTitipanListForm" view="receiptRealisasiTPReinsuranceList.jsp" />
+</forms>

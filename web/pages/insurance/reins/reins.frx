@@ -1,0 +1,4 @@
+<forms>
+   <form name="reins_validate_upload_list" class="com.webfin.reinsurance.form.ReinsuranceValidationUploadList" view="reinsValidationUploadList.jsp" />
+   <form name="reins_validate_upload_form" class="com.webfin.reinsurance.form.ReinsuranceValidationUploadForm" view="reinsValidationUploadForm.jsp" />
+</forms>

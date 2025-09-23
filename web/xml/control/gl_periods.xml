@@ -1,0 +1,31 @@
+<events>
+   <event name="GL_PERIODS">
+      <helper class="com.webfin.gl.period.helper.GLPeriodHelper" method="list"/>
+      <forward page="/pages/gl/period/listPeriods.jsp"/>
+   </event>
+   <event name="GL_PERIODS_ADD">
+      <helper class="com.webfin.gl.period.helper.GLPeriodHelper" method="add"/>
+      <forward page="/pages/gl/period/periods.jsp"/>
+   </event>
+   <event name="GL_PERIODS_OPEN_CLOSE">
+      <helper class="com.webfin.gl.period.helper.GLPeriodHelper" method="openClose"/>
+      <forward page="/pages/gl/period/periodsOpenClose.jsp"/>
+   </event>
+   <event name="GL_PERIODS_TOGGLE">
+      <helper class="com.webfin.gl.period.helper.GLPeriodHelper" method="toggle"/>
+      <forward page="/pages/gl/period/periodsOpenClose.jsp"/>
+   </event>
+   <event name="GL_PERIODS_EDIT">
+      <helper class="com.webfin.gl.period.helper.GLPeriodHelper" method="edit"/>
+      <forward page="/pages/gl/period/periods.jsp"/>
+   </event>
+   <event name="GL_PERIODS_VIEW">
+      <helper class="com.webfin.gl.period.helper.GLPeriodHelper" method="view"/>
+      <forward page="/pages/gl/period/periods.jsp"/>
+   </event>
+   <event name="GL_PERIODS_SAVE">
+      <helper class="com.webfin.gl.period.helper.GLPeriodHelper" method="save"/>
+      <forward event="DLG_AUTOCLOSE"/>
+      <forward id="ERROR" page="/pages/gl/period/periods.jsp"/>
+   </event>
+</events>

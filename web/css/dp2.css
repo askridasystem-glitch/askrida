@@ -1,0 +1,41 @@
+.DatePicker /* main datepicker style */
+
+{
+
+     background-color: #e0ffe0;
+
+}
+
+.DatePickerHdr /* style for the header row */
+
+{
+
+     background-color: #c0ffc0;
+
+}
+
+.DatePickerHdrBtn /* style for buttons in the header row */
+
+{
+
+     cursor: pointer;
+
+}
+
+.DatePickerBtn /* style for the calendar area */
+
+{
+
+     cursor: pointer;
+
+}
+
+.DatePickerBtnSelect /* highlighted date */
+
+{
+
+     background-color: #c0c0ff;
+
+     cursor: pointer;
+
+}

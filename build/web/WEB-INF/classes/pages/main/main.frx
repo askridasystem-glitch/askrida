@@ -1,0 +1,4 @@
+<forms>
+   <form name="error" class="com.crux.web.form.ErrorForm" view="cruxError.jsp"/>
+   <form name="sysmon" class="com.crux.sysmon.SysMonitorForm" view="sysmon.jsp"/>
+</forms>

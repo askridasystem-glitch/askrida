@@ -1,0 +1,9 @@
+<forms>
+   <form name="account_list" class="com.webfin.gl.accounts.forms.AccountList" view="account_list.jsp"/>
+   <form name="account_form" class="com.webfin.gl.accounts.forms.AccountForm" view="account_form.jsp"/>
+   <form name="uploadAccount_list" class="com.webfin.gl.accounts.forms.AccountList" view="uploadAccountList.jsp"/>
+   <form name="uploadAccount_form" class="com.webfin.gl.accounts.forms.AccountForm" view="uploadAccountForm.jsp"/>
+   <form name="accountinsurancelist" class="com.webfin.gl.accounts.forms.AccountInsuranceList" view="accountinsurancelist.jsp"/>
+   <form name="accountinsuranceform" class="com.webfin.gl.accounts.forms.AccountInsuranceForm" view="accountinsuranceform.jsp"/>
+   <form name="uploadNoper_form" class="com.webfin.gl.accounts.forms.AccountForm" view="uploadNoperForm.jsp"/>
+</forms>

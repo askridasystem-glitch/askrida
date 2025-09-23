@@ -1,0 +1,10 @@
+<forms>
+   <form name="claim_upload_form" class="com.webfin.insurance.form.ClaimUploadForm" view="uploadClaimForm.jsp" />
+   <form name="claim_upload_list" class="com.webfin.insurance.form.ClaimUploadList" view="uploadClaimList.jsp" />
+   <form name="policy_bypass_edit" class="com.webfin.insurance.form.PolicyForm" view="policyBypassForm.jsp" return="ENT_LIST"/>
+   <form name="policy_bypass_list" class="com.webfin.insurance.form.PolicyListForm" view="policyBypassList.jsp" return="ENT_LIST"/>
+   <form name="claim_process_form" class="com.webfin.insurance.form.ClaimUploadForm" view="processClaimForm.jsp" />
+   <form name="claim_process_list" class="com.webfin.insurance.form.ClaimUploadList" view="processClaimList.jsp" />
+   <form name="subrogasi_process_form" class="com.webfin.insurance.form.ClaimUploadForm" view="processSubrogasiForm.jsp" />
+   <form name="subrogasi_process_list" class="com.webfin.insurance.form.ClaimUploadList" view="processSubrogasiList.jsp" />
+</forms>

@@ -1,0 +1,4 @@
+<forms>
+   <form name="role_edit" class="com.crux.login.form.RoleForm2" view="roleform.jsp"/>
+   <form name="role_list" class="com.crux.login.form.RoleListForm" view="listRoleForm.jsp"/>
+</forms>

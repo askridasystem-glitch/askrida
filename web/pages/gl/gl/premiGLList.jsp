@@ -1,0 +1,103 @@
+<%@ page import="com.webfin.gl.model.JournalView,
+                 com.crux.util.Tools,
+                 com.webfin.gl.form.GLListForm"%>
+<%@ taglib prefix="c" uri="crux" %><c:frame title="JURNAL">
+<%
+
+   GLListForm form  =(GLListForm) request.getAttribute("FORM");
+
+
+%>
+   <table cellpadding=2 cellspacing=1>
+      <tr>
+         <td>
+            <table cellpadding=2 cellspacing=1>
+               <tr>
+                  <td>
+                     <table cellpadding=2 cellspacing=1>
+                        <c:field name="accountCode" type="string" caption="Account" presentation="standard" width="200" />
+                        <c:field name="description" type="string" caption="Description" presentation="standard" width="200" />
+                        <c:field name="branch" type="string" caption="Branch" lov="LOV_Branch" presentation="standard" width="200" />
+                     </table>
+                  </td>
+                  <td>
+                     <table cellpadding=2 cellspacing=1>
+                        <tr>
+                           <c:field name="transNumber" type="string" caption="Trans #" presentation="standard" width="200" />
+                           <%--<c:field name="transdate" type="date" caption="Date" presentation="standard" width="200" />--%>
+                           <c:field name="transdatefrom" type="date" caption="Date From" presentation="standard" width="200" />
+                           <c:field name="transdateto" type="date" caption="Date To" presentation="standard" width="200" />
+                           <c:field name="showReverse" type="check" caption="Show Reverse" presentation="standard" width="200" changeaction="btnSearch" />
+                        </tr>
+                     </table>
+                  </td>
+                  <td><c:button text="Refresh" event="btnSearch" /></td>
+               </tr>
+            </table>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <c:button text="Print" event="btnPrint" /> using template <c:field name="printForm" type="string" lov="VS_PRT_GLJE" />: in <c:field name="printLang" lov="LOV_LANG" type="string" />
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <%
+               JournalView lastjv = new JournalView();
+            %>
+            <c:field name="trxhdrid" type="string"  hidden="true" />
+            <c:listbox name="uangMukaPremiList" paging="true" >
+               <%
+                  final JournalView jv = (JournalView) current;
+
+                  final boolean isdetail = jv!=null && lastjv!=null && Tools.isEqual(jv.getStTransactionHeaderID(), lastjv.getStTransactionHeaderID());
+
+                  lastjv=jv;
+               %>
+               <c:evaluate when="<%=jv==null%>" >
+                  <c:listcol title="" ></c:listcol>
+                  <c:listcol title="TRANS #" ></c:listcol>
+                  <c:listcol title="DATE" ></c:listcol>
+                  <c:listcol title="ACCOUNT #" ></c:listcol>
+                  <c:listcol title="DESC" ></c:listcol>
+                  <c:listcol title="JT" ></c:listcol>
+                  <c:listcol title="DEBIT" align="right"></c:listcol>
+                  <c:listcol title="CREDIT" align="right"></c:listcol>
+               </c:evaluate>
+               <c:evaluate when="<%=jv!=null%>" >
+                  <c:listcol title="" ><% if (!isdetail) {%><input type=radio name=sel onclick="f.trxhdrid.value='<%=jspUtil.print(jv.getStTransactionHeaderID())%>'"><% } %></c:listcol>
+                  <c:listcol title="TRANS #" ><%=jspUtil.print(!isdetail?jv.getStTransactionNo():null)%></c:listcol>
+                  <c:listcol title="DATE" ><%=jspUtil.print(!isdetail?jv.getDtApplyDate():null)%></c:listcol>
+                  <c:listcol title="ACCOUNT #" ><div style="width:120"><%=jspUtil.print(jv.getStAccountNo())%></div></c:listcol>
+                  <c:listcol title="DESC" ><%=jspUtil.print(jv.getStDescription())%></c:listcol>
+                  <c:listcol title="JT" ><%=jspUtil.print(jv.getStJournalCode())%></c:listcol>
+                  <c:listcol title="DEBIT" align="right" ><%=jspUtil.print(jv.getDbDebit(),2)%></c:listcol>
+                  <c:listcol title="CREDIT" align="right" ><%=jspUtil.print(jv.getDbCredit(),2)%></c:listcol>
+               </c:evaluate>
+            </c:listbox>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <%=jspUtil.getButtonNormal("crt","Create","openDialog('so.ctl?EVENT=PREMI_GL_ENTRY_ADD', 750,550,refreshcb);")%>
+            <%=jspUtil.getButtonNormal("edt","Edit","openDialog('so.ctl?EVENT=GL_ENTRY_EDIT&trxhdrid='+f.trxhdrid.value, 750,550,refreshcb);")%>
+            <%=jspUtil.getButtonNormal("v","View","openDialog('so.ctl?EVENT=GL_ENTRY_VIEW&trxhdrid='+f.trxhdrid.value, 750,550,refreshcb);")%>
+         </td>
+      </tr>
+   </table>
+<script>
+   function refreshcb(o) {
+      if (o!=null) f.submit();
+   }
+</script>
+<%/*
+   if (form.goPrint!=null) {
+         out.print("<script>");
+         out.print("window.open('pages/gl/report/rpt_"+form.goPrint+".fop?formid="+form.getFormID()+"')");
+         out.print("</script>");
+         form.goPrint=null;
+      }*/
+
+%>
+</c:frame>

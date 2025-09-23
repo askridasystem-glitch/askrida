@@ -1,0 +1,66 @@
+<events>
+   <event name="GL_ACCOUNTS">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="list"/>
+      <forward page="/pages/gl/accounts/listAccounts.jsp"/>
+   </event>
+   <event name="GL_ACCOUNTS_REFRESH">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="refresh"/>
+      <forward page="/pages/gl/accounts/listAccounts.jsp"/>
+   </event>
+   <event name="GL_ACCOUNTS_CREATE">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="create"/>
+      <forward page="/pages/gl/accounts/Accounts.jsp"/>
+   </event>
+   <event name="GL_ACCOUNTS_EDIT">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="edit"/>
+      <forward page="/pages/gl/accounts/Accounts.jsp"/>
+   </event>
+   <event name="GL_ACCOUNTS_VIEW">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="view"/>
+      <forward page="/pages/gl/accounts/Accounts.jsp"/>
+   </event>
+   <event name="GL_ACCOUNTS_SAVE">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="save"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+
+   <event name="GL_ACCOUNTS_SELECT">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="select"/>
+      <forward page="/pages/gl/accounts/selectAccounts.jsp"/>
+   </event>
+   <event name="GL_ACCOUNTS_AUTOCRT">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="autoCreate"/>
+      <forward page="/pages/gl/accounts/selectAccountsCreate.jsp"/>
+   </event>
+   <event name="CREATE_ACCOUNTCODE">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="createAccountCode"/>
+      <forward page="/pages/gl/accounts/createAccount.jsp"/>
+   </event>
+   <event name="GL_ACCOUNTS_SELECTCRT">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="select2"/>
+      <forward page="/pages/gl/accounts/selectAccountsNotCreate.jsp"/>
+   </event>
+   <event name="GL_ACCOUNT_SAVE">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="saveAccount"/>
+   </event>
+   <event name="GL_ACCOUNTS_SELECT3">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="select3"/>
+      <forward page="/pages/gl/accounts/selectAccountsCashBank.jsp"/>
+   </event>
+   <event name="GL_ACCOUNTS_AUTOCRTCASHBANK">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="autoCreateCashBank"/>
+      <forward page="/pages/gl/accounts/selectAccountsCashBankCreate.jsp"/>
+   </event>
+   <event name="GL_ACCOUNTS_SELECT_NOKASBANK">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="selectAccountNotKasBank"/>
+      <forward page="/pages/gl/accounts/selectAccountsNoCashBank.jsp"/>
+   </event>
+   <event name="GL_ACCOUNTS_SELECT2">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="select4"/>
+      <forward page="/pages/gl/accounts/selectAccounts4.jsp"/>
+   </event>
+   <event name="GL_ACCOUNTS_RKAP">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="selectRKAP"/>
+      <forward page="/pages/gl/accounts/selectRKAP.jsp"/>
+   </event>
+</events>

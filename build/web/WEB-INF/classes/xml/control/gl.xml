@@ -1,0 +1,18 @@
+<events>
+   <event name="GL_REPORT">
+      <helper class="com.webfin.gl.report.helper.GLReportHelper" method="main"/>
+      <forward page="pages/gl/report/listReport.jsp"/>
+   </event>
+   <event name="GL_RPT_GENERATE">
+      <helper class="com.webfin.gl.report.helper.GLReportHelper" method="generate"/>
+      <forward page="pages/gl/report/rptgl.jsp"/>
+   </event>
+   <event name="GL_RPT_GENERATE2">
+      <helper class="com.webfin.gl.report.helper.GLReportHelper" method="generate"/>
+      <forward page="pages/gl/report/rptgl2.jsp"/>
+   </event>
+   <report name="GL_RPT_1">
+      <datasource ds="primary" class="com.webfin.gl.report.GLReportDS"/>
+      <jasper file="/pages/gl/report/glrpt.jrxml"/>
+   </report>
+</events>

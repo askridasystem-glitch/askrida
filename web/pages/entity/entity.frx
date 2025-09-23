@@ -1,0 +1,10 @@
+<forms>
+   <form name="entity_edit" class="com.webfin.entity.forms.EntityMasterForm" view="entityForm.jsp" return="ENT_LIST"/>
+   <form name="entity_list" class="com.webfin.entity.forms.EntityListForm" view="entityList.jsp" return="ENT_LIST"/>
+   <form name="entity_search" class="com.webfin.entity.forms.EntitySearchForm" view="entitySearch.jsp"/>
+   <form name="master_bussrc" class="com.webfin.entity.forms.MasterBusinessSourceForm" view="master_bussrc.jsp"/>
+   <form name="master_marktr" class="com.webfin.entity.forms.MasterMarketterForm" view="master_marktr.jsp"/>
+   <form name="agen_group_list" class="com.webfin.entity.forms.EntityAgentListForm" view="agentList.jsp"/>
+   <form name="agen_group_form" class="com.webfin.entity.forms.EntityAgentForm" view="agentForm.jsp"/>
+   <form name="entity_check" class="com.webfin.entity.forms.EntityMasterForm" view="entityCheck.jsp" return="ENT_LIST"/>
+</forms>

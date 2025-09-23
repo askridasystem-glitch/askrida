@@ -1,0 +1,68 @@
+<events>
+   <event name="MEM_GL_ENTRY">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="list"/>
+      <forward page="/pages/gl/entry/listGLEntry.jsp"/>
+   </event>
+   <event name="MEM_GL_ENTRY_ADD">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addMemorial"/>
+      <forward page="/pages/gl/entry/memorial_glentry.jsp"/>
+   </event>
+   <event name="MEM_GL_ENTRY_EDIT">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="edit"/>
+      <forward page="/pages/gl/entry/memorial_glentry.jsp"/>
+   </event>
+   <event name="MEM_GL_ENTRY_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addline"/>
+      <forward page="/pages/gl/entry/memorial_glentry.jsp"/>
+   </event>
+   <event name="MEM_GL_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="delline"/>
+      <forward page="/pages/gl/entry/memorial_glentry.jsp"/>
+   </event>
+   <event name="MEM_GL_ENTRY_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="editrefresh"/>
+      <forward page="/pages/gl/entry/memorial_glentry.jsp"/>
+   </event>
+   
+   <event name="MEM_GL_ENTRY_VIEW">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="view"/>
+      <forward page="/pages/gl/entry/memorial_glentry.jsp"/>
+   </event>
+   <event name="MEM_GL_ENTRY_CHG_CCY">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="changeCCy"/>
+      <forward page="/pages/gl/entry/memorial_glentry.jsp"/>
+   </event>
+   <event name="MEM_GL_ENTRY_SAVE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="saveMemorial"/>
+      <forward id="ERROR" event="MEM_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="MEM_GL_ENTRY_APPROVE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="approve"/>
+      <forward id="ERROR" event="MEM_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="MEM_GL_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="delline"/>
+      <forward page="/pages/gl/entry/memorial_glentry.jsp"/>
+   </event>
+   <event name="MEM_GL_ENTRY_REVERSE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="reverse"/>
+      <forward page="/pages/gl/entry/memorial_glentry.jsp"/>
+   </event>
+   <event name="MEM_GL_REVERSE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="doReverse"/>
+      <forward id="ERROR" event="GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+  <event name="MEM_GL_ENTRY_DELETE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="delete"/>
+      <forward page="/pages/gl/entry/memorial_glentry.jsp"/>
+   </event>
+   <event name="MEM_GL_ENTRY_CHG_YEAR">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="memorialChangeYear"/>
+      <forward page="/pages/gl/entry/memorial_glentry.jsp"/>
+   </event>
+   
+</events>
+

@@ -1,0 +1,4 @@
+<forms>
+   <form name="clausules_list" class="com.webfin.master.clausules.form.ClausulesListForm" view="clausules_list.jsp"/>
+   <form name="clausules_form" class="com.webfin.master.clausules.form.ClausulesMasterForm" view="clausules_form.jsp"/>
+</forms>

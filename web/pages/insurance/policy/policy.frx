@@ -1,0 +1,76 @@
+<forms>
+   <form name="policy_edit" class="com.webfin.insurance.form.PolicyForm" view="policyForm.jsp" return="ENT_LIST"/>
+   <form name="policy_list" class="com.webfin.insurance.form.PolicyListForm" view="policyList.jsp" return="ENT_LIST"/>
+   <form name="cover_note_list" class="com.webfin.insurance.form.CoverNoteListForm" view="coverNoteList.jsp" return="ENT_LIST"/>
+   <form name="cover_note_edit" class="com.webfin.insurance.form.CoverNoteForm" view="coverNoteForm.jsp" return="ENT_LIST"/>
+   <form name="policy_search" class="com.webfin.insurance.form.PolicySearchForm" view="searchingPolicyData.jsp" />
+   <form name="policy_form" class="com.webfin.insurance.form.PolicyListForm" view="policyData.jsp" />
+   <form name="policy_data" class="com.webfin.ar.forms.ReceiptListForm" view="listPL.jsp" />
+   <form name="policy_pl" class="com.webfin.ar.forms.ReceiptForm" view="policyPL.jsp" />
+   <form name="policy_parent_edit" class="com.webfin.insurance.form.PolicyParentForm" view="policyParentForm.jsp" return="ENT_LIST"/>
+   <form name="policy_parent_list" class="com.webfin.insurance.form.PolicyParentListForm" view="policyParentList.jsp" return="ENT_LIST"/>
+   <form name="policy_rcp" class="com.webfin.ar.forms.ReceiptListForm" view="listReceipt.jsp" />
+   <form name="policy_receipt" class="com.webfin.ar.forms.ReceiptForm" view="policyReceipt.jsp" />
+   <form name="policy_clm" class="com.webfin.ar.forms.ReceiptListForm" view="listClaim.jsp" />
+   <form name="policy_claim" class="com.webfin.ar.forms.ReceiptForm" view="policyClaim.jsp" />
+   <form name="policy_edit_underwriting" class="com.webfin.insurance.form.PolicyForm" view="policyForm.jsp" return="ENT_LIST"/>
+   <form name="policy_edit_reinsurance" class="com.webfin.insurance.form.PolicyForm" view="policyFormReinsurance.jsp" return="ENT_LIST"/>
+   <form name="policy_edit_claim" class="com.webfin.insurance.form.PolicyForm" view="policyFormClaim.jsp" return="ENT_LIST"/>
+   <form name="vehicle_search" class="com.webfin.insurance.form.PolicyListForm" view="policyDataVehicle.jsp" />
+   <form name="policy_list_uw_monitoring" class="com.webfin.insurance.form.PolicyListForm" view="policyListUWMonitoring.jsp" return="ENT_LIST"/>
+   <form name="policy_list_reas_monitoring" class="com.webfin.insurance.form.PolicyListForm" view="policyListReasMonitoring.jsp" return="ENT_LIST"/>
+   <form name="policy_list_claim_monitoring" class="com.webfin.insurance.form.PolicyListForm" view="policyListClaimMonitoring.jsp" return="ENT_LIST"/>
+   <form name="policy_upload" class="com.webfin.insurance.form.PolicyListForm" view="policyUpload.jsp" return="ENT_LIST"/>
+   <form name="policy_mandiri_edit" class="com.webfin.insurance.form.PolicyMandiriForm" view="policyMandiriForm.jsp" return="ENT_LIST"/>
+   <form name="policy_mandiri_list" class="com.webfin.insurance.form.PolicyListForm" view="policyMandiriList.jsp" return="ENT_LIST"/>
+   <form name="ins_closing_list" class="com.webfin.insurance.form.InsuranceClosingList" view="ins_closing_list.jsp"/>
+   <form name="ins_closing_form" class="com.webfin.insurance.form.InsuranceClosingForm" view="ins_closing_form.jsp"/>
+   <form name="endorse_upload_form" class="com.webfin.insurance.form.InsuranceUploadForm" view="uploadPolicyForm.jsp" />
+   <form name="endorse_upload_list" class="com.webfin.insurance.form.InsuranceUploadList" view="uploadPolicyList.jsp" />
+   <form name="vldlist_clm" class="com.webfin.ar.forms.ReceiptListForm" view="listVldClaim.jsp" />
+   <form name="vldform_clm" class="com.webfin.ar.forms.ReceiptPembayaranKlaimForm" view="formVldClaim.jsp" />
+   <form name="reins_upload_form" class="com.webfin.insurance.form.InsuranceUploadForm" view="uploadPolicyForm.jsp" />
+   <form name="reins_upload_list" class="com.webfin.insurance.form.InsuranceUploadList" view="uploadPolicyList.jsp" />
+   <form name="ins_closingcl_list" class="com.webfin.insurance.form.InsuranceClosingList" view="ins_closingcl_list.jsp"/>
+   <form name="ins_closingcl_form" class="com.webfin.insurance.form.InsuranceClosingForm" view="ins_closingcl_form.jsp"/>
+   <form name="reas_upload_list" class="com.webfin.insurance.form.InsuranceUploadList" view="uploadReinsuranceList.jsp" />
+   <form name="reas_upload_form" class="com.webfin.insurance.form.InsuranceUploadForm" view="uploadReinsuranceForm.jsp" />
+   <form name="policy_cek_guest" class="com.webfin.insurance.form.PolicyListForm" view="policyChecking.jsp" />
+   <form name="kalkulator_premi_list" class="com.webfin.insurance.form.InsuranceUploadList" view="kalkulatorPremiList.jsp" />
+   <form name="kalkulator_premi_form" class="com.webfin.insurance.form.InsuranceUploadForm" view="kalkulatorPremiForm.jsp" />
+   <form name="endorsepolis_upload_form" class="com.webfin.insurance.form.EndorseUploadForm" view="uploadEndorseForm.jsp" />
+   <form name="endorsepolis_upload_list" class="com.webfin.insurance.form.EndorseUploadList" view="uploadEndorseList.jsp" />
+   <form name="ins_closingtax_list" class="com.webfin.insurance.form.InsuranceClosingList" view="ins_closingtax_list.jsp"/>
+   <form name="ins_closingtax_form" class="com.webfin.insurance.form.InsuranceClosingForm" view="ins_closingtax_form.jsp"/>
+   <form name="policy_lite_list" class="com.webfin.insurance.form.PolicyListForm" view="policyLiteList.jsp" return="ENT_LIST"/>
+   <form name="policy_lite_edit" class="com.webfin.insurance.form.PolicyForm" view="policyLiteForm.jsp" return="ENT_LIST"/>
+   <form name="proposalcomm_list" class="com.webfin.insurance.form.InsuranceUploadList" view="uploadProposalCommList.jsp" />
+   <form name="proposalcomm_form" class="com.webfin.insurance.form.InsuranceUploadForm" view="uploadProposalCommForm.jsp" />
+   <form name="ins_closingreport_list" class="com.webfin.insurance.form.InsuranceClosingList" view="ins_closingreport_list.jsp"/>
+   <form name="ins_closingreport_form" class="com.webfin.insurance.form.InsuranceClosingForm" view="ins_closingreport_form.jsp"/>
+   <form name="piutangpremi_list" class="com.webfin.insurance.form.InsuranceUploadList" view="uploadPiutangPremiList.jsp" />
+   <form name="piutangpremi_form" class="com.webfin.insurance.form.InsuranceUploadForm" view="uploadPiutangPremiForm.jsp" />
+   <form name="ins_closingprod_list" class="com.webfin.insurance.form.InsuranceClosingList" view="ins_closingprod_list.jsp"/>
+   <form name="ins_closingprod_form" class="com.webfin.insurance.form.InsuranceClosingForm" view="ins_closingprod_form.jsp"/>
+   <form name="piutangpremi30_list" class="com.webfin.insurance.form.InsuranceUploadList" view="uploadPiutangPremi30List.jsp" />
+   <form name="piutangpremi30_form" class="com.webfin.insurance.form.InsuranceUploadForm" view="uploadPiutangPremi30Form.jsp" />
+   <form name="piutangpremi75_list" class="com.webfin.insurance.form.InsuranceUploadList" view="uploadPiutangPremi75List.jsp" />
+   <form name="piutangpremi75_form" class="com.webfin.insurance.form.InsuranceUploadForm" view="uploadPiutangPremi75Form.jsp" />
+   <form name="ins_soa_list" class="com.webfin.insurance.form.InsuranceClosingList" view="ins_soa_list.jsp"/>
+   <form name="ins_soa_form" class="com.webfin.insurance.form.InsuranceClosingForm" view="ins_soa_form.jsp"/>
+   <form name="policyobj_check" class="com.webfin.insurance.form.PolicyForm" view="policyCheck.jsp"/>
+   <form name="ri_upload_manual_list" class="com.webfin.insurance.form.InsuranceUploadList" view="uploadReinsuranceManualList.jsp" />
+   <form name="ri_upload_manual_form" class="com.webfin.insurance.form.InsuranceUploadForm" view="uploadReinsuranceManualForm.jsp" />
+   <form name="policy_split_edit" class="com.webfin.insurance.form.PolicySplitForm" view="policySplitForm.jsp" return="ENT_LIST"/>
+   <form name="policy_split_list" class="com.webfin.insurance.form.PolicySplitListForm" view="policySplitList.jsp" return="ENT_LIST"/>
+   <form name="policy_document_upload_list" class="com.webfin.insurance.form.DocumentUploadList" view="uploadPolicyDocumentList.jsp" />
+   <form name="policy_document_upload_form" class="com.webfin.insurance.form.DocumentUploadForm" view="uploadPolicyDocumentForm.jsp" />
+   <form name="policy_approval_upload_list" class="com.webfin.insurance.form.PolicyApprovalUploadList" view="policyApprovalUploadList.jsp" />
+   <form name="policy_approval_upload_form" class="com.webfin.insurance.form.PolicyApprovalUploadForm" view="policyApprovalUploadForm.jsp" />
+   <form name="endorsefire_upload_form" class="com.webfin.insurance.form.EndorseUploadForm" view="uploadEndorseFireForm.jsp" />
+   <form name="endorsefire_upload_list" class="com.webfin.insurance.form.EndorseUploadList" view="uploadEndorseFireList.jsp" />
+   <form name="policy_listrenewal" class="com.webfin.insurance.form.InsuranceUploadList" view="listRenewal.jsp" />
+   <form name="policy_renewal" class="com.webfin.insurance.form.InsuranceUploadForm" view="policyRenewal.jsp" />
+   <form name="policy_listfop" class="com.webfin.insurance.form.InsuranceUploadList" view="listPolicyFop.jsp" />
+   <form name="policy_fop" class="com.webfin.insurance.form.InsuranceUploadForm" view="policyFop.jsp" />
+</forms>

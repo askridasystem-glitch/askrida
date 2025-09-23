@@ -1,0 +1,237 @@
+BODY {
+	MARGIN-TOP: 0px; MARGIN-LEFT: 0px; FONT-SIZE: 10px; BACKGROUND-COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+
+div#cap-body {
+	background: transparent url(submenu_bg.png) repeat-y;
+	width: 545px;
+}
+
+A.menuitem {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A.menu {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+a{
+	color: #000080;
+	text-decoration: none;
+	font-size: 9pt;
+}
+
+a:hover
+{
+    COLOR: #ED0010;
+    FONT-FAMILY: 7pt;
+    TEXT-DECORATION: none;
+}
+a.toplink2{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+
+   color: #919592;
+	text-decoration: none;
+
+}
+a.toplink2:visited{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+
+   color: #919592;
+	text-decoration: none;
+}
+a.toplink2:hover{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+
+	color: #003583;
+	text-decoration: none;
+}
+.RINPUT
+{
+    BORDER-RIGHT: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none;
+    BORDER-TOP: medium none;
+    BACKGROUND-POSITION: center bottom;
+    FONT-SIZE: 10px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #FFFFFF;
+    border: solid 1px #000000;
+    TEXT-ALIGN : right;
+}
+.INPUT
+{
+    BORDER-RIGHT: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none;
+    BORDER-TOP: medium none;
+    BACKGROUND-POSITION: center bottom;
+    FONT-SIZE: 10px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #FFFFFF;
+    border: solid 1px #000000;
+}
+.SELECT
+{
+    BORDER-RIGHT: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none;
+    BORDER-TOP: medium none;
+    BACKGROUND-POSITION: center bottom;
+    FONT-SIZE: 11px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #FFFFFF;
+    border: solid 1px #000000;
+}
+TD
+{
+    FONT-SIZE: 11px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+}
+.title {
+	font-family: Verdana, Arial;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+.header
+{
+    FONT-SIZE: 10px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #033963;
+    color: #FFFFFF;
+}
+.tabheader
+{
+    FONT-SIZE: 12px;
+    font-weight: bold;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #063933;
+    color: #FFFFFF;
+}
+
+.row
+{
+	background-color: #033963;
+	color: #FFFFFF;
+   font-size: 11px;
+}
+.row1
+{
+	BACKGROUND: #E6EAEA;
+    FONT:  8pt Verdana;
+    color: #000000;
+}
+
+.row2
+{
+	BACKGROUND: #D0D0E6;
+    FONT:  8pt Verdana;
+    color: #000000;
+}
+
+.row0
+{
+	BACKGROUND: #D9DFDE;
+    FONT: 8pt Verdana ;
+    color: #000000;
+}
+
+TD.detail
+{
+    FONT-SIZE: 10px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #FFFFFF;
+    color: #000000;
+}
+.msg0, .msg1, .msg2, .msg3
+{
+	FONT-FAMILY : arial,verdana,helvetica;
+	FONT-SIZE : 9pt;
+	POSITION : absolute;
+	Z-INDEX : 1;
+	VISIBILITY : hidden;
+}
+.holder
+{
+	TEXT-ALIGN : left;
+	POSITION : absolute;
+	FONT-FAMILY : arial,verdana;
+	FONT-SIZE : 9pt;
+}
+.pos {
+	position: absolute;
+	visibility: visible;
+	left: 30px;
+	top: 100px;
+}
+.style3 {
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+.style2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #636365;
+}
+
+.DatePicker /* main datepicker style */
+
+{
+
+     background-color: #e0ffe0;
+
+}
+
+.DatePickerHdr /* style for the header row */
+
+{
+
+     background-color: #c0ffc0;
+
+}
+
+.DatePickerHdrBtn /* style for buttons in the header row */
+
+{
+
+     cursor: pointer;
+
+}
+
+.DatePickerBtn /* style for the calendar area */
+
+{
+
+     cursor: pointer;
+
+}
+
+.DatePickerBtnSelect /* highlighted date */
+
+{
+
+     background-color: #c0c0ff;
+
+     cursor: pointer;
+
+}
+/*.button
+{
+    BACKGROUND: #E6EAEA;
+    FONT:  8pt Verdana
+}*/
+.button {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}

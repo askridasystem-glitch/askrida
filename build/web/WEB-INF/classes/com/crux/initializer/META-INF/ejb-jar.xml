@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC '-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN' 'http://java.sun.com/dtd/ejb-jar_2_0.dtd'>
+<ejb-jar>
+   <display-name></display-name>
+   <enterprise-beans>
+      <session>
+         <ejb-name>InitializerEJB</ejb-name>
+         <home>com.crux.initializer.ejb.InitializerHome</home>
+         <remote>com.crux.initializer.ejb.Initializer</remote>
+         <ejb-class>com.crux.initializer.ejb.InitializerEJB</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+      </session>
+   </enterprise-beans>
+   <assembly-descriptor>
+      <container-transaction>
+         <description>Transaction attributes for 'InitializerEJB' methods</description>
+         <method>
+            <ejb-name>InitializerEJB</ejb-name>
+            <method-name>*</method-name>
+         </method>
+         <trans-attribute>Required</trans-attribute>
+      </container-transaction>
+   </assembly-descriptor>
+</ejb-jar>

@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<script language="JavaScript" src="validator.js"></script>
+<body>
+   lfqw;klr; wke;wkl r';
+   <form name=f>
+   <input type=hidden name=date1>
+   <input type=text name=date1d>
+   <input type=text name=date1m>
+   <input type=text name=date1y>
+		<input type=submit>
+   </form>
+</body>
+<script>
+   var f = document.f;
+   VA_req(document.all.date1,'dt','date');
+   VA_req(f.date1d,'dtd','dateday',-1);
+   VA_req(f.date1m,'dtm','datemonth',-1);
+   VA_req(f.date1y,'dty','dateyear',-1);
+</script>
+</html>

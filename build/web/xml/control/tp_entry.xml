@@ -1,0 +1,96 @@
+<events>
+   <event name="TP_GL_ENTRY">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="list"/>
+      <forward page="/pages/gl/entry/listGLEntry.jsp"/>
+   </event>
+   <event name="TP_GL_ENTRY_ADD">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="addCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiEntry.jsp"/>
+   </event>
+   <event name="TP_GL_ENTRY_EDIT">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="edit"/>
+      <forward page="/pages/gl/entry/titipanPremiEntry.jsp"/>
+   </event>
+   <event name="TP_GL_ENTRY_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="addlineCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiEntry.jsp"/>
+   </event>
+   <event name="TP_GL_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="dellineCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiEntry.jsp"/>
+   </event>
+   <event name="TP_GL_ENTRY_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="editrefreshCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiEntry.jsp"/>
+   </event>
+   <event name="TP_GL_ENTRY_VIEW">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="view"/>
+      <forward page="/pages/gl/entry/titipanPremiEntry.jsp"/>
+   </event>
+   <event name="TP_GL_ENTRY_CHG_CCY">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="changeCCy"/>
+      <forward page="/pages/gl/entry/titipanPremiEntry.jsp"/>
+   </event>
+   <event name="TP_GL_ENTRY_SAVE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="saveTP"/>
+      <forward id="ERROR" event="TP_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="TP_GL_EDIT_SAVE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="save"/>
+      <forward id="ERROR" event="TP_GL_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="TP_GL_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="editrefreshCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiEdit.jsp"/>
+   </event>
+   <event name="TP_GL_EDIT_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="addlineCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiEdit.jsp"/>
+   </event>
+   <event name="TP_GL_EDIT_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="dellineCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiEdit.jsp"/>
+   </event>
+   <event name="TP_GL_ENTRY_APPROVE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="approve"/>
+      <forward page="/pages/gl/entry/titipanPremiEntry.jsp"/>
+   </event>
+   <event name="TP_GL_ENTRY_REVERSE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="reverse"/>
+      <forward page="/pages/gl/entry/titipanPremiEntry.jsp"/>
+   </event>
+   <event name="TP_GL_REVERSE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="doReverse"/>
+      <forward id="ERROR" event="TP_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="TP_GL_ENTRY_CHG_YEAR">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="changeYear"/>
+      <forward page="/pages/gl/entry/titipanPremiEntry.jsp"/>
+   </event>
+
+   <event name="TP_GL_ENTRY_DELETE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="delete"/>
+      <forward page="/pages/gl/entry/titipanPremiEntry.jsp"/>
+   </event>
+   <event name="TP_GL_ACTIVATE_TRX">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="activate"/>
+      <forward page="/pages/gl/entry/titipanPremiExtracomptable.jsp"/>
+   </event>
+   <event name="TP_GL_EXTRACOMPTABLE_SAVE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="saveExtracomptable"/>
+      <forward id="ERROR" event="TP_GL_EXTRACOMPTABLE_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="TP_GL_EXTRACOMPTABLE_VIEW">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="viewExtracomptable"/>
+      <forward page="/pages/gl/entry/titipanPremiExtracomptable.jsp"/>
+   </event>
+   <event name="TP_GL_EXTRACOMPTABLE_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiEntryHelper" method="editrefreshExtracomptable"/>
+      <forward page="/pages/gl/entry/titipanPremiExtracomptable.jsp"/>
+   </event>
+</events>
+

@@ -1,0 +1,30 @@
+<events>
+   <event name="GUIDANCE_PRINT">
+      <helper class="com.webfin.utilities.helper.UtilitiesHelper" method="printManual"/>
+      <forward id="ERROR" page="/pages/utilities/blank.jsp"/>
+   </event>
+   <event name="INCOMING_PRINT">
+      <helper class="com.webfin.incoming.helper.IncomingHelper" method="print"/>
+      <forward id="ERROR" page="/pages/utilities/blank.jsp"/>
+   </event>
+   <event name="OUTCOMING_PRINT">
+      <helper class="com.webfin.outcoming.helper.OutcomingHelper" method="print"/>
+      <forward id="ERROR" page="/pages/utilities/blank.jsp"/>
+   </event>
+   <event name="REGISTER_PRINT">
+      <helper class="com.webfin.register.helper.RegisterHelper" method="print"/>
+      <forward id="ERROR" page="/pages/utilities/blank.jsp"/>
+   </event>
+   <event name="UPLOAD_PRINT">
+      <helper class="com.webfin.outcoming.helper.OutcomingHelper" method="print2"/>
+      <forward id="ERROR" page="/pages/utilities/blank.jsp"/>
+   </event>
+   <event name="APPROVAL_PRINT">
+      <helper class="com.webfin.incoming.helper.IncomingHelper" method="print2"/>
+      <forward id="ERROR" page="/pages/utilities/blank.jsp"/>
+   </event>
+   <event name="REQUEST_PRINT">
+      <helper class="com.webfin.ar.helper.ARInvoiceHelper" method="printRequest"/>
+      <forward id="ERROR" page="/pages/utilities/blank.jsp"/>
+   </event>
+</events>

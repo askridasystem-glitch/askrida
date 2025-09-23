@@ -1,0 +1,37 @@
+<forms>
+   <form name="gl_list" class="com.webfin.gl.form.GLListForm" view="gllist.jsp"/>
+   <form name="cashbankGL_list" class="com.webfin.gl.form.GLListForm" view="cashbankGLList.jsp"/>
+   <form name="prod_account" class="com.webfin.gl.form.GLListForm" view="prodRPT.jsp" />
+   <form name="free_gl_list" class="com.webfin.gl.form.GLListForm" view="freegllist.jsp"/>
+   <form name="premi_gl_list" class="com.webfin.gl.form.GLListForm" view="premiGLList.jsp"/>
+   <form name="comission_gl_list" class="com.webfin.gl.form.GLListForm" view="comissionGLList.jsp"/>
+   <form name="titipan_premi_list" class="com.webfin.gl.form.GLListForm" view="titipanPremiList.jsp"/>
+   <form name="syariah_gl_list" class="com.webfin.gl.form.GLListForm" view="syariahGLList.jsp"/>
+   <form name="pb_gl_list" class="com.webfin.gl.form.GLListForm" view="pbGLList.jsp"/>   
+   <form name="currency_list" class="com.webfin.gl.form.CurrencyList" view="currency_list.jsp"/>
+   <form name="currency_form" class="com.webfin.gl.form.CurrencyForm" view="currency_form.jsp"/>
+   <form name="gl_posting_list" class="com.webfin.gl.form.GLPostingList" view="gl_posting_list.jsp"/>
+   <form name="gl_posting_form" class="com.webfin.gl.form.GLPostingForm" view="gl_posting_form.jsp"/>
+   <form name="memorial_gl_list" class="com.webfin.gl.form.GLListForm" view="memorial_gllist.jsp"/>
+   <form name="memorialform" class="com.webfin.gl.form.GLJournalForm" view="memorialForm.jsp" />
+   <form name="memoriallist" class="com.webfin.gl.form.GLJournalList" view="memorialList.jsp" />
+   <form name="syariahform" class="com.webfin.gl.form.GLJournalForm" view="syariahForm.jsp" />
+   <form name="syariahlist" class="com.webfin.gl.form.GLJournalList" view="syariahList.jsp" />
+   <form name="rkapform" class="com.webfin.gl.form.GLJournalForm" view="rkapForm.jsp" />
+   <form name="rkaplist" class="com.webfin.gl.form.GLJournalList" view="rkapList.jsp" />
+   <form name="closing_setting_list" class="com.webfin.gl.form.ClosingSettingList" view="closing_setting_list.jsp"/>
+   <form name="closing_setting_form" class="com.webfin.gl.form.ClosingSettingForm" view="closing_setting_form.jsp"/>
+   <form name="earlyWarning_form" class="com.webfin.gl.form.GLPostingList" view="earlyWarningForm.jsp" />
+   <form name="cashbank_upload_form" class="com.webfin.gl.form.GLJournalForm" view="cashBankUploadForm.jsp" />
+   <form name="cashbank_upload_list" class="com.webfin.gl.form.GLJournalList" view="cashBankUploadList.jsp" />
+   <form name="accountEntertainList" class="com.webfin.gl.form.GLJournalList" view="accountEnt_list.jsp" />
+   <form name="accountEntertainForm" class="com.webfin.gl.form.GLJournalForm" view="accountEnt_form.jsp" />
+   <form name="accountPromosiList" class="com.webfin.gl.form.GLJournalList" view="accountPro_list.jsp" />
+   <form name="accountPromosiForm" class="com.webfin.gl.form.GLJournalForm" view="accountPro_form.jsp" />
+   <form name="prod_account2" class="com.webfin.gl.form.GLListForm" view="prodRPT2.jsp" />
+   <form name="gl_rounded" class="com.webfin.gl.form.GLRoundedForm" view="gl_rounded.jsp"/>
+   <form name="clusterProduksi_form" class="com.webfin.gl.form.GLPostingList" view="clusterProduksiForm.jsp" />
+   <form name="titipan_premi_reins_list" class="com.webfin.gl.form.GLListForm" view="titipanPremiReinsuranceList.jsp"/>
+   <form name="titipan_premi_excomp_list" class="com.webfin.gl.form.GLListForm" view="titipanPremiExcomptableList.jsp"/>
+   <form name="acc_account" class="com.webfin.gl.form.GLListForm" view="accountRPT.jsp" />
+</forms> 

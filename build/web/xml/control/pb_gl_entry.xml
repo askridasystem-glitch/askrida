@@ -1,0 +1,61 @@
+<events>
+   <event name="PB_GL_ENTRY">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="list"/>
+      <forward page="/pages/gl/entry/listGLEntry.jsp"/>
+   </event>
+   <event name="PB_GL_ENTRY_ADD">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="addCashBank"/>
+      <forward page="/pages/gl/entry/pbGLEntry.jsp"/>
+   </event>
+   <event name="PB_GL_ENTRY_EDIT">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="edit"/>
+      <forward page="/pages/gl/entry/pbGLEdit.jsp"/>
+   </event>
+   <event name="PB_GL_EDIT_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="addlineCashBank"/>
+      <forward page="/pages/gl/entry/pbGLEdit.jsp"/>
+   </event>
+   <event name="PB_GL_EDIT_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="dellineCashBank"/>
+      <forward page="/pages/gl/entry/pbGLEdit.jsp"/>
+   </event>
+   <event name="PB_GL_ENTRY_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="addlineCashBank"/>
+      <forward page="/pages/gl/entry/pbGLEntry.jsp"/>
+   </event>
+   <event name="PB_GL_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="dellineCashBank"/>
+      <forward page="/pages/gl/entry/pbGLEntry.jsp"/>
+   </event>
+   <event name="PB_GL_ENTRY_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="editrefreshCashBank"/>
+      <forward page="/pages/gl/entry/pbGLEntry.jsp"/>
+   </event>
+   <event name="PB_GL_ENTRY_VIEW">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="view"/>
+      <forward page="/pages/gl/entry/pbGLEntry.jsp"/>
+   </event>
+   <event name="PB_GL_ENTRY_CHG_CCY">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="changeCCy"/>
+      <forward page="/pages/gl/entry/pbGLEntry.jsp"/>
+   </event>
+   <event name="PB_GL_ENTRY_SAVE">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="saveCBGL"/>
+      <forward id="ERROR" event="PB_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="PB_GL_EDIT_SAVE">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="saveEditCBGL"/>
+      <forward id="ERROR" event="PB_GL_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="PB_GL_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.PBEntryHelper" method="editrefreshCashBank"/>
+      <forward page="/pages/gl/entry/pbGLEdit.jsp"/>
+   </event>
+   <event name="PB_GL_ACCOUNTS_SELECT">
+      <helper class="com.webfin.gl.accounts.helper.AccountsHelper" method="selectPB"/>
+      <forward page="/pages/gl/accounts/selectAccountsPB.jsp"/>
+   </event>
+</events>
+

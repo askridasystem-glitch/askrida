@@ -1,0 +1,4 @@
+<forms>
+   <form name="company_edit" class="com.webfin.company.forms.CompanyMasterForm" view="companyForm.jsp" return="ENT_LIST"/>
+   <form name="company_group_list" class="com.webfin.company.forms.CompanyListForm" view="companyList.jsp" return="ENT_LIST"/>
+</forms>

@@ -1,0 +1,4 @@
+<forms>
+   <form name="titipanlist" class="com.webfin.ar.forms.TitipanListForm" view="titipanList.jsp" />
+  <form name="titipanform" class="com.webfin.ar.forms.TitipanForm" view="titipanForm.jsp" />
+</forms>

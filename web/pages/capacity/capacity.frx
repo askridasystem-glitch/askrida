@@ -1,0 +1,7 @@
+<forms>
+    <form name="capacity_edit" class="com.webfin.master.capacity.CapacityMasterForm" view="capacity_edit.jsp"/>
+    <form name="capacity_konsumtif_edit" class="com.webfin.master.capacity.CapacityMasterForm" view="capacity_konsumtif_edit.jsp"/>
+    <form name="rate_konsumtif_edit" class="com.webfin.master.capacity.CapacityMasterForm" view="rate_konsumtif_edit.jsp"/>
+    <form name="warranty_edit" class="com.webfin.master.capacity.CapacityMasterForm" view="warranty_edit.jsp"/>
+    <form name="capacity_edit3" class="com.webfin.master.capacity.CapacityMasterForm" view="capacity_edit3.jsp"/>
+</forms>

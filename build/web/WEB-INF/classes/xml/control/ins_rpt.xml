@@ -1,0 +1,62 @@
+<events>
+   <event name="INS_POL_PRT">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printPolicy"/>
+      <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+   </event>
+   <event name="INS_PRT_NOM">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="getNomerator"/>
+      <forward page="/pages/insurance/policy/getnom.jsp"/>
+   </event>
+   <event name="INS_POL_PRV">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="previewPolicy"/>
+      <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+   </event>
+   <event name="INS_POL_PRT_DIGITALSIGN">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printPolicyWithDigital"/>
+      <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+   </event>
+   <event name="INS_PRT_CLAUSULES">
+      <helper class="com.webfin.master.clausules.helper.ClausulesHelper" method="printClausules"/>
+      <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+   </event>
+   <event name="INS_POL_PRT_DIGITALPOLICY">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printDigitalPolicy"/>
+      <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+   </event>
+   <event name="INS_CLOSING_RPT">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printClosing"/>
+      <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+   </event>
+    <event name="INS_UPLOAD_PROPOSAL">
+        <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printProposal"/>
+        <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+    </event>
+    <event name="INS_UPLOAD_PROPOSAL_EXCEL">
+        <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printProposalExcel"/>
+        <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+    </event>
+    <event name="INS_UPLOAD_PROPOSAL_DOC">
+        <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printProposalDoc"/>
+        <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+    </event>
+    <event name="INS_PIUTANG_EXCEL">
+        <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printPiutangExcel"/>
+        <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+    </event>
+    <event name="INS_PIUTANG">
+        <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printPiutang"/>
+        <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+    </event>
+    <event name="INS_BIAYA_PEMASARAN">
+        <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printByPemasaran"/>
+        <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+    </event>
+    <event name="INS_BIAYA_PEMASARAN_EXCEL">
+        <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printByPemasaranExcel"/>
+        <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+    </event>
+    <event name="INS_BIAYA_PEMASARAN_DOC">
+        <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="printByPemasaranDoc"/>
+        <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+    </event> 
+</events> 

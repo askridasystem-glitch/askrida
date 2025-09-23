@@ -1,0 +1,55 @@
+<events>
+   <event name="LOGIN_WELCOME">
+      <forward page="/pages/main/Login.jsp"/>
+      <forward id="fail_login" event="LOGIN_MAIN"/>
+      <forward id="success_login" event="LOGIN_SUCCESS"/>
+   </event>
+   <event name="LOGIN_TIMEOUT">
+      <forward page="/pages/main/LoginTO.jsp"/>
+   </event>
+   <event name="LOGIN_MAIN">
+      <helper class="com.crux.login.helper.LoginHelper" method="processLogin"/>
+      <forward id="ERROR" page="/index.jsp"/>
+      <forward id="success_login" page="/main.jsp"/>
+      <forward id="success_login_uw" page="/pages/main/mainUW.jsp"/>
+      <forward id="success_login_reas" page="/pages/main/mainRI.jsp"/>
+      <forward id="success_login_claim" page="/pages/main/mainClaim.jsp"/>
+      <forward id="success_login_policycheckguest" page="/pages/main/mainCekPolicy.jsp"/>
+   </event>
+   <event name="FRAME_TOP">
+   	<helper class="com.crux.login.helper.LoginHelper" method="loadMenu"/>
+   	<forward page="/pages/main/header.jsp"/>
+   	</event>
+   <event name="FRAME_LEFT">
+      <helper class="com.crux.login.helper.LoginHelper" method="loadMenu"/>
+      <forward page="/pages/main/menu.jsp"/>
+   </event>
+   <event name="MAIN_WELCOME"><forward page="/pages/main/welcome.jsp"/></event>
+   <event name="FOOTER"><forward page="/pages/main/footer.jsp"/></event>
+   <event name="LOGOUT">
+      <helper class="com.crux.login.helper.LoginHelper" method="logOut"/>
+      <forward page="/index.jsp"/>
+   </event>
+   <event name="LIST_SESSIONS">
+      <forward page="/pages/main/listSessions.jsp"/>
+   </event>
+   <event name="SESSION_KILL">
+      <helper class="com.crux.login.helper.LoginHelper" method="killSession"/>
+      <forward page="/pages/main/listSessions.jsp"/>
+   </event>
+   <event name="CTL_BLOCK_USERS">
+      <helper class="com.crux.login.helper.LoginHelper" method="blockUsers"/>
+      <forward event="LIST_SESSIONS"/>
+   </event>
+   <event name="SHOW_ROLE">
+      <helper class="com.crux.login.helper.LoginHelper" method="showRole"/>
+      <forward event="LIST_SESSIONS"/>
+   </event>
+   <event name="HIDE_ROLE">
+      <helper class="com.crux.login.helper.LoginHelper" method="hideRole"/>
+      <forward event="LIST_SESSIONS"/>
+   </event>
+   <event name="ANNOUNCEMENT">
+      <forward page="/pages/main/makeAnnouncement.jsp"/>
+   </event>
+</events>

@@ -1,0 +1,30 @@
+LIST PERTANYAAN
+-----------------------------------------------
+1. Limit bawah dan atas tarif rate harta benda bdasarkan kode okupasi itu rate akumulasi per object atau per cover?
+2. jika polis jangka panjang (>1 tahun) bagaimana penerapan/pengecekan limit rate tsb
+   lakukan penerapan dasar pro rata
+3. loss limit penerapan nya seperti apa?
+4. KODE RESIKO BUAT POP UP MAX 3 KODE RESIKO SAJA JGN KETIK SDRI SPT KEMARIN
+
+
+CATATAN OJK
+----------------------------------------------------------------------------------------------------
+KENDARAAN BERMOTOR :
+
+1. JIKA PLAT NO TBA, MAKA MERUJUK KE KODE CABANG KANTOR OPERASIONAL ASKRIDA, AMBIL KODE WILAYAH ->
+done, testing
+2. JIKA RENEWAL TIDAK BOLEH TBA LAGI -> done, testing
+3. DEDUCTIBLE SELAIN DI TABLE OJK MAKA 300.000 MIN -> DONE
+4. NAMA DI DETIL RESIKO WAJIB DIISI, JIKA SAMA DGN SUMBER BISNIS MAKA TIDAK BOLEH ADA FEE BASE &
+   KOMISI -> done, testing
+5. DISKON DI BLOK TIDAK BOLEH ADA SELAMA TAHUN 2014 per periode awal 1 maret 2014 -> done
+
+FIRE
+----------------------------------------------------------------------------------------------------
+1. JENIS DEDUCTIBLE FIRE KIRIM KE U/W UNTUK DI EVALUASI MANA YG PERLU SAJA
+2. TAMBAHKAN SUM INSURED BI -> done, testing
+3. TAMBAHKAN TIME EXCESS DI MENU DEDUCTIBLE -> done
+4. NAMA DI DETIL RESIKO WAJIB DIISI, JIKA SAMA DGN SUMBER BISNIS MAKA TIDAK BOLEH ADA FEE BASE &
+   KOMISI -> done, testing
+5. DISKON DI BLOK TIDAK BOLEH ADA SELAMA TAHUN 2014 per periode awal 1 FEB 2014 -> done
+6. DEDUCTIBLE TIDAK BOLEH KOSONG/HARUS ADA  

@@ -1,0 +1,4 @@
+02009 August 19 11:55:11 com.webfin.chat.jzchat => Cannot read database (1250657711362) : E:\Fin\web\pages\chat\store\jzchat.ser (The system cannot find the file specified)
+02009 August 19 11:55:11 com.webfin.chat.jzchat => JzChat Servlet initialization : OK
+02009 August 19 13:08:15 com.webfin.chat.jzchat => Servlet destroyed (free memory : 7446784/20303872)
+02009 August 19 13:08:15 com.webfin.chat.jzchat => Database not instantied

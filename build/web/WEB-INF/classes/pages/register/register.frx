@@ -1,0 +1,4 @@
+<forms>
+   <form name="register_edit" class="com.webfin.register.forms.RegisterMasterForm" view="registerForm.jsp" return="OUT_LIST"/>
+   <form name="register_list" class="com.webfin.register.forms.RegisterListForm" view="registerListForm.jsp"/>
+</forms>

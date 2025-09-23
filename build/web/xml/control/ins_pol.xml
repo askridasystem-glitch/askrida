@@ -1,0 +1,98 @@
+<events>
+   <event name="INS_POL">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="listPolicies"/>
+      <forward page="/pages/insurance/policy/listpolicies.jsp"/>
+   </event>
+   <event name="INS_POL_CREATE">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="selectPolicy"/>
+      <forward page="/pages/insurance/policy/selectPolicyType.jsp"/>
+   </event>
+   <event name="INS_POL_CREATE_CHGTYPE">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="selectPolicy"/>
+      <forward page="/pages/insurance/policy/selectPolicyType.jsp"/>
+   </event>
+   <event name="INS_POL_CREATE2">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="create"/>
+      <forward page="/pages/insurance/policy/InsPolicy.jsp"/>
+   </event>
+   <event name="INS_POL_CHG_TAB">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="chgTab"/>
+      <forward page="/pages/insurance/policy/InsPolicy.jsp"/>
+   </event>
+   <event name="INS_POL_CHG_OBJ">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="chgObject"/>
+      <forward page="/pages/insurance/policy/InsPolicy.jsp"/>
+   </event>
+   <event name="INS_POL_ADD_OBJ">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="addObject"/>
+      <forward page="/pages/insurance/policy/InsPolicy.jsp"/>
+   </event>
+   <event name="INS_POL_DEL_OBJ">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="delObject"/>
+      <forward page="/pages/insurance/policy/InsPolicy.jsp"/>
+   </event>
+   <event name="INS_POL_OW_ADD_ADDR">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="addOwnerAddress"/>
+      <forward page="/pages/insurance/policy/InsPolicy.jsp"/>
+   </event>
+   <event name="INS_POL_EDIT">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="edit"/>
+      <forward page="/pages/insurance/policy/InsPolicy.jsp"/>
+   </event>
+   <event name="INS_POL_VIEW">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="view"/>
+      <forward page="/pages/insurance/policy/InsPolicy.jsp"/>
+   </event>
+   <event name="INS_POL_SAVE">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="save"/>
+      <forward event="INS_POL"/>
+   </event>
+   <event name="INS_POL_RECALCULATE">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="recalculate"/>
+      <forward page="/pages/insurance/policy/InsPolicy.jsp"/>
+   </event>
+   <event name="INS_POL_DEL_ITEM">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="deleteItem"/>
+      <forward page="/pages/insurance/policy/InsPolicy.jsp"/>
+   </event>
+   <event name="INS_POL_NEW_ITEM">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="newItem"/>
+      <forward page="/pages/insurance/policy/InsPolicy.jsp"/>
+   </event>
+   <event name="INS_AGENT_SELECT">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="selectAgent"/>
+      <forward page="/pages/insurance/policy/selectAgent.jsp"/>
+   </event>
+   <event name="INS_POL_SEARCH">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="searchPolicy"/>
+      <forward page="/pages/insurance/policy/searchPolicy.jsp"/>
+   </event>
+   <event name="INS_POLICY_SEARCH">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="searchPolicyNew"/>
+      <forward page="/pages/insurance/policy/searchPolicyNew.jsp"/>
+   </event>
+   <event name="INS_POLICY_SEARCH">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="searchPolicyOnly"/>
+      <forward page="/pages/insurance/policy/searchPolicy.jsp"/>
+   </event>
+   <event name="INS_CLAIM_SEARCH">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="searchKlaimNew"/>
+      <forward page="/pages/insurance/policy/searchKlaimNew.jsp"/>
+   </event>
+    <event name="INS_CLAIM_SEARCH_VLD">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="searchKlaimNewVld"/>
+      <forward page="/pages/insurance/policy/searchKlaimNewVld.jsp"/>
+   </event>
+   <event name="INS_CLAIM_SEARCH_CF">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="searchKlaimCashflow"/>
+      <forward page="/pages/ar/receipt/searchKlaimCashflow.jsp"/>
+   </event>
+   <event name="INS_POLIS_JIWA">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="downloadPolisJiwa"/>
+      <forward id="ERROR" page="/pages/manual/blank.jsp"/>
+   </event>
+   <event name="INS_POLIS_JIWA_ONE">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="downloadPolisJiwaSatuan"/>
+      <forward id="ERROR" page="/pages/manual/blank.jsp"/>
+   </event>
+</events>

@@ -1,0 +1,119 @@
+<events>
+   <event name="ASN_LIST">
+      <helper class="com.ots.asn.helper.ASNHelper" method="listASNpop"/>
+      <forward page="/pages/asn/listASN.jsp"/>
+   </event>
+   <event name="ASN_LIST_GO">
+      <helper class="com.ots.asn.helper.ASNHelper" method="listASNgo"/>
+      <forward page="/pages/asn/listASN.jsp"/>
+   </event>
+   <event name="ASN_CREATE">
+      <helper class="com.ots.asn.helper.ASNHelper" method="createASN"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_LIST_GO"/>
+   </event>
+   <event name="ASN_EDIT">
+      <helper class="com.ots.asn.helper.ASNHelper" method="editASN"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_LIST_GO"/>
+   </event>
+   <event name="ASN_VIEW">
+      <helper class="com.ots.asn.helper.ASNHelper" method="viewASN"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_LIST_GO"/>
+   </event>
+   <event name="ASN_RCV1">
+      <helper class="com.ots.asn.helper.ASNHelper" method="rcv1"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_LIST_GO"/>
+   </event>
+   <event name="ASN_RCV2">
+      <helper class="com.ots.asn.helper.ASNHelper" method="rcv2"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_LIST_GO"/>
+   </event>
+   <event name="ASN_RCV3">
+      <helper class="com.ots.asn.helper.ASNHelper" method="rcv3"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_LIST_GO"/>
+   </event>
+   <event name="ASN_DVY1">
+      <helper class="com.ots.asn.helper.ASNHelper" method="dvy1"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_LIST_GO"/>
+   </event>
+   <event name="ASN_DVY2">
+      <helper class="com.ots.asn.helper.ASNHelper" method="dvy2"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_LIST_GO"/>
+   </event>
+   <event name="ASN_REFRESH">
+      <helper class="com.ots.asn.helper.ASNHelper" method="refresh"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_ERROR"/>
+   </event>
+   <event name="ASN_ADD_ITEM">
+      <helper class="com.ots.asn.helper.ASNHelper" method="addItem"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_ERROR"/>
+   </event>
+   <event name="ASN_DEL_ITEM">
+      <helper class="com.ots.asn.helper.ASNHelper" method="delItem"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_ERROR"/>
+   </event>
+   <event name="ASN_ERROR">
+      <helper class="com.ots.asn.helper.ASNHelper" method="error"/>
+      <forward page="/pages/asn/ASN.jsp"/>
+      <forward id="bsave" event="ASN_SAVE"/>
+      <forward id="bcancel" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_ERROR"/>
+   </event>
+   <event name="ASN_SAVE">
+      <helper class="com.ots.asn.helper.ASNHelper" method="saveASN"/>
+      <forward page="/pages/asn/ASNAckk.jsp"/>
+      <forward id="bback" event="ASN_LIST_GO"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+      <forward id="ERROR" event="ASN_ERROR"/>
+   </event>
+   <event name="INVOICE_LIST_OF_ASN">
+      <helper class="com.ots.asn.helper.ASNHelper" method="listInvoiceOfASN"/>
+      <forward page="/pages/asn/searchInvoice.jsp"/>
+      <forward id="ERROR" event="ASN_ERROR"/>
+      <forward id="REFRESH" event="ASN_REFRESH"/>
+    </event>
+</events>

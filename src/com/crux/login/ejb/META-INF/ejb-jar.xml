@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC '-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN' 'http://java.sun.com/dtd/ejb-jar_2_0.dtd'>
+<ejb-jar>
+   <description>Login Module</description>
+   <display-name></display-name>
+   <enterprise-beans>
+      <session>
+         <ejb-name>LoginModuleEJB</ejb-name>
+         <home>com.crux.login.ejb.LoginModuleHome</home>
+         <remote>com.crux.login.ejb.LoginModule</remote>
+         <ejb-class>com.crux.login.ejb.LoginModuleEJB</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+         <env-entry>
+            <description></description>
+            <env-entry-name>LoginPrefs</env-entry-name>
+            <env-entry-type>java.lang.String</env-entry-type>
+            <env-entry-value>test</env-entry-value>
+         </env-entry>
+
+      </session>
+      <session>
+         <ejb-name>UserMaintenanceEJB</ejb-name>
+         <home>com.crux.login.ejb.UserMaintenanceHome</home>
+         <remote>com.crux.login.ejb.UserMaintenance</remote>
+         <ejb-class>com.crux.login.ejb.UserMaintenanceEJB</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+      </session>
+   </enterprise-beans>
+   <assembly-descriptor>
+      <container-transaction>
+         <description>Transaction attributes for 'LoginModuleEJB' methods</description>
+         <method>
+            <ejb-name>LoginModuleEJB</ejb-name>
+            <method-name>*</method-name>
+         </method>
+         <trans-attribute>Required</trans-attribute>
+      </container-transaction>
+      <container-transaction>
+         <description>Transaction attributes for 'UserMaintenanceEJB' methods</description>
+         <method>
+            <ejb-name>UserMaintenanceEJB</ejb-name>
+            <method-name>*</method-name>
+         </method>
+         <trans-attribute>Required</trans-attribute>
+      </container-transaction>
+   </assembly-descriptor>
+</ejb-jar>

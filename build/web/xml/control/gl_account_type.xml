@@ -1,0 +1,7 @@
+<events>
+   <event name="GL_ACCT_TYPE">
+      <helper class="com.webfin.gl.accountype.helper.GLAccountTypeHelper" method="listAccountTypes"/>
+      <forward page="/pages/gl/account_type/listAccountType.jsp"/>
+   </event>
+
+</events>

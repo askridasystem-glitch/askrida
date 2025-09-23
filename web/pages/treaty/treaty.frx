@@ -1,0 +1,6 @@
+<forms>
+   <form name="treaty_list" class="com.webfin.master.treaty.form.TreatyListForm" view="treaty_list.jsp"/>
+   <form name="treaty_form" class="com.webfin.master.treaty.form.TreatyMasterForm" view="treaty_form.jsp"/>
+   <form name="cashcall_list" class="com.webfin.master.claim.CashCallListForm" view="cashcall_list.jsp"/>
+   <form name="cashcall_form" class="com.webfin.master.claim.CashCallMasterForm" view="cashcall_form.jsp"/>
+</forms>

@@ -1,0 +1,29 @@
+   <events>
+      <event name="ENT_LIST">
+         <helper class="com.webfin.entity.helper.EntityHelper" method="list"/>
+         <forward page="pages/entity/listEntity.jsp"/>
+      </event>
+      <event name="ENT_CREATE">
+         <helper class="com.webfin.entity.helper.EntityHelper" method="create"/>
+         <forward page="pages/entity/entity.jsp"/>
+      </event>
+      <event name="ENT_EDIT">
+         <helper class="com.webfin.entity.helper.EntityHelper" method="edit"/>
+         <forward page="pages/entity/entity.jsp"/>
+      </event>
+      <event name="ENT_VIEW">
+         <helper class="com.webfin.entity.helper.EntityHelper" method="view"/>
+         <forward page="pages/entity/entity.jsp"/>
+      </event>
+      <event name="SELECT_ENT">
+         <helper class="com.webfin.entity.helper.EntityHelper" method="select"/>
+         <forward page="pages/entity/selectEntity.jsp"/>
+      </event>
+      <event name="CREATE_ENT">
+         <helper class="com.webfin.entity.helper.EntityHelper" method="create"/>
+         <forward page="pages/entity/entityForm.jsp"/>
+      </event>
+   </events>
+   <!--<forms>
+      <form name="" class="" view=""/>
+   </forms>-->

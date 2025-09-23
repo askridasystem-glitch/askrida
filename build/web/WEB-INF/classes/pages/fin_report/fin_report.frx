@@ -1,0 +1,6 @@
+<forms>
+   <form name="fin_report" class="com.webfin.gl.report2.form.FinReportForm" view="fin_report.jsp" />
+   <form name="proyeksi_prod" class="com.webfin.gl.report2.form.FinReportForm" view="prodProyeksiRPT.jsp" />
+   <form name="gl_early_warning" class="com.webfin.gl.report2.form.FinReportForm" view="prodEarlyWarningRPT.jsp"/>
+   <form name="fin_report2" class="com.webfin.gl.report2.form.FinReportForm" view="fin_report2.jsp" />
+</forms>

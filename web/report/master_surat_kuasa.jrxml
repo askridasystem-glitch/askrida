@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="master_surat_kuasa"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="595"
+		 pageHeight="842"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="AllSectionsNoDetail"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="2" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+	<parameter name="nama_pemberi_kuasa" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="jabatan_pemberi_kuasa" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="nama_diberi_kuasa" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="npwp_diberi_kuasa" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="alamat_diberi_kuasa" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="pengirim" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="nama_barang" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="jumlah_koli" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="negara_asal" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="nama_pesawat" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="mawb" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="no_invoice" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="tanggal_invoice" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="nilai_invoice" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="nama_vendor" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="alamat_vendor" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="tanggal_cetak" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="subreport1" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="subreport2" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="subreport3" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="subreport4" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="subreport5" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sk1_number" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="sk1_check" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="sk2_number" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sk2_check" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sk3_number" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sk3_check" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sk4_number" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sk4_check" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sk5_number" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="sk5_check" isForPrompting="true" class="java.lang.String"/>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="802"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						mode="Opaque"
+						x="2"
+						y="1"
+						width="533"
+						height="155"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="subreport-1"
+						stretchType="NoStretch"
+						positionType="FixRelativeToTop"
+						isPrintRepeatedValues="true"
+						isRemoveLineWhenBlank="false"
+						isPrintInFirstWholeBand="false"
+						isPrintWhenDetailOverflows="false">
+							<printWhenExpression><![CDATA[new Boolean($P{sk1_check}.equalsIgnoreCase("1"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="nomor_surat">
+						<subreportParameterExpression><![CDATA[$P{sk1_number}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_pemberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{nama_pemberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="jabatan_pemberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{jabatan_pemberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{nama_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="npwp_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{npwp_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="alamat_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{alamat_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="pengirim">
+						<subreportParameterExpression><![CDATA[$P{pengirim}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_barang">
+						<subreportParameterExpression><![CDATA[$P{nama_barang}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="jumlah_koli">
+						<subreportParameterExpression><![CDATA[$P{jumlah_koli}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="negara_asal">
+						<subreportParameterExpression><![CDATA[$P{negara_asal}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_pesawat">
+						<subreportParameterExpression><![CDATA[$P{nama_pesawat}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="mawb">
+						<subreportParameterExpression><![CDATA[$P{mawb}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="no_invoice">
+						<subreportParameterExpression><![CDATA[$P{no_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="tanggal_invoice">
+						<subreportParameterExpression><![CDATA[$P{tanggal_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nilai_invoice">
+						<subreportParameterExpression><![CDATA[$P{nilai_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="tanggal_cetak">
+						<subreportParameterExpression><![CDATA[$P{tanggal_cetak}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{subreport1}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						mode="Opaque"
+						x="1"
+						y="161"
+						width="533"
+						height="155"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="subreport-1"
+						stretchType="NoStretch"
+						positionType="FixRelativeToTop"
+						isPrintRepeatedValues="true"
+						isRemoveLineWhenBlank="false"
+						isPrintInFirstWholeBand="false"
+						isPrintWhenDetailOverflows="false">
+							<printWhenExpression><![CDATA[new Boolean($P{sk2_check}.equalsIgnoreCase("1"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="nomor_surat">
+						<subreportParameterExpression><![CDATA[$P{sk2_number}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_pemberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{nama_pemberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="jabatan_pemberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{jabatan_pemberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{nama_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="npwp_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{npwp_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="alamat_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{alamat_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="pengirim">
+						<subreportParameterExpression><![CDATA[$P{pengirim}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_barang">
+						<subreportParameterExpression><![CDATA[$P{nama_barang}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="jumlah_koli">
+						<subreportParameterExpression><![CDATA[$P{jumlah_koli}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="negara_asal">
+						<subreportParameterExpression><![CDATA[$P{negara_asal}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_pesawat">
+						<subreportParameterExpression><![CDATA[$P{nama_pesawat}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="mawb">
+						<subreportParameterExpression><![CDATA[$P{mawb}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="no_invoice">
+						<subreportParameterExpression><![CDATA[$P{no_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="tanggal_invoice">
+						<subreportParameterExpression><![CDATA[$P{tanggal_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nilai_invoice">
+						<subreportParameterExpression><![CDATA[$P{nilai_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="tanggal_cetak">
+						<subreportParameterExpression><![CDATA[$P{tanggal_cetak}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{subreport2}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						mode="Opaque"
+						x="1"
+						y="321"
+						width="533"
+						height="155"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="subreport-1"
+						stretchType="NoStretch"
+						positionType="FixRelativeToTop"
+						isPrintRepeatedValues="true"
+						isRemoveLineWhenBlank="false"
+						isPrintInFirstWholeBand="false"
+						isPrintWhenDetailOverflows="false">
+							<printWhenExpression><![CDATA[new Boolean($P{sk3_check}.equalsIgnoreCase("1"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="nomor_surat">
+						<subreportParameterExpression><![CDATA[$P{sk3_number}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_pemberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{nama_pemberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="jabatan_pemberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{jabatan_pemberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{nama_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="npwp_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{npwp_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="alamat_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{alamat_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="pengirim">
+						<subreportParameterExpression><![CDATA[$P{pengirim}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_barang">
+						<subreportParameterExpression><![CDATA[$P{nama_barang}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="jumlah_koli">
+						<subreportParameterExpression><![CDATA[$P{jumlah_koli}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="negara_asal">
+						<subreportParameterExpression><![CDATA[$P{negara_asal}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_pesawat">
+						<subreportParameterExpression><![CDATA[$P{nama_pesawat}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="mawb">
+						<subreportParameterExpression><![CDATA[$P{mawb}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="no_invoice">
+						<subreportParameterExpression><![CDATA[$P{no_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="tanggal_invoice">
+						<subreportParameterExpression><![CDATA[$P{tanggal_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nilai_invoice">
+						<subreportParameterExpression><![CDATA[$P{nilai_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="tanggal_cetak">
+						<subreportParameterExpression><![CDATA[$P{tanggal_cetak}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{subreport3}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						mode="Opaque"
+						x="1"
+						y="482"
+						width="533"
+						height="155"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="subreport-1"
+						stretchType="NoStretch"
+						positionType="FixRelativeToTop"
+						isPrintRepeatedValues="true"
+						isRemoveLineWhenBlank="false"
+						isPrintInFirstWholeBand="false"
+						isPrintWhenDetailOverflows="false">
+							<printWhenExpression><![CDATA[new Boolean($P{sk4_check}.equalsIgnoreCase("1"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="nomor_surat">
+						<subreportParameterExpression><![CDATA[$P{sk4_number}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_pemberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{nama_pemberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="jabatan_pemberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{jabatan_pemberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{nama_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="npwp_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{npwp_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="alamat_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{alamat_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="pengirim">
+						<subreportParameterExpression><![CDATA[$P{pengirim}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_barang">
+						<subreportParameterExpression><![CDATA[$P{nama_barang}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="jumlah_koli">
+						<subreportParameterExpression><![CDATA[$P{jumlah_koli}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="negara_asal">
+						<subreportParameterExpression><![CDATA[$P{negara_asal}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_pesawat">
+						<subreportParameterExpression><![CDATA[$P{nama_pesawat}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="mawb">
+						<subreportParameterExpression><![CDATA[$P{mawb}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="no_invoice">
+						<subreportParameterExpression><![CDATA[$P{no_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="tanggal_invoice">
+						<subreportParameterExpression><![CDATA[$P{tanggal_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nilai_invoice">
+						<subreportParameterExpression><![CDATA[$P{nilai_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="tanggal_cetak">
+						<subreportParameterExpression><![CDATA[$P{tanggal_cetak}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{subreport4}]]></subreportExpression>
+				</subreport>
+				<subreport  isUsingCache="true">
+					<reportElement
+						mode="Opaque"
+						x="1"
+						y="643"
+						width="533"
+						height="155"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="subreport-2"
+						stretchType="NoStretch"
+						positionType="FixRelativeToTop"
+						isPrintRepeatedValues="true"
+						isRemoveLineWhenBlank="false"
+						isPrintInFirstWholeBand="false"
+						isPrintWhenDetailOverflows="false">
+							<printWhenExpression><![CDATA[new Boolean($P{sk5_check}.equalsIgnoreCase("1"))]]></printWhenExpression>
+						</reportElement>
+					<subreportParameter  name="nomor_surat">
+						<subreportParameterExpression><![CDATA[$P{sk5_number}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_pemberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{nama_pemberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="jabatan_pemberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{jabatan_pemberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{nama_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="npwp_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{npwp_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="alamat_diberi_kuasa">
+						<subreportParameterExpression><![CDATA[$P{alamat_diberi_kuasa}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="pengirim">
+						<subreportParameterExpression><![CDATA[$P{pengirim}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_barang">
+						<subreportParameterExpression><![CDATA[$P{nama_barang}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="jumlah_koli">
+						<subreportParameterExpression><![CDATA[$P{jumlah_koli}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="negara_asal">
+						<subreportParameterExpression><![CDATA[$P{negara_asal}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_pesawat">
+						<subreportParameterExpression><![CDATA[$P{nama_pesawat}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="mawb">
+						<subreportParameterExpression><![CDATA[$P{mawb}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="no_invoice">
+						<subreportParameterExpression><![CDATA[$P{no_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="tanggal_invoice">
+						<subreportParameterExpression><![CDATA[$P{tanggal_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nilai_invoice">
+						<subreportParameterExpression><![CDATA[$P{nilai_invoice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="nama_vendor">
+						<subreportParameterExpression><![CDATA[$P{nama_vendor}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="alamat_vendor">
+						<subreportParameterExpression><![CDATA[$P{alamat_vendor}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="tanggal_cetak">
+						<subreportParameterExpression><![CDATA[$P{tanggal_cetak}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{subreport5}]]></subreportExpression>
+				</subreport>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

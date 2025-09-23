@@ -1,0 +1,317 @@
+<%@ page import="com.crux.util.fop.FOPTableSource,
+com.webfin.insurance.form.ProductionClaimReportForm,
+com.crux.common.model.HashDTO,
+com.crux.util.*,
+java.util.Date"%><?xml version="1.0" encoding="utf-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <%
+    final ProductionClaimReportForm form = (ProductionClaimReportForm) request.getAttribute("FORM");
+    %>
+    
+    <!-- defines page layout -->
+    <fo:layout-master-set>
+        
+        <!-- layout for the first page -->
+        <fo:simple-page-master master-name="only"
+                               page-width="21cm"
+                               page-height="29.7cm"
+                               margin-top="0.5cm"
+                               margin-bottom="0.5cm"
+                               margin-left="1.5cm"
+                               margin-right="1.5cm">
+            <fo:region-body margin-top="3cm" margin-bottom="0.5cm"/>
+            <fo:region-before extent="3cm"/>
+            <fo:region-after extent="1.5cm"/>
+        </fo:simple-page-master>
+        
+    </fo:layout-master-set>
+    <!-- end: defines page layout -->
+
+    <!-- actual layout -->
+    <fo:page-sequence master-reference="only" initial-page-number="1">
+        
+        <!-- usage of page layout -->
+        <fo:static-content flow-name="xsl-region-before">
+            <fo:block-container height="1cm" width="15cm" top="0cm" left="0cm" position="absolute">    <fo:block>
+                    <fo:retrieve-marker retrieve-class-name="message"
+                                        retrieve-boundary="page"
+                                        retrieve-position="first-starting-within-page"/>
+                </fo:block>
+            </fo:block-container>
+            <fo:block-container height="1cm" width="15cm" top="0cm" left="0cm" position="absolute">    <fo:block>
+                    <fo:retrieve-marker retrieve-class-name="term"
+                                        retrieve-boundary="page"
+                                        retrieve-position="last-ending-within-page"/>
+                </fo:block>
+            </fo:block-container>
+        </fo:static-content>
+        
+        <fo:static-content flow-name="xsl-region-after">
+            <fo:block text-align="end"
+                      font-size="6pt"
+                      font-family="TAHOMA"
+                      line-height="12pt" 
+                      font-style="bold">
+                rkp_claim_note - PT. Asuransi Bangun Askrida
+            </fo:block>
+            <fo:block text-align="end"
+                      font-size="8pt" font-family="serif" line-height="1em + 2pt">
+                {L-ENG Page-L}{L-INA Halaman-L} <fo:page-number/> {L-ENG of-L}{L-INA dari-L} <fo:page-number-citation
+                    ref-id="end-of-document"/>
+            </fo:block>
+        </fo:static-content>
+        
+        
+        
+        
+        <fo:flow flow-name="xsl-region-body">
+            <fo:block font-size="12pt" text-align="left">
+                {L-ENG To. -L}{L-INA Kepada -L}
+            </fo:block> 
+            <fo:block font-size="12pt" text-align="left" space-after.optimum="10pt">
+                <%=JSPUtil.printX(form.getStEntityName())%>
+            </fo:block> 
+            
+            <fo:block font-size="10pt" space-after.optimum="10pt">
+                <fo:table table-layout="fixed">
+                    <fo:table-column column-width="60mm"/>
+                    <fo:table-column column-width="20mm"/>
+                    <fo:table-column column-width="5mm"/>
+                    <fo:table-column column-width="60mm"/>
+                    <fo:table-column column-width="25mm"/>
+                    <fo:table-body>
+                        
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="5"><fo:block text-align="center">{L-ENG REINSURANCE CLAIM NOTE-L}{L-INA REINSURANCE CLAIM NOTE-L}</fo:block></fo:table-cell>
+                        </fo:table-row>
+                        
+                        
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="5">
+                                <fo:block text-align="center">      
+                                    <% if(form.getStPolicyTypeGroupID()!=null) { %>  	 
+                                    <%= JSPUtil.printX(form.getStPolicyTypeGroupDesc().toUpperCase()) %>
+                                    <% } %>
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        
+                        <fo:table-row>
+                            <fo:table-cell></fo:table-cell>
+                            <fo:table-cell><fo:block>{L-ENG NOTE-L}{L-INA NOTA-L}</fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block>:</fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block>
+                                    <%=DateUtil.getMonth2Digit(form.getAppDateFrom())%>
+                                    /04R/NPR/<%=DateUtil.getMonthRomawi(form.getAppDateFrom())%>/<%=DateUtil.getYear2Digit(form.getAppDateFrom())%>
+                            </fo:block></fo:table-cell>
+                            <fo:table-cell></fo:table-cell>
+                        </fo:table-row>
+                        
+                        <fo:table-row>
+                            <fo:table-cell></fo:table-cell>
+                            <fo:table-cell><fo:block>{L-ENG MONTH-L}{L-INA BULAN-L}</fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block>:</fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block><%=DateUtil.getDateStr(form.getAppDateFrom(),"^^ yyyy")%></fo:block></fo:table-cell>
+                            <fo:table-cell></fo:table-cell>
+                        </fo:table-row>
+                        
+                        <fo:table-row>
+                            <fo:table-cell></fo:table-cell>
+                            <fo:table-cell><fo:block>TREATY</fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block>:</fo:block></fo:table-cell>
+                            <fo:table-cell><fo:block>
+                                    <% if(form.getPeriodFrom()!=null){ %>
+                                    <%=DateUtil.getYear(form.getPeriodFrom())%>
+                                    <% } %> - 
+                                    <% if(form.getStFltTreatyType()!=null){ %>
+                                    <%=form.getStFltTreatyTypeDesc().toUpperCase()%>
+                                    <% } %>
+                            </fo:block></fo:table-cell>
+                            <fo:table-cell></fo:table-cell>
+                        </fo:table-row>   
+                        
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="5"><fo:block text-align="end" space-before.optimum="20pt">(in IDR)</fo:block></fo:table-cell>
+                        </fo:table-row>  
+                        
+                    </fo:table-body>
+                </fo:table>
+            </fo:block> 
+            
+            <fo:block font-size="8pt" text-align="left">
+                {L-ENG Herewith confirmed, that your share in this Treaty is as follow : -L}{L-INA Dengan ini disampaikan bahwa saham saudara dalam Treaty ini adalah sebagai berikut : -L}
+            </fo:block> 
+            
+            <fo:block font-size="8pt" line-height="20pt" ></fo:block>
+            
+            <!-- defines text title level 1-->
+            <fo:block font-size="8pt" line-height="10pt" space-after.optimum="10pt">
+                <%
+                
+                SQLAssembler sqa = new SQLAssembler();
+                
+                sqa.addSelect(" h.description as pol_type_desc,sum(e.claim_amount*a.ccy_rate) as premi_amt ");
+                
+                sqa.addQuery("   from ins_policy a "+
+                        "	inner join ins_pol_obj b on b.pol_id = a.pol_id "+
+                        "	inner join ins_pol_treaty c on c.ins_pol_obj_id = b.ins_pol_obj_id "+
+                        "	inner join ins_pol_treaty_detail d on d.ins_pol_treaty_id = c.ins_pol_treaty_id "+
+                        "	inner join ins_pol_ri e on e.ins_pol_tre_det_id = d.ins_pol_tre_det_id "+
+                        "	inner join ins_policy_types h on h.pol_type_id = a.pol_type_id "+
+                        "	inner join ent_master f on f.ent_id = e.member_ent_id "+
+                        "	inner join ins_treaty_detail g on g.ins_treaty_detail_id = e.ins_treaty_detail_id "
+                        );
+                
+                sqa.addClause("a.status in ('CLAIM','CLAIM ENDORSE') and a.claim_status = 'DLA'");
+                
+                sqa.addClause("g.treaty_type not in ('XOL1','XOL2','XOL3','XOL4','XOL5','OR')");
+                
+                sqa.addClause("a.effective_flag='Y'");
+                sqa.addClause("a.active_flag='Y'");
+                
+                if (form.getStPolicyTypeID()!=null) {
+                    sqa.addClause("h.pol_type_id = ?");
+                    sqa.addPar(form.getStPolicyTypeID());
+                }
+                
+                if (form.getAppDateFrom()!=null) {
+                    sqa.addClause("date_trunc('day',a.claim_approved_date) >= ?");
+                    sqa.addPar(form.getAppDateFrom());
+                }
+                
+                if (form.getAppDateTo()!=null) {
+                    sqa.addClause("date_trunc('day',a.claim_approved_date) <= ?");
+                    sqa.addPar(form.getAppDateTo());
+                }
+                
+                if(form.getPeriodFrom()!=null) {
+                    sqa.addClause("date_trunc('day',a.period_start) >= ?");
+                    sqa.addPar(form.getPeriodFrom());
+                }
+                
+                if(form.getPeriodTo()!=null) {
+                    sqa.addClause("date_trunc('day',a.period_start) <= ?");
+                    sqa.addPar(form.getPeriodTo());
+                }
+                
+                if(form.getStEntityID()!=null) {
+                    sqa.addClause("e.member_ent_id = ?");
+                    sqa.addPar(form.getStEntityID());
+                }
+                
+                if(form.getStBranch()!=null) {
+                    sqa.addClause("a.cc_code = ?");
+                    sqa.addPar(form.getStBranch());
+                }
+                
+                if(form.getStFltTreatyType()!=null){
+                    sqa.addClause("g.treaty_type = ?");
+                    sqa.addPar(form.getStFltTreatyType());
+                }                
+                
+                if (form.getStPolicyTypeGroupID()!=null) {
+                    sqa.addClause("h.ins_policy_type_grp_id = ?");
+                    sqa.addPar(form.getStPolicyTypeGroupID());
+                }
+                
+                String q = sqa.getSQL()+" group by h.description,a.pol_type_id order by a.pol_type_id";
+                
+                final DTOList r = ListUtil.getDTOListFromQuery(q,  sqa.getPar(), HashDTO.class);
+                
+                HashDTO tot = new HashDTO();
+                
+                tot.setFieldValueByFieldName("no", "");
+                tot.setFieldValueByFieldName("premi_amt", r.getTotal("premi_amt"));
+                tot.setFieldValueByFieldName("description", "TOTAL");
+                
+                r.add(tot);                
+                
+                final FOPTableSource fopTableSource = new FOPTableSource(
+                        3,
+                        new int [] {4,30,12},
+                        16.7,
+                        "cm"
+                        ) {
+                    public int getRowCount() {
+                        return r.size();
+                    }
+                    
+                    public Object getColumnValue(int rowNo, int columnNo) {
+                        HashDTO h = (HashDTO) r.get(rowNo);
+                        switch(columnNo) {
+                            case 0: return h.getFieldValueByFieldNameST("no")==null?String.valueOf(rowNo+1):"";
+                            case 1: return h.getFieldValueByFieldNameST("pol_type_desc");
+                            case 2: return h.getFieldValueByFieldNameBD("premi_amt");
+                        }
+                        return "?";
+                    }
+                    
+                    public String getColumnHeader(int columnNo) {
+                        switch(columnNo) {
+                            case 0: return "{L-ENG No -L}{L-INA No -L}";
+                            case 1: return "{L-ENG Type of Bonds -L}{L-INA Jenis Polis -L}";
+                            case 2: return "{L-ENG Net Claim -L}{L-INA Claim Netto -L}";
+                        }
+                        return "?";
+                    }
+                    
+                    public String getColumnAlign(int rowNo, int columnNo) {
+                        switch(columnNo) {
+                            case 2:
+                                return "end";
+                        };
+                        
+                        return super.getColumnAlign(rowNo, columnNo);    //To change body of overridden methods use File | Settings | File Templates.
+                    }
+                };
+                
+                fopTableSource.display(out);
+                %>
+            </fo:block>
+            
+            <fo:block font-size="6pt">
+                {L-ENG Print Date-L}{L-INA Tanggal Cetak-L} : <%=DateUtil.getDateStr(new Date(),"d-MMM-yyyy hh:mm:ss")%>  
+            </fo:block> 
+            
+            <fo:block font-size="8pt">
+                <fo:table table-layout="fixed">
+                    <fo:table-column column-width="100mm"/>
+                    <fo:table-column column-width="100mm"/>
+                    <fo:table-body>
+                        <fo:table-row>
+                            <fo:table-cell ><fo:block></fo:block></fo:table-cell>
+                            <fo:table-cell >
+                                <fo:block text-align="center">Jakarta, <%=DateUtil.getDateStr(new Date(),"d MMM yyyy")%></fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell ><fo:block></fo:block></fo:table-cell>
+                            <fo:table-cell >
+                                <fo:block text-align="center">S. E. &#x26; O</fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <fo:table-row>
+                            <fo:table-cell ><fo:block></fo:block></fo:table-cell>
+                            <fo:table-cell >
+                                <fo:block text-align="center">Reinsurance Dept.,</fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>           
+                    </fo:table-body>
+                </fo:table>
+            </fo:block>
+            
+            
+            
+            <fo:block id="end-of-document"><fo:marker
+                    marker-class-name="term">
+                    <fo:instream-foreign-object>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15cm" height="1cm" xml:space="preserve">     
+                            <rect style="fill:white;stroke:white" x="0" y="0" width="15cm" height="1cm"/>
+                        </svg>
+                    </fo:instream-foreign-object>
+                </fo:marker>
+            </fo:block> 
+            
+        </fo:flow>
+    </fo:page-sequence>
+</fo:root>

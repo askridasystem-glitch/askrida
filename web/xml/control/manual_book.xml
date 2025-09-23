@@ -1,0 +1,14 @@
+<events>
+   <event name="MANUAL_BOOK_PRINT">
+      <helper class="com.webfin.manual.helper.PrintManualBookHelper" method="printManual"/>
+      <forward id="ERROR" page="/pages/manual/blank.jsp"/>
+   </event>
+   <event name="INSURANCE_TOOLS_PRINT">
+      <helper class="com.webfin.manual.helper.PrintManualBookHelper" method="printInsuranceTools"/>
+      <forward id="ERROR" page="/pages/manual/blank.jsp"/>
+   </event>
+   <event name="MANUAL_BOOK_PRINT2">
+      <helper class="com.webfin.manual.helper.PrintManualBookHelper" method="printManual3"/>
+      <forward id="ERROR" page="/pages/manual/blank.jsp"/>
+   </event>
+</events>

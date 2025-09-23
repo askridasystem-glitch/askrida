@@ -1,0 +1,47 @@
+<events>
+   <event name="AR_INVOICE_LIST">
+      <helper class="com.webfin.ar.helper.ARInvoiceHelper" method="list"/>
+      <forward page="/pages/ar/invoice/listARInvoice.jsp"/>
+   </event>
+   <event name="AR_INVOICE_CREATE">
+      <helper class="com.webfin.ar.helper.ARInvoiceHelper" method="create"/>
+      <forward page="/pages/ar/invoice/Invoice.jsp"/>
+   </event>
+   <event name="AR_INVOICE_EDIT">
+      <helper class="com.webfin.ar.helper.ARInvoiceHelper" method="edit"/>
+      <forward page="/pages/ar/invoice/Invoice.jsp"/>
+   </event>
+   <event name="AR_INVOICE_VIEW">
+      <helper class="com.webfin.ar.helper.ARInvoiceHelper" method="view"/>
+      <forward page="/pages/ar/invoice/Invoice.jsp"/>
+   </event>
+   <event name="AR_INVOICE_SAVE">
+      <helper class="com.webfin.ar.helper.ARInvoiceHelper" method="save"/>
+      <forward event="AR_INVOICE_LIST"/>
+      <forward id="ERROR" event="AR_INVOICE_REFRESH"/>
+   </event>
+   <event name="AR_INVOICE_REFRESH">
+      <helper class="com.webfin.ar.helper.ARInvoiceHelper" method="refresh"/>
+      <forward page="/pages/ar/invoice/Invoice.jsp"/>
+      <forward id="ERROR" event="AR_INVOICE_REFRESH"/>
+   </event>
+   <event name="AR_INVOICE_CHG_CCY">
+      <helper class="com.webfin.ar.helper.ARInvoiceHelper" method="refresh"/>
+      <forward page="/pages/ar/invoice/Invoice.jsp"/>
+      <forward id="ERROR" event="AR_INVOICE_REFRESH"/>
+   </event>
+   <event name="AR_INVOICE_DEL_ITEM">
+      <helper class="com.webfin.ar.helper.ARInvoiceHelper" method="delItem"/>
+      <forward page="/pages/ar/invoice/Invoice.jsp"/>
+      <forward id="ERROR" event="AR_INVOICE_REFRESH"/>
+   </event>
+   <event name="AR_INVOICE_ADD_ITEM">
+      <helper class="com.webfin.ar.helper.ARInvoiceHelper" method="addItem"/>
+      <forward page="/pages/ar/invoice/Invoice.jsp"/>
+      <forward id="ERROR" event="AR_INVOICE_REFRESH"/>
+   </event>
+   <event name="AR_INVOICE_PRT">
+      <helper class="com.webfin.ar.helper.ARInvoiceHelper" method="printInvoice"/>
+      <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+   </event>
+</events>

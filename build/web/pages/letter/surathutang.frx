@@ -1,0 +1,4 @@
+<forms>
+   <form name="surathutangform" class="com.webfin.ar.forms.InvoiceForm" view="suratHutangForm.jsp" />
+   <form name="surathutanglist" class="com.webfin.ar.forms.InvoiceListForm" view="suratHutangList.jsp" />
+</forms>

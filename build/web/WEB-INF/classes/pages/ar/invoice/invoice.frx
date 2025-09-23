@@ -1,0 +1,18 @@
+<forms>
+   <form name="invoiceform" class="com.webfin.insurance.form.InvoiceForm" view="invoiceForm.jsp" />
+   <form name="invoicelist" class="com.webfin.insurance.form.InvoiceListForm" view="invoiceList.jsp" />
+   <form name="invoiceinwardtreatyform" class="com.webfin.insurance.form.InvoiceInwardTreatyForm" view="invoiceInwardTreatyForm.jsp" />
+   <form name="invoiceinwardtreatylist" class="com.webfin.insurance.form.InvoiceInwardTreatyListForm" view="invoiceInwardTreatyList.jsp" />
+   <form name="invoiceclaiminwardtreatyform" class="com.webfin.insurance.form.InvoiceClaimInwardTreatyForm" view="invoiceClaimInwardTreatyForm.jsp" />
+   <form name="invoiceclaiminwardtreatylist" class="com.webfin.insurance.form.InvoiceClaimInwardTreatyListForm" view="invoiceClaimInwardTreatyList.jsp" />
+   <form name="arinvoiceform" class="com.webfin.ar.forms.InvoiceForm" view="arinvoiceForm.jsp" />
+   <form name="arinvoicelist" class="com.webfin.ar.forms.InvoiceListForm" view="arinvoiceList.jsp" />
+   <form name="invoiceclaimform" class="com.webfin.insurance.form.InvoiceClaimForm" view="invoiceClaimForm.jsp" />
+   <form name="invoiceclaimlist" class="com.webfin.insurance.form.InvoiceClaimListForm" view="invoiceClaimList.jsp" />
+   <form name="inwardtreatyuploadform" class="com.webfin.insurance.form.InvoiceInwardTreatyForm" view="inwardTreatyUploadForm.jsp" />
+   <form name="invoiceclaimexgratialist" class="com.webfin.insurance.form.InvoiceClaimListForm" view="invoiceClaimExGratiaList.jsp" />
+   <form name="invoiceclaimexgratiaform" class="com.webfin.insurance.form.InvoiceClaimForm" view="invoiceClaimExGratiaForm.jsp" />
+   <form name="invoiceclaimsubrolist" class="com.webfin.insurance.form.InvoiceClaimListForm" view="invoiceClaimSubroList.jsp" />
+   <form name="invoiceclaimsubroform" class="com.webfin.insurance.form.InvoiceClaimForm" view="invoiceClaimSubroForm.jsp" />
+   <form name="inwardfacultativeuploadform" class="com.webfin.insurance.form.InvoiceForm" view="inwardFacultativeUploadForm.jsp" />
+</forms>

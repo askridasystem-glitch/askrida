@@ -1,0 +1,99 @@
+/***********************************************************************
+ * Module:  com.webfin.entity.forms.MasterMarketterForm
+ * Author:  Denny Mahendra
+ * Created: Jan 21, 2008 10:24:55 AM
+ * Purpose: 
+ ***********************************************************************/
+
+package com.webfin.contact.forms;
+
+import com.crux.web.form.Form;
+import com.crux.util.DTOList;
+import com.crux.util.SQLAssembler;
+import com.crux.util.IDFactory;
+import com.crux.util.SQLUtil;
+import com.crux.ff.model.FlexTableView;
+import com.crux.pool.DTOPool;
+
+public class MasterMarketterForm extends Form {
+   private DTOList list;
+   private FlexTableView fft;
+   private String selected;
+
+   public String getSelected() {
+      return selected;
+   }
+
+   public void setSelected(String selected) {
+      this.selected = selected;
+   }
+
+   public FlexTableView getFft() {
+      return fft;
+   }
+
+   public void setFft(FlexTableView fft) {
+      this.fft = fft;
+   }
+
+   public DTOList getList() throws Exception {
+      if (list==null) {
+         list = new DTOList();
+         list.activateFilter();
+      }
+
+      SQLAssembler sqa = new SQLAssembler();
+
+      sqa.addSelect("*");
+
+      sqa.addQuery("from ff_table");
+
+      sqa.addOrder("ref1");
+
+      sqa.addClause("fft_group_id='FFT_MARKETR'");
+
+      sqa.addFilter(list.getFilter());
+
+      list = sqa.getList(FlexTableView.class);
+
+      return list;
+   }
+
+   public void setList(DTOList list) {
+      this.list = list;
+   }
+
+   public void initialize() {
+      super.initialize();    //To change body of overridden methods use File | Settings | File Templates.
+      setFormMode("LIST","MASTER MARKETTER");
+   }
+
+   public void btAdd() {
+      fft = new FlexTableView();
+      fft.markNew();
+
+      fft.setStFFTGroupID("FFT_MARKETR");
+
+      setFormMode("EDIT","NEW MARKETTER");
+   }
+
+   public void btEdit() {
+      fft = (FlexTableView)DTOPool.getInstance().getDTO(FlexTableView.class, selected );
+
+      fft.markUpdate();
+
+      setFormMode("EDIT","NEW MARKETTER");
+   }
+
+   public void btnSave() throws Exception {
+
+      if (fft.isNew()) fft.setStFFTID(String.valueOf(IDFactory.createNumericID("FFT")));
+
+      SQLUtil.qstore(fft);
+      btnCancel();
+   }
+
+   public void btnCancel() {
+      setFormMode("LIST","MASTER MARKETTER");
+   }
+}

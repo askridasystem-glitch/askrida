@@ -1,0 +1,28 @@
+<events>
+   <event name="FRAME_GEN">
+      <helper class="com.crux.common.controller.Helper" method="frameGenerator"/>
+      <forward page="/pages/main/framegen.jsp"/>
+   </event>
+   <event name="DLG_AUTOCLOSE">
+      <forward page="/pages/main/dlgautoclose.jsp"/>
+   </event>
+   <event name="LOVPOP">
+      <helper class="com.crux.common.controller.Helper" method="lovPop"/>
+      <forward page="/pages/main/lovPop.jsp"/>
+   </event>
+   <event name="CLR_POOL">
+      <forward page="/pages/main/clearPool.jsp"/>
+   </event>
+   <event name="FILE_UPLOAD">
+      <helper class="com.crux.file.helper.FileUploadHelper" method="upload"/>
+      <forward page="/pages/main/fup.jsp"/>
+   </event>
+   <event name="FILE" cacheable="true">
+      <helper class="com.crux.file.helper.FileUploadHelper" method="download"/>
+      <forward page="/pages/main/fup.jsp"/>
+   </event>
+   <event name="ZONE_SELECT">
+      <helper class="com.webfin.insurance.helper.InsurancePolicyHelper" method="selectZone"/>
+      <forward page="/pages/insurance/policy/selectZone.jsp"/>
+   </event>
+</events>

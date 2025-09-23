@@ -1,0 +1,5 @@
+<forms>
+   <form name="utilities" class="com.webfin.utilities.form.Utilities" view="utilities.jsp"/>
+  <form name="fix_data" class="com.webfin.utilities.form.Utilities" view="fixData.jsp"/>
+  <form name="claimDocumentH2H_form" class="com.webfin.utilities.form.Utilities" view="claimDocumentH2HForm.jsp" />
+</forms>

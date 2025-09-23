@@ -1,0 +1,28 @@
+<control-files>
+   <control-file name="common.xml"/>
+   <control-file name="configparam.xml"/>
+   <control-file name="login.xml"/>
+   <control-file name="user.xml"/>
+   <control-file name="gl_account_type.xml"/>
+   <control-file name="gl_journal_master.xml"/>
+   <control-file name="gl_dept.xml"/>      
+   <control-file name="gl_accounts.xml"/>      
+   <control-file name="gl_entry.xml"/>
+   <control-file name="gl_periods.xml"/>      
+   <control-file name="gl.xml"/>      
+   <control-file name="ins_pol.xml"/>      
+   <control-file name="ins_rpt.xml"/>      
+   <control-file name="ar_receipt.xml"/>
+   <control-file name="ar_invoice.xml"/>
+   <control-file name="entity.xml"/>
+   <control-file name="report.xml"/>
+   <control-file name="manual_book.xml"/>
+   <control-file name="postalcode.xml"/>
+   <control-file name="job.xml"/> 
+   <control-file name="utilities.xml"/>
+   <control-file name="tp_entry.xml"/>
+   <control-file name="pb_gl_entry.xml"/>
+   <control-file name="syariah_gl_entry.xml"/>
+   <control-file name="memorial_gl_entry.xml"/>
+   <control-file name="tp_reinsurance_entry.xml"/>
+</control-files>

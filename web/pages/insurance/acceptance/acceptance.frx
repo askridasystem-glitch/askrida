@@ -1,0 +1,4 @@
+<forms>
+   <form name="acceptance_edit" class="com.webfin.acceptance.form.AcceptanceForm" view="acceptanceForm.jsp" return="ENT_LIST"/>
+   <form name="acceptance_list" class="com.webfin.acceptance.form.AcceptanceListForm" view="acceptanceList.jsp" return="ENT_LIST"/>
+</forms>

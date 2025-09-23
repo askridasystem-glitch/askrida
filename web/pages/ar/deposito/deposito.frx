@@ -1,0 +1,28 @@
+<forms>
+   <form name="pembentukan_list" class="com.webfin.ar.forms.PembentukanList" view="pembentukan_list.jsp"/>
+   <form name="pembentukan_form" class="com.webfin.ar.forms.PembentukanForm" view="pembentukan_form.jsp"/>
+   <form name="pencairan_list" class="com.webfin.ar.forms.PencairanList" view="pencairan_list.jsp"/>
+   <form name="pencairan_form" class="com.webfin.ar.forms.PencairanForm" view="pencairan_form.jsp"/>
+   <form name="bunga_list" class="com.webfin.ar.forms.BungaList" view="bunga_list.jsp"/>
+   <form name="bunga_form" class="com.webfin.ar.forms.BungaForm" view="bunga_form.jsp"/>
+   <form name="budeplist" class="com.webfin.ar.forms.BungaDepositoList" view="bungaDepositoList.jsp" />
+   <form name="budepform" class="com.webfin.ar.forms.BungaDepositoForm" view="bungaDepositoForm.jsp" />
+   <form name="pembentukanbunga_form" class="com.webfin.ar.forms.PembentukanForm" view="pembentukanbunga_form.jsp"/>
+   <form name="izinbentuk_list" class="com.webfin.ar.forms.PengajuanIzinList" view="izinbentuk_list.jsp"/>
+   <form name="izinbentuk_form" class="com.webfin.ar.forms.PengajuanIzinForm" view="izinbentuk_form.jsp"/>
+   <form name="bentukdepo_list" class="com.webfin.ar.forms.PembentukanList" view="bentukdepo_list.jsp"/>
+   <form name="bentukdepo_form" class="com.webfin.ar.forms.PembentukanForm" view="bentukdepo_form.jsp"/>
+   <form name="bentukdepobukti_form" class="com.webfin.ar.forms.PembentukanForm" view="bentukdepobukti_form.jsp"/>
+   <form name="izincair_list" class="com.webfin.ar.forms.PengajuanIzinList" view="izincair_list.jsp"/>
+   <form name="izincair_form" class="com.webfin.ar.forms.PengajuanIzinForm" view="izincair_form.jsp"/>
+   <form name="cairdepo_list" class="com.webfin.ar.forms.PencairanList" view="cairdepo_list.jsp"/>
+   <form name="cairdepo_form" class="com.webfin.ar.forms.PencairanForm" view="cairdepo_form.jsp"/>
+   <form name="cairdepo_real_form" class="com.webfin.ar.forms.PencairanForm" view="cairdepo_real_form.jsp"/>
+   <form name="izinbunga_list" class="com.webfin.ar.forms.PengajuanIzinList" view="izinbunga_list.jsp"/>
+   <form name="izinbunga_form" class="com.webfin.ar.forms.PengajuanIzinForm" view="izinbunga_form.jsp"/>
+   <form name="bentukdepoposisi_form" class="com.webfin.ar.forms.PembentukanForm" view="bentukdepoposisi_form.jsp"/>
+   <form name="izincairnobuk_form" class="com.webfin.ar.forms.PengajuanIzinForm" view="izincairnobuk_form.jsp"/>
+   <form name="bentukulangdepo_form" class="com.webfin.ar.forms.PencairanForm" view="bentukulangdepo_form.jsp"/>
+   <form name="pembentukancair_form" class="com.webfin.ar.forms.PembentukanForm" view="pembentukancair_form.jsp"/>
+   <form name="editbilyet_form" class="com.webfin.ar.forms.PembentukanForm" view="editbilyet_form.jsp"/>
+</forms>

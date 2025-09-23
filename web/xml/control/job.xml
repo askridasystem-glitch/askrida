@@ -1,0 +1,46 @@
+<events>
+    <event name="CONFIG_JOB">
+        <helper class="com.crux.jobs.helper.JobConfigHelper" method="listJob"/>
+        <forward page="/pages/jobconfig/listJobConfig.jsp"/>
+    </event>
+    <event name="JOB_ADD">
+        <helper class="com.crux.jobs.helper.JobConfigHelper" method="createJob"/>
+        <forward page="/pages/jobconfig/saveJobConfig.jsp"/>
+    </event>
+    <event name="JOB_EDIT">
+        <helper class="com.crux.jobs.helper.JobConfigHelper" method="editJob"/>
+        <forward page="/pages/jobconfig/saveJobConfig.jsp"/>
+    </event>
+    <event name="JOB_CHANGE_EVENT">
+        <helper class="com.crux.jobs.helper.JobConfigHelper" method="changeEvent"/>
+        <forward page="/pages/jobconfig/saveJobConfig.jsp"/>
+    </event>
+    <event name="JOB_SAVE">
+        <helper class="com.crux.jobs.helper.JobConfigHelper" method="saveJob"/>
+        <forward page="/pages/jobconfig/JobAck.jsp"/>
+    </event>
+
+    <event name="JOB_DELETE">
+        <helper class="com.crux.jobs.helper.JobConfigHelper" method="deleteJob"/>
+        <forward page="/pages/jobconfig/JobAck.jsp"/>
+        <forward id="ERROR" event="CONFIG_JOB"/>
+    </event>
+
+    
+ <event name="JOB_INVOKE">
+       <helper class="com.crux.jobs.helper.JobConfigHelper" method="invokeJob"/>
+       <forward page="/pages/jobconfig/JobInvokeAck.jsp"/>
+ <forward id="ERROR" event="CONFIG_JOB"/>
+ </event>
+    
+    <event name="JOB_TRIGGER">
+        <helper class="com.crux.jobs.helper.JobConfigHelper" method="triggerJob"/>
+        <!--<forward page="/pages/jobconfig/JobAck.jsp"/>-->
+        <forward event="JOB_LOG_VIEW"/>
+        <forward id="ERROR" event="CONFIG_JOB"/>
+    </event>
+    <event name="JOB_LOG_VIEW">
+        <helper class="com.crux.jobs.helper.JobConfigHelper" method="viewJobLog"/>
+        <forward page="/pages/jobconfig/joblog.jsp"/>
+    </event>
+</events>

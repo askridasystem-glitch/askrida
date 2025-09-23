@@ -1,0 +1,5 @@
+<forms>
+   <form name="user_edit" class="com.crux.login.form.UserForm" view="userform.jsp"/>
+   <form name="userlist" class="com.crux.login.form.UserListForm" view="userListform.jsp"/>
+   <form name="user_newpassword" class="com.crux.login.form.UserForm" view="setPasswordForm.jsp"/>
+</forms>

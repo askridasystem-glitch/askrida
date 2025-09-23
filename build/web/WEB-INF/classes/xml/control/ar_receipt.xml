@@ -1,0 +1,148 @@
+<events>
+   <event name="AR_RECEIPT_LIST">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="list"/>
+      <forward page="/pages/ar/receipt/listARReceipt.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_CREATE">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="create"/>
+      <forward page="/pages/ar/receipt/ARReceipt.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_EDIT">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="edit"/>
+      <forward page="/pages/ar/receipt/ARReceipt.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_VIEW">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="view"/>
+      <forward page="/pages/ar/receipt/ARReceipt.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_RECALC">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="recalculate"/>
+      <forward page="/pages/ar/receipt/ARReceipt.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SAVE">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="save"/>
+      <forward event="AR_RECEIPT_LIST"/>
+      <forward id="ERROR" event="AR_RECEIPT_RECALC"/>
+   </event>
+   <event name="AR_RECEIPT_SEARCH_INVOICE">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchInvoice"/>
+      <forward page="/pages/ar/receipt/searchInvoice.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_ADD_INVOICE">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="addInvoice"/>
+      <forward page="/pages/ar/receipt/ARReceipt.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_ADD_NOTE">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="addNote"/>
+      <forward page="/pages/ar/receipt/ARReceipt.jsp"/>
+   </event>
+   <event name="AR_RCP_DEL_NOTE">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="delNote"/>
+      <forward page="/pages/ar/receipt/ARReceipt.jsp"/>
+   </event>
+   <event name="AR_RCP_DEL_INVOICE">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="delInvoice"/>
+      <forward page="/pages/ar/receipt/ARReceipt.jsp"/>
+   </event>
+   <event name="AR_RCP_CHG_CCY">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="chgCurrency"/>
+      <forward page="/pages/ar/receipt/ARReceipt.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SEARCH_SURAT_HUTANG">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchSuratHutang"/>
+      <forward page="/pages/ar/receipt/searchSuratHutang.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SEARCH_TITIPAN">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchTitipan"/>
+      <forward page="/pages/ar/receipt/searchTitipan.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SEARCH_PL">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchPL"/>
+      <forward page="/pages/ar/receipt/searchPL.jsp"/>
+   </event>
+      <event name="AR_RECEIPT_PRT">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="printReceipt"/>
+      <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+   </event>
+   <event name="AR_TITIPAN_DEL_LINE">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="delLine"/>
+      <forward page="/pages/ar/receipt/titipanPremiForm.jsp"/>
+   </event>
+  <event name="AR_RECEIPT_SEARCH_CLAIM">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchClaim"/>
+      <forward page="/pages/ar/receipt/searchClaim.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SEARCH_NO">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchClaimNo"/>
+      <forward page="/pages/ar/receipt/searchNo.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SEARCH_LETTER">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchLetter"/>
+      <forward page="/pages/ar/receipt/searchLetter.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SEARCH_LKS">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchLKS"/>
+      <forward page="/pages/ar/receipt/searchLKS.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SEARCH_PLNO">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchPLNo"/>
+      <forward page="/pages/ar/receipt/searchPLNo.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SEARCH_KWITANSI">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchKwitansi"/>
+      <forward page="/pages/ar/receipt/searchKwitansi.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SEARCH_TITIPAN_MINUS">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchTitipanMinus"/>
+      <forward page="/pages/ar/receipt/searchTitipan.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_EXCEL">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="printExcel"/>
+      <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_EXCEL_KLAIM">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="printExcelKlaim"/>
+      <forward id="ERROR" page="/pages/insurance/policy/blank.jsp"/>
+   </event>
+  <event name="AR_RECEIPT_SEARCH_VLD_CLAIM">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchVldClaim"/>
+      <forward page="/pages/ar/receipt/searchVldClaim.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SURAT_HUTANG_RI">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchSuratHutangReas"/>
+      <forward page="/pages/ar/receipt/searchSuratHutangRI.jsp"/> 
+   </event>
+   <event name="AR_RECEIPT_SEARCH_INVOICE_RI">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchInvoiceRI"/>
+      <forward page="/pages/ar/receipt/searchInvoiceRI.jsp"/>
+   </event>
+    <event name="AR_RECEIPT_SEARCH_SURAT_HUTANG_COMM">
+        <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchSuratHutangComm"/>
+        <forward page="/pages/ar/receipt/searchSuratHutangComm.jsp"/>
+    </event>
+
+    <event name="AR_RECEIPT_SURAT_HUTANG_RI_REKAP">
+        <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchSuratHutangReasRekap"/>
+        <forward page="/pages/ar/receipt/searchSuratHutangRIRekap.jsp"/>
+    </event>
+    <event name="AR_RECEIPT_SEARCH_NOMOR_REKAP">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchNomorRekap"/>
+      <forward page="/pages/ar/receipt/searchNomorRekap.jsp"/>
+   </event>
+   <event name="AR_RECEIPT_SEARCH_REFERENCE_NO">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchInvoiceByReferenceNo"/>
+      <forward page="/pages/ar/receipt/searchReference.jsp"/>
+   </event>
+    <event name="AR_RECEIPT_SEARCH_SURAT_HUTANG_CLAIM">
+        <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchSuratHutangClaim"/>
+        <forward page="/pages/ar/receipt/searchSuratHutangClaim.jsp"/>
+    </event>
+    <event name="AR_RECEIPT_NOMOR_TRX_RI">
+      <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchNomorTransaksi"/>
+      <forward page="/pages/ar/receipt/searchNomorTrxRI.jsp"/>
+   </event>
+    <event name="AR_RECEIPT_SEARCH_SURAT_HUTANG_IZINCAIR">
+        <helper class="com.webfin.ar.helper.ARReceiptHelper" method="searchSuratHutangIzinCair"/>
+        <forward page="/pages/ar/receipt/searchSuratHutangIzinCair.jsp"/>
+    </event>
+</events>

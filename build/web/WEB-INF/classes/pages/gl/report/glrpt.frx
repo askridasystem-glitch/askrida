@@ -1,0 +1,4 @@
+<forms>
+   <form name="glrptdsgnform" class="com.webfin.gl.report.form.GLRptDesignerForm" view="glrptdesign.jsp" return="GL_REPORT"/>
+
+</forms>

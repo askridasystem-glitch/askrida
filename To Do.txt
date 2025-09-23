@@ -1,0 +1,1095 @@
+1. Betulin perhitungan otomatis Bank garansi -> udah
+2. Buat checking simpan polis history, no polis jangan sampai kurang 00 -> udah
+3. Buat auto wording untuk restitusi PA Kreasi -> udah
+4. Ketika simpan ke 4 tabel lama, check ke pol_type kode lama nya, ambil settingan kode lama nya -> udah
+5. Buat endorse intern -> ENDORSE INT
+6. Buat perhitungan reas bppdan bagi berdasarkan jumlah tahun(periode pertanggungan) &
+    tambah tanggal produksi di detil member reas -> udah
+7. program restitusi premi masih kacau di total premi bruto dan posting utang piutang
+8. cek ubah(reverse) dan setujui(reverse), ada yang salah -> udah
+9. endorse byk yg doble nomor nya, cegah ini -> udah
+10. cek lg restitusi premi
+11. history jgn sampe bisa period end = period start -> udah
+12. BUAT KOMISI OTOMATIS BDASARKAN SETTINGAN KOMISI/CABANG DAN KOMISI TSB TIDAK BISA DI EDIT DAN TIDAK 
+    BISA DI CETAK NOTA NYA JUGA
+13. buat endorse R/I dari polis KBG Mamuju, kurangi dari premi reas seharusnya - premi reas awal yg salah
+14. reverse endorse KBG Mamuju, hitung ulang, setujui ulang lagi -> udah
+15. block jika endorsemen tgl nya kurang dr current date -> udah
+16. cetak lampiran endorse jgn tmpil smua (udah)
+17. buat settingan pembagian komisi & rate pajak per daerah, jika tidak ada maka ambil settingan standar (pending)
+18. blocking view data utk div bonding hanya bs lihat data SB dan KBG -> sudah 
+19. buat pemisahan coasuransi PA Kreasi : Co-Cover dan Co murni (urgent) -> SUDAH
+20. buat fasilitas input no ri slip di objek 1 lalu apply ke smua objek utk cash management -> udah
+21. limit komisi ubah jgn per cabang juga, samakan dgn metode limit akseptasi -> sudah
+22. buat fasilitas reverse utk bag u/w -> Sudah
+23. bppdan tsi max nya harus mengikuti % share askrida jika coas -> udah
+24. ubah clausula jgn per daerah sama semua, di kelompokkan yang umum bs untuk semua daerah, yang khusus
+    utk daerah tertentu tetap
+25. ubah tabel rate koas kreasi -> UDAH
+26. untuk polis sudah tutup produksi otomatis pindah current date jika di ubah -> udah, tapi ada bugs klo admin super edit pasti pindah juga tanggalnya -> udah
+27. makassar agar bisa input no polis secara manual utk semua jenis asuransi jika settingan can_edit_policyno diaktifkan, dan utk BG berikut PP nya -> udah
+28. buat settingan PA Kreasi untuk jangka waktu 1 - 4 tahun ke BAJ atau JS, sedangkan > = 5 tahun ke JS
+29. maipark tsi max nya harus mengikuti % share askrida jika coas
+30. CIS apakah bisa per bank per object
+31. endorsemen gempa bumi masih ngaco -> udah
+32. polis jika endorse premi reas nya suka 1.00 ex : 010111111110412501 -> udah, bugs 0 / 0 = 1.00
+33. upload excel konversi suka ngaco baca excel yang lain -> udah
+34. bugs jika endorse dan manual nilai pembayaran, tetap mengikuti nilai polis nya
+35. pisahkan jika upload excel ke folder lain biar gampang maintenance nya
+36. calculate co-cover komisi nya ambil dr komisi askrida di tab coinsurance aja - > udah
+37. PERHITUNGAN cover reinsurance pindahkan ke bag treaty reas -> udah
+38. bugs tanggal penagihan di pembayran jika endorse hrsnya sesuai tgl endorse, jgn ikut tgl polis asli -> udah
+39. bugs jika endorsemen maka reas nya mengikuti current date x
+40. buat settingan limit tsi, komisi, klaim per periode valid
+41. buat validasi limit daerah/pusat ketika approval -> udah
+42. posting reas per polis aja jgn per object -> udah
+43. bugs endorse kreasi jgn sampai premi di detil n di cover tidak sama
+44. pembentukan hutang pembayaran/pengembalian premi restitusi salah harusnya di AP
+    dan munculnya harus nya di menu pembayaran pengembalian premi
+45. perhitungan klaim endorse masih salah seharusnya perhitungan ambil yang dr nilai klaim endorse nya -> udah
+46. perhitungan PA Kreasi, set coas ke BAJ aja, tidak boleh JS, coas line juga cuma 1 ke BAJ saja
+47. perhitungan endorse pa kreasi masih bugs, cek jika tidak ada perubahan yang mempengaruhi
+    rate/nilai koas, maka premi koas null/0 tidak apa2x, bisa di setujui
+48. claim inward treaty waktu buat lkp error
+49. ubah cash management terlanjur masuk
+50. tambah report Surety bond unconditional -> udah
+51. cek 2 line komisi pontianak -> udah
+52. pembuatan program akumulasi resiko SB & KBG -> udah
+53. pembuatan program otomatisasi update balance/akumulasi resiko jika periode akhir + 30 hari sudah expire
+53. buat settingan tabel limit TSI per principal -> udah
+
+CLAIM
+------
+1.object klaim lkp harus punya identitas dgn object pada polis nya ,harus sama object id link nya
+2.  
+
+INWARD TREATY
+----------------------------------
+1. akun Cash Loss  ganti STOA -> udah
+2. tambah desc akun jenis treaty
+3. Underwriting Year :  
+   Treaty 
+   COB
+   PINDAH KE DETAIL
+4. tambah field kelas polis di detail
+5. BUAT TABEL SETTINGAN SHARE OTOMATIS
+6. Customer -> CEDING COMPANY -> udah
+7. tambah detail adjuster fee -> udah
+8. tambah date of loss -> udah
+
+claim inward TREATY CASH LOSS
+----------------------------------
+1.tambah desc cash loss di detail jumlah klaim
+2. tambah field no
+3 . TRANSACTION NO -> NO PLA/DLA
+4. TAMPILKAN STATUS (PLA/DLA) 
+5. TRANSACTION DATE -> ENTRY DATE
+6. Mutation Date -> APPROVED DATE
+7. Quartal HILANGKAN
+8.Customer -> CEDING COMPANY
+9. TAMBAH FIELD STATUS PLA/DLA KETIKA CREATE DLA:
+	- INTERIM
+	- FULL & FINAL
+
+Inward Facultative 
+----------------------------------
+1. TAMBAHKAN FLEXIBLE FIELD PER JENIS ASURANSI
+2. Klaim HILANGKAN DARI DETAIL
+3. TAMBAH FIELD FILE ATTACHMENT 
+
+INWARD EXCESS OF LOSS
+-----------------------------------
+1. REINSTATEMENT (PENGURANG) 
+
+1. INWARD HARUS BISA SIMPAN POL_TYPE_GROUP_ID
+2. Pemilihan principal BG masih belum benar ambil data javascript nya -> udah
+
+PEMBETULAN PROGRAM REASURANSI
+--------------------------------------
+1. Perbaikan perhitungan reas SB dan BG jika polis dibatalkan -> sudah
+2. Buat pemilihan zona gempa agar otomatis mengambil zona nya -> sudah
+3. Buat perhitungan rate EQ reas (Maipark dan Bppdan) agar otomatis dr tabel -> sudah
+4. Buat perhitungan reas Marine Hull berdasarkan kelas kapal -> sudah
+5. Endorse polis jangka panjang agar harus dilakukan validasi dan approval oleh bagian reas lebih dulu -> sudah
+6. Bag U/W bisa melakukan permintaan spreading manual pada bag reas dengan mencentang flag manual reas,
+   maka bag reas harus melakukan spreading manual dan disetujui reas, baru U/W bisa menyetujui polis tsb -> sudah
+7. Reverse polis harus menghilangkan ket approved_who n approved_date -> sudah
+8. cek bppdan jika periode awal - tanggal polis >= 1 tahun maka jumlah split tahun - 1 krn sudah habis masa berlaku tahun pertama
+
+
+klaim
+1. untuk daerah 23,11,50,24 jika penyebab nya kecelakaan maka jumlah klaim boleh melebihi TSI krn ada santunan
+
+-polis restitusi harus nol TSI nya bikin checking -> sudah
+-
+
+- PROGRAM REAS JIKA POLIS RENEWAL TREATY NYA MASIH AMBIL YANG POLIS INDUK -> udah
+- PROGRAM REAS JIKA ENDORSE MAKA TGL BPPDAN BELUM AMBIL YANG KONDISI ENDORSE -> udah
+- buat settingan limit komisi tambah parameter pemasar -> udah
+- UBAH PROGRAM AKUMULASI RESIKO PRINCIPAL JADI YANG BERDASARKAN PREMI OR ASKRIDA SAJA  -> SUDAH
+- BUAT PROGRAM SETTINGAN CEK LIMIT KOMISI PER ITEM -> sudah
+- BUAT PROGRAM REAS PER COVER
+
+
+bulan oktober
+1. monitoring pembayaran secara otomatis  muncul semua cicilan nya jika cicilan -> sudah
+2. konfirmasi teknis klaim untuk jumlah klaim jgn di tambahkan adjuster fee
+
+
+november 2013
+-------------------
+1. polis coinsurance in jika ada member coas lagi maka harus di jurnal -> sudah
+2. ubah r/i jurnal balik(nol) dulu jika di reverse r/i, pas approve r/i di jurnal yg sebenarnya, jgn data selisih saja -> SUDAH
+3. buat penomoran nomor bukti inward reas dan klaim inward utk penomoran internal -> SUDAH
+4. no bukti jurnal reas buat penomoran khusus sebagai pembeda -> SUDAH
+5. blocking periode awal polis jgn sampai bisa tahun lama
+6. BETULKAN PROGRAM REVERSE JIKA DI REVERSE TETAP JURNAL DENGAN JURNAL BALIK SEHINGGA JADI NOL DI AR AP DAN JURNAL -> SUDAH
+7. Export saham buat ke csv aja jangan excel -> sudah
+8. cek laporan reas NO. 11 angka di reas dgn di export saham blm sama -> sudah
+9. proses ulang treaty pa kreasi salah kode koas -> sudah
+10. proses endorse dr wicak -> sudah
+11. laporan reas no. 8 blm sama dengan laporan no 11 & 12 angka nya -> handle by pras
+12. benerin transaksi klaim subrogasi
+13. menu reasuransi tambah pilihan mau di round atau tidak perhitungan nya -> sudah, di round 2 digit saja hasil konsul dgn reas
+14. entry backdate harus ada pengecekan lagi hanya bisa mundur 1 bulan ke belakang saja
+
+januari 2014
+-------------------------
+1. perhitungan polis gempa bumi rate baca dr tabel, sbgai rate minimal, > bisa, < blok
+2. TSI reas masih salah, hrs di kalikan lg dgn first loss/cover
+3. inject rate koas kenaikan 90% baki debet rata usia JS -> sudah
+4. cadangan premi per september -> sudah
+5. inject settingan Treaty 2014
+6. reverse data invoice lama nya hrs di update posted_flag = 'N
+7. cek kode resiko polis fire sama atau ga antara kode resiko pilihan dgn ketikan
+8. maipark tdnya 5% & 25% skrg jadi 15% semua -> sudah
+9. kurs treaty skrg 10.000 -> sudah
+
+
+februari 2014
+----------------------------------------------------------------
+1. blocking OJK :
+      - block bisa entry diskon, komisi, feebase, hfee, brokerfee dgn nilai maksimal 25% yang
+         periode awalnya >= 1 maret 2014 utk kendaraan bermotor
+      - block bisa entry diskon, komisi, feebase, hfee, brokerfee dgn nilai maksimal 15% yang
+        periode awalnya >= 1 februari 2014 utk harta benda
+
+2. TAMBAH SELECT ALL DI MENU MEMBER REAS
+3. maipark jika renewal blm membaca limit eq baru
+4. input tanggal bayar blm block tanggal produksi
+5. hilangkan provinsi zona gempa
+
+
+6. approval reas jgn hilangkan jika sudah approval manual oleh reas -> done
+7. CEK JIKA POLIS DAN TSI BLANK JGN BISA DI SIMPAN
+
+8. buat menu jurnal memorial -> sudah
+9. uang muka klaim di item klaim double
+10. jika endorse batal total maka tandai flag jgn muncul di outstanding
+11. blok yang endorse batal dan polis baru jgn bisa khusus fire -> sudah
+12. bugs di konversi realisasi titipan premi hanya bisa ambil 1 invoice -> sudah
+13. bugs di realisasi titipan lainnya tidak ter cek tanggal bayarnya -> sudah
+14. buat blocking reas jika sudah closing jgn bisa di edit
+
+15. tambahkan period factor ke objek pertanggungan jgn hanya di polis -> sudah
+
+------------------------------------------------------------
+                    POLIS DIGITAL
+------------------------------------------------------------
+1. Buat tombol baru terpisah utk pencetakan polis digital, tombol cetak lama(digitized sign) tetap ada -> sudah
+2. Penyimpanan polis digital -> sudah
+3. laporan penggunaan materai
+4. link dengan system umum utk stok materai
+5. minta wording terbaru per polis dr u/w
+6. buat menu view polis digital yg tersimpan di tampilan form input
+7. tambah label bea materai lunas
+
+----------------------------------------------
+OKTOBER 2014
+---------------------------------------------
+1. waktu pembayaran klaim, search nya belum ngecek apakah klaim tsb sudah di entry sebelumnya -> sudah
+2. pada saat posting nasional, tampilkan jika ada cabang yg belum di posting
+
+NOVEMBER 2014
+---------------------------------------------
+1. Sistem interkoneksi bank
+2. Modul Laporan Khusus cabang semarang -> sudah
+3. tambah limit of liability di detil resiko -> sudah
+
+1. sistem interkoneksi -> saat pembuatan lks dari teks file, isi field2x di tab lks secara otomatis -> sudah
+
+
+1. buat tombol finalisasi neraca di postingan, centang status finalisasi hanya kantor pusat yg bisa update, laporan
+juga cek ke status itu -> SUDAH
+
+
+JUNI 2015
+----------------------------------------------
+1. PERHITUNGAN LIMIT TSI TAMBAHKAN RUMUS X SHARE PCT JIKA ASKRIDA SEBAGAI MEMBER
+2. TAMBAH FIELD UPLOAD SURAT KUASA DI MENU PROFILE -> sudah
+3. TAMBAH FIELD UPLOAD DOKUMEN PENDUKUNG DATA FORM DATA CUSTOMER -> sudah
+4. TAMBAH FIELD UPLOAD DOKUMEN POLIS INDUK (PKS) DI FORM POLIS INDUK -> sudah
+5. KHUSUS POLIS BONDING, BLOK HARUS ISI BIAYA POLIS MATERAI -> sudah
+6. tambah tab entry data analisa resiko per jenis asuransi per objek pertanggungan -> sudah
+7. jika polis member, tambahkan input field tsi 100%, otomatis x share askrida -> SUDAH
+8. coba cari formula utk otomatis mencari tgl awal terawal dan tgl akhir terakhir utk ke tgl header scr otomatis -> sudah
+9. utk bonding jika minimum premi maka blok tidak boleh ada komisi , IT butuh inputan nilai minimum premi per cabang per jenis
+10. buat laporan produksi akumulasi per principal -> sudah
+11. tambahkan poin penggunaan plafon pd ikhtisar polis kredit kontruksi -> sudah
+12. bonding minta buatkan format cetakan SKP
+13. buat laporan produksi atas polis yang melebihi limit cabang -> sudah
+14. buat laporan akumulasi resiko bdasarkan kode zona gempa -> sudah
+15. menu realisasi titipan premi blok harus ada titipan premi nya
+
+Agustus 2015
+-----------------------------------------------
+1. kronologis kejadian klaim buat wajib
+2. buat settingan mandatory dokumen klaim
+3. upload dokumen penolakan klaim -> sudah
+
+november 2015
+-----------------------------------------------
+1. benerin perhitungan klaim amount jika ada PPN -> sudah
+2. tambah cek double input realisasi titipan, taro pengecekan sisa titipan pada saat approval
+3. input pembayaran komisi buat pilihan bayar komisi aja atau fee base aja, jgn otomatis terambil semua yg nomor polisnya sama -> sudah
+4. input titipan premi berubah sendiri tgl nya
+5. buat laporan cetak nomor akun yang aktif
+6. buat tombol untuk apply tgl periode awal ke seluruh objek -> sudah
+
+8. tambah field alasan pada saat melakukan reverse -> sudah
+
+
+1. ketika input ppn broker, maka di brokerfee jgn bs pilih pph23 include ppn -> sudah
+
+
+2. validasi no 5 harus membandingkan tagihan netto keuangan dgn total jurnal -> sudah
+3. arahan jurnal pembayaran premi tanpa premi bruto harus ke akun 1331 -> sudah
+
+
+endorse fire yang pembatalan total atau ada faculative tetap validasi reas, lainnya bypass ke underwriting -> SUDAH
+
+
+PAJAK ADJUSTER BUAT SHP SENDIRI
+
+
+1. buat realisasi uang muka klaim menu lain nya, tanpa lawan hutang klaim,
+   input akun lawan nya vs akun panjar klaim, input no akun,jumlah,nopol/lks/lkp,deskripsi -> SUDAH
+
+
+2.  di menu pembayaran keuangan & jurnal kas bank, tgl bayar maksimum adalah tgl hari ini (current date) -> DONE
+3.  hutang adjuster tambah item pajak jika ada pajak
+4.  validasi tgl bayar tidak boleh > tgl polis
+5.  buat modul closing reas premi inward yang di outward kan -> sudah
+6.  buat menu pembayaran sentralisasi untuk cabang, tanpa tombol buat,ubah,setujui,reverse -> sudah
+
+
+Step perubahan sistem web untuk pelaporan akuntansi per regional
+--------------------------------------------------------------------------
+1.	Tabel jurnal gl_je_detail tambahkan field region_id
+2.	Tabel idr gl_acct_bal2 tambahkan field region_id
+3.	Jurnal produksi u/w, reas, dan klaim tambahkan kolom region_id
+4.	Jurnal transaksi keuangan tambahkan kolom region_id
+5.	Edit source code dengan cara copy dulu baru edit
+6.
+
+
+
+1. LIMIT KOMISI TAMBAH FIELD UPLOAD DOKUMEN PENDUKUNG -> SUDAH
+2. DATA YANG LALU BUAT TAMPIL READ ONLY, TIDAK BISA DI EDIT -> SUDAH
+3. FIELD LAST CHANGED JANGAN BERUBAH JIKA TIDAK ADA PERUBAHAN DATA WALAU DI KLIK SIMPAN
+
+1. data u/w tambah fungsi kronologis penagihan piutang premi, bisa upload dokumen jg
+
+PAJAK
+------------------------------------
+1. Data customer tambah menu upload dokumen keagenan (sertifikat,npwp)
+2. Input komisi di u/w harus ada NPWP, tidak boleh kosong
+3. Buat sistem saldo total komisi per data customer per tahun, untuk penerapan pajak prosgressif
+4. running januari 2018
+
+REAS
+-------------------------------------
+1. BUAT MODUL PEMBENTUKAN CICILAN PREMI REAS DI SPREADING REAS
+
+KLAIM
+---------------------
+1. Hutang adjuster tambahkan invoice detail hutang pajak, seperti premi, jd pembyaaran klaim nya sudah di potong pajak juga
+
+
+MEI 2018
+------------------------------------------
+1. rate eq di blocking hrs sesuai rate OJK, tampilkan warning jika rate yg di input tdk sesuai (spt fire) -> OK
+2. kode pos, ambil 3 digit, compare ke tabel kode pos OJK (3 digit) (dari teknik), cek kesesuaian zona gempa
+
+juni 2018
+------------------------------------------
+1. nilai premi inward, waktu ambil data klik ... jangan dikali kurs, karena akan dikalikan kurs pada sistem -> DONE
+2. nol kan nilai premi & komisi bppdan & maipark produksi inward dari 01-01-2016 s/d 30-06-2018 -> DONE
+
+
+045923230618068900 benerin hitungan nya feebase tmasuk ppn samain dgn hitungan brokerage
+
+sept 2018
+-------------------------------------------
+1. jika disistem interkoneksi data teks masuk ada nomor bukti bayar & tgl bayar, set sebagai no surat hutang di
+    data invoice piutang premi -> DONE
+2. menu pembayaran sentralisasi premi tambahkan fitur bayar by nomor rekap -> DONE
+3. update data mundur, set nomor bukti bayar sebagai no surat hutang, data minta ke oji -> DONE
+
+4. jika di sistem interkoneksi ada no virtual account, set sebagai key di data invoice piutang premi/polis -> DONE
+5. menu bayar sentralisasi tambah fitur bisa upload rekening koran, get no virtual account, jadikan key
+ pengambil data invoice -> DONE
+6. update data mundur/ backdated -> DONE
+
+feedback user UAT
+-----------------------
+1. warning tidak bisa input nomor bukti bayar yg sama 2x -> DONE
+2. ketik search no surat hutang bisa ketik sebagian, search by like... -> DONE
+3. format upload referensi bayar tambah kolom jumlah bayar,
+    fungsi nya untuk cek selisih nilai jika polis ditemukan -> DONE
+4. tambahkan field tgl bayar dr host ke core untuk filtering data by tgl bayar juga
+
+
+jan 2019
+-----------------------------------
+1. pembentukan data dari interkoneksi bypass langsung buat 3 level data, proposal, sppa & polis (belum disetujui & validasi)
+2.
+
+
+
+sept 2019
+-----------------------------------------
+1. lampiran dokumen limit tsi & komisi buat jadi mandatory -> DONE
+2. buat pengecekan di scheduler pengajuan polis, cek limit komisi h2h dari tabel limit core -> DONE
+3. pada upload realisasi titipan premi, block jika upload no bukti & counter titipan yg sama pd 1 no bukti
+
+feb 2020
+-------------------------------------------
+1. pd tombol endorse batal terbit baru, jgn auto centang print flag & validasi data
+    & nilai premi tidak auto minus dri nilai sebelum -> done
+
+maret 2020
+-------------------------------------------
+1. tambahkan jenis cob baru khusus inward & bedakan tabel nya dr kode existing -> DONE
+2. perbaikan modul create kode pos, setelah create tidak muncul di sistem -> DONE
+
+H2H BANK SULSELBAR
+----------------------------------------------------------------------------------------------------------------
+1. klaim h2h sulsel input manual di core askrida, cek status klaim by no polis & no urut juga untuk polis lama, minta query dari oji -> DONE
+2. tarik data no polis, no urut, entity id, paket coverage,  penyebab, jumlah klaim, tgl lahir, plafon, tgl awal, tgl akhir
+   klaim on progress (lks), lkp cabang makassar -> wait dulu
+3. pembatalan total ->
+	saya siapin field endorse pembatalan -> DONE
+	BACA STATUS INDUK DI INTERKONEKSI, SIAPIN QUERY CEK STATUS -> DONE
+	kasih contoh format polis endorse batal -> done
+
+april 2020
+--------------------------------------------------------------------
+1. simpan data user yang reverse, tgl reverse, alasan reverse
+2. polis h2h simpan juga SPPA nya -> DONE
+
+
+juli 2020
+-------------------------------------------------------------
+1. modif scheduler pembentukan polis h2h, jika kode transaksi top up & ada premi restitusi nya, bentuk item coverage
+    premi restitusi nya juga di polis tsb -> OKE
+2. siapkan untuk scheduler pembentukan endorsemen batal total untuk debitur tsb, premi nol, approval manual oleh cabang
+
+
+to do
+1. scheduler kirim klaim dari h2h kalau dokumen sudah dinyatakan lengkap saja,
+   buat pengecekan dokumen untu flag sudah slesai upload -> done
+2. mapping kode dokumen klaim ke kode ins_document_id askrida -> done
+
+1. bawa trx no dari interkoneksi ke data core -> done
+2. update pengajuan di interkoneksi by trx_no / reference_no -> done
+
+
+update sistem core untuk dokumen klaim
+1. tambah opsi (sesuai/tidak sesuai) -> done
+2. tambah keterangan kesesuaian dokumen -> done
+2. tambah tombol untuk update status ke interkoneksi/h2h mengenai status dokumen tsb -> done
+3. tambah dokumen klaim lainnya -> done
+
+
+mei 2021
+-------------------------
+1. tambah field ref14, ref15,ref16 di ins_policy
+
+    ref14 character varying(32),
+    ref15 character varying(255),
+    ref16 character varying(255),
+    claim_sub_cause bigint,
+    claim_sub_cause_other character varying(255)
+
+2. tambah settingan ff_detail
+3. tambah kategori pekerjaan LAINNYA
+
+review klaim
+1.penyebab spesifik
+    -  pneumonia susp covid 19 di hapus aja -> oke
+    -  jika penybab dipilih lain nya, wajib isi keterangan lainnya -> oke
+
+2. pekerjaan
+    - kode pekerjaan dipisahkan dengan kode akseptasi ,buat vs tersendiri -> oke
+    - tambah kode satpol PP PNS & Janda/duda pensiunan -> oke
+    - jika pekerjaan dipilih lain nya, wajib isi keterangan lainnya -> oke
+    - value pekerjaan dicopy dari data akseptasi jika ada, jika tidak maka kosongkan
+
+2. urutan field pekerjaan, ket pekerjaan lainnya, instansi harus betul -> oke
+
+to do agustus 2021
+------------------------------------------------
+1. blocking jenis asuransi tertentu jika tidak tambah deductible, setting di table jenis pol_type -> oke
+    update settingan tabel pol_type nya -> oke
+2. ganti mata uang maka ambil kurs terakhir dari tabel kurs -> oke
+3. saat simpan polis/inward jika mata uang non IDR, cek jika kurs masih 1 rupiah -> oke
+4. ubah label field tanggal binding di reas menjadi tanggal -> oke
+5. buat menu create LKS by upload excel
+
+to do desember 2021
+------------------------
+1. buat menu rounded jurnal -> DONE
+2. perbaiki jurnal produksi klaim, deskrippsi data customer harus sesuai sumbis -> DONE
+3. edit bank mantap ke bank mandiri taspen aja -> done
+4. tambah notifikasi surat masuk update dokumen -> done
+
+
+mei 2022
+-------------------------
+1. buat item klaim forensic fee, akun samakan dgn adjuster fee -> sudah
+2. buat menu persetujuan polis by upload excel -> done
+
+juli 2022
+-----------------------------
+1. buat perhitungan ppn PMK 2022 -> sudah, sedang review oleh keuangan
+2. proses klaim lks setujui data klaim bank mandiri ksm
+3. share email utk h2h bpd bali
+4. coding h2h bpd bali
+
+to do
+------------------------------
+1. lock edit manual pph rate & amount
+2. lock npwp jgn bs di edit
+3. no npwp 02.094.721.4-018.000
+
+018 digit ini tidak boleh 000
+
+nov 2022
+---------------------------------
+1. buat penomoran LKS/LKP 8 digit, 2 digit terakhir ada counter endorse lkp, nomor lama tetap berlaku
+2. buat proteksi untuk polis installment,
+    - jika belum lunas all installment, bisa buat LKS, tapi saat buat LKP di block -> DONE
+
+jan 2023
+-----------------------------------
+1. tmbah field reasruansi perusahaan di member reas -> done, tinggal tambah field di db core -> DONE
+2. tambah menu pembayaran klaim reas outward -> DONE, menu penerima klaim reas
+3. tambah menu pembayaran klaim reas inward to outward -> DONE
+
+april 2023
+------------------------------------
+1. ubah menu pembayaran reasuransi jadi menu sendiri
+sub menu nya :
+- pembayaran reasuransi -> pembayaran premi outward -> tinggal rename
+- pembayaran inward pecah jadi -> penerimaan premi inward -> tinggal rename
+                                -> pembayaran klaim inward -> DONE
+- penerimaan klaim reas -> penerimaan klaim outward -> tinggal rename
+- pembayaran klaim -> tambah menu pembayaran klaim inward to outward
+
+2. buat menu input titipan premi reasuransi -> DONE
+3. buat menu laporan reasuransi -> DONE
+
+
+juni 2023
+---------------------------------------
+1. tambah field "dokumen pendukung polis" di lampiran polis, data ambil dari interkoneksi ws_dokumen_fire -> DONE
+2. bikin scheduler trf dokumen ke core, masukin ke poin 1 -> DONE
+
+sept 2023
+--------------------------------------------
+1. cek inward fac dgn ppn & pph serta jurnal nya netto/bruto -> Done ke rafli & vika
+2. perbaiki urutan item di form input inward fac sesuai permintaan reas -> DONE
+
+3. form input inward fac tambahkan opsi skema pembayaran (All in atau Sebagian)
+    jika all in maka bentuk ar ap spt skrg
+    jika sebagian maka bentuk 2 ar ap, 1 untuk ppn & pph, 1 lg untuk selain itu
+4. cek skema cicilan inward suka ilang data cicilan nya
+5. tunggu info lanjutan dr keuangan terkait pembentukan hutang pajak inward
+
+1. Penambahan field "Reinsured" inward treaty (100 %)
+2. Proses klaim traveloka batch 9-12 (100 %)
+3. API flagging data pembatalan debitur  (100 %)
+4. SIT H2H BPD DIY (70 %)
+5. Proses bypass validasi klaim debitur Bank Mantap (STNC)  (100 %)
+6. Pengembangan sistem interkoneksi E-Polis Asset Bank Jateng  (100 %)
+
+
+oktober 2023
+------------------------
+1. Pembuatan fitur approval masal restitusi
+2. Penambahan item klaim "biaya konsultan" pada menu klaim
+3. Proses jurnal mutasi tahun 2019-2022 untuk divisi keuangan
+4. Pembahasan H2H Bank Kalbar (Presentasi)
+5. Penambahan field "Reinsured" pada seluruh menu inward (100 %)
+6. Penambahan customer & klausula untuk Polis Agunan Bank Mandiri
+
+
+november 2023
+---------------------
+1. Pengembangan sistem interkoneksi terkait polis kredit konstruksi H2H Bank Sumut (scheduler, monitoring)
+2. Proses pembatalan polis mandiri taspen pos
+3. Pengembangan sistem core terkait unit kerja AKS & Non AKS
+4. Proses endorsemen pembatalan polis H2H Bank Sulselbar
+5. Penyempurnaan sistem interkoneksi polis asset Bank Jateng
+6. Pengembangan sistem core terkait polis Bank Mandiri Produk Agunan
+
+    - jurnal persetujuan polis -> DONE OK
+    - jurnal reas -> DONE
+    - jurnal klaim -> DONE OK
+    - jurnal klaim reas -> DONE
+    - trx keuangan
+    - akuntansi
+
+desember
+--------------------------
+1. pengembangan core terkait aks non aks
+2. jenis penutupan menjadi "tipe penutupan" -> DONE
+3. Direct menjadi Non-Co -> DONE
+4. penambahan field
+    - Polis (piutang) : Tagihan kepada -> DONE
+    - Klaim (utang klaim) : Dibayar kepada
+5. tambah field di menu penginputan polis, baca dari login user tsb -> DONE
+    - Cabang penerbit
+    - Daerah Penerbit
+6. tambah field di menu user profil -> DONE
+    - Cabang penerbit
+    - Daerah Penerbit
+7. view cabang user pic non aks hanya bisa view data cab penerbit bersangkutan saja -> DONE, tambah filter cab penerbit
+8. Minta list PIC non aks
+9. Cetak polis belum bisa -> DONE
+10. Laporan produksi tambahkan 2 field cabang penerbit & daerah penerbit -> PRAS
+11. Polis H2H & interkoneksi disesuaikan masuk ke produksi AKS/Non AKS
+12. Buat modul transfer titipan premi dari cabang ke div non AKS, pakai jurnal rek antar kantor
+
+
+
+1. Proses endorsemen Outgo H2H Bank Jateng
+2. Pengembangan sistem core terkait unit kerja AKS & Non AKS
+3. UAT & Sosialisasi sistem interkoneksi monitoring aset Bank Jateng
+4. Penambahan kolom coverage format konversi polis Kendaraan Bermotor
+5. Pengembangan scheduler polis H2H terkait promo tarif premi
+
+1. Extra premi di proses pembentukan restitusi jgn di bawa ke endorse nya -> DONE
+
+
+1. Approval polis non aks
+2. Pembentukan endorse polis non aks periode sebelum ada non aks -> ENDORSE DI CAB PENERBIT POLIS INDUK -> DONE
+3. sistem klaim
+4. keuangan
+  - semua modul pembayaran keuangan tambah fitur RAK spt sentralisasi
+  - buat modul transfer RAK dana dari aks ke non aks
+
+5. buat user kepala cabang non aks
+
+
+modul;
+- Pembayaran Premi
+    1. Pencarian polis -> OKE
+    2. Upload Konversi -> OKE
+    3. Tambah jurnal RAK -> OKE
+
+- Pembayaran Komisi
+    1. Pencarian polis -> OKE
+    2. Upload Konversi -> OKE
+    3. Tambah jurnal RAK -> ON REVIEW
+
+- Pembayaran Klaim
+    1. Pencarian polis -> OKE
+    2. Upload Konversi -> OKE
+    3. Tambah jurnal RAK
+
+- Realisasi Titipan Premi
+    1. Pencarian polis -> OKE
+    2. Upload Konversi -> OKE
+    3. Tambah jurnal RAK -> ON REVIEW
+
+- Realisasi Titipan Komisi
+    1. Pencarian polis -> OKE
+    2. Upload Konversi -> OKE
+    3. Tambah jurnal RAK -> ON REVIEW
+
+- Pembayaran Ko Asuransi
+    1. Pencarian polis -> OKE
+    2. Upload Konversi -> OKE
+    3. Tambah jurnal RAK
+
+- Pembayaran Klaim Ko-asuransi
+    1. Pencarian polis -> OK
+    2. Upload Konversi -> Ok
+    3. Tambah jurnal RAK
+
+
+[15:12, 1/12/2024] Fajar Akuntasi Askrida: Sama pembuatan Modul RAK
+untuk keperluan:
+1. Transfer Dana Non Aks ke 80
+2. Pembebanan Biaya Non Aks ke 80
+[15:59, 1/12/2024] Fajar Akuntasi Askrida: Tambahan mas:
+
+jan 2024
+----------------------------
+1.  buat laporan bordero premi per object polis -> REPORT TO PRAS
+2. Block period end detail tidak boleh > period end di header polis
+3. tambah filter laporan reas internal/eksternal
+    - jika internal tambah kolom SOB-> reinsured
+    - jika external tdk ada kolom SOB
+4. COB fire, EQ, PAR  yg  ( > 1 tahun), pakai treaty autofac khusus -> DONE, sementara pakai treaty OR
+5. spreding polis BNI fleksi macet dan pensiunan, pakai treaty khusus, filter by kode jenis kredit -> DONE
+    bni macet 628 -> treaty tib atm 220
+    pensiunan 627 -> treaty tib pensiunan 219
+
+
+titipan polis khusus
+-------------------------------
+1. cabang input pengajuan realisasi titipan polis khusus (input/upload) di menu realisasi titipan polis khusus -> DONE
+2. pusat menyetujui pengajuan realisasi dr cabang, saldo/sisa titipan premi excomtable sudah berkurang -> DONE
+3. teknik cabang input endorse polis khusus, panggil/input no bukti realisasi titipan polis khusus, akan muncul rincian nya -> DONE
+4. keuangan cabang mengupdate realisasi titipan polis khusus tsb dgn menginput no endorse poin 3 -> otomatis ketika setujui endorsemen
+5. teknik cabang input polis baru atas endorse tsb, cantumkan nopol endorse sebagai no polis rujukan
+6. cabang & pusat bisa memonitoring sisa titipan & realisasi nya di menu titipan premi excomptable -> DONE
+
+1. buat menu titipan premi polis khusus -> DONE
+2. buat menu realisasi titipan premi polis khusus -> DONE
+3. di menu input polis, tambah fitur utk link no bukti realisasi tp khusus -> DONE
+
+Pekerjaan Januari 2024
+-----------------------------------------------------------------------------
+1. Pengembangan sistem core (marketing, akseptasi) terkait unit AKS & Non AKS
+2. Pengembangan sistem core terkait endorsemen polis Khusus
+3. Pembuatan modul titipan premi polis khusus
+4. Pembuatan modul keuangan Realisasi titipan premi polis khusus
+5. Pengembangan sistem reasuransi terkait Treaty 2024
+6. Membantu setting treaty reasuransi 2024
+7. Pengembangan sistem pembayaran keuangan terkait polis Non AKS
+8. Pengembangan scheduler pembentukan endorsemen restitusi kumpulan
+
+
+
+feb 2024
+----------------------------------------------
+1. Ubah penomoran SHP -> DONE
+	No SHP
+Non AKS	SHP/POL/PPH23/975420/80/40/12/2023
+AKS	SHP/POL/PPH23/975420/40/40/12/2023
+
+	SHP/POL/PPH21/975420/40/40/12/2023
+	SHP/POL/PPH21/975420/80/40/12/2023
+
+	SHP/CLM/PPH23/975420/40/40/12/2023
+	SHP/CLM/PPH23/975420/80/40/12/2023
+
+2. Tambah fitur + polis pembayaran pajak -> DONE
+3. tambah fitur upload konversi pembayaran pajak -> DONE
+4. Tambah jurnal RAK untuk pembayaran pajak polis non AKS -> DONE
+5. Proses ulang no SHP dari januari to februari 2024
+
+1. cek h2h bpd diy error -> DONE
+2. pasang kode produk & tarif pks adendum bank jatim pada h2h -> DONE
+3. Belokin scheduler produksi interkoneksi cit cis bank kaltim -> DONE
+4. Inward gak bs approve (gita) -< DONE
+5. tambah jurnal RAK di pembayaran klaim non aks -> DONE
+
+1. Pengembangan sistem pembayaran pajak terkait unit Non AKS
+2. Setting kode produk & tarif PKS adendum H2H Bank Jatim
+3. Perubahan produksi CIT CIS sistem interkoneksi Bank Kaltimtara ke unit Non AKS
+4. Pengembangan modul pembayaran klaim terkait unit Non AKS
+5. Koordinasi terkait SIT H2H Bpd DIY
+6. Presentasi host to host Bank Kalsel
+7. Pembahasan IFRS 17 dengan konsultan
+
+Maret 2024
+-----------------------------------------------------------------
+
+1. Koordinasi terkait SIT H2H Bpd DIY
+2. Pembuatan sistem core modul realisasi titipan premi reasuransi
+3. Pengembangan sistem core modul Upload pembayaran reasuransi
+4. Pengembangan sistem core terkait blocking approval polis multiyears
+5. Proses inject klaim BNI Traveloka batch 30-31
+6. Proses inject data pembayaran reasuransi
+7. Penambahan data customer Bank Sultra terkait peralihan portofolio Askrindo & FLPP
+8. Pembahasan terkait pengembangan menu subrogasi klaim
+9. Penambahan user non aks cabang semarang
+10. Meeting pembahasan sistem host to host CIT CIS dengan cabang makassar
+
+APRIL 2024
+-----------------------------------------------------------------
+
+1. Koordinasi terkait SIT H2H Bpd DIY
+2. Pengembangan sistem core modul Endorsemen Restitusi EEI & EQ
+3. Proses reverse massal polis cabang bandung sesuai permintaan akseptasi
+4. Pembahasan terkait IFRS 17 dengan konsultan 
+5. Pembahasan sistem Host to Host & interkoneksi bank jateng produk kebakaran dan kendaraan bermotor
+
+MEI 2024
+-----------------------------------------------------------------
+
+1. Pembahasan terkait IFRS 17 dengan konsultan
+2. Menyiapkan data-data terkait setting IFRS 17
+3. Pembahasan sistem Host to Host & interkoneksi bank jateng produk kebakaran dan kendaraan bermotor
+
+
+1. proteksi jika dari klaim inward mau buat endorse klaim biasa, ga bisa
+2. tambah field currency polis di inward cash loss -> OK
+3. bs edit no konfirmasi klaim setelah setujui cash loss -> OK
+
+
+Juni 2024
+---------------------
+1. Buat modul upload split polis Jaminan penawaran
+2. Buat modul upload split polis Jaminan pelaksanaa
+3. Buat modul upload split polis Jaminan pembayaran uang muka
+4. Buat modul upload split polis Jaminan pemeliharaan
+5. Pembahasan offline Sistem SPPA Online Kebakaran & H2H Kendaraan Bermotor dengan Bank Jateng
+7. Pelatihan SQL Server
+8. Pembahasan terkait IFRS 17 dengan konsultan
+9. Menyiapkan data-data terkait setting IFRS 17
+10. Penambahan field currency polis di Klaim inward cash loss
+11. Membuka proteksi polis multiyears untuk COB AKS
+12. Proses Reverse 400 polis papua sesuai memo akseptasi
+
+Juli
+----------------------------------------------------
+1. buat modul insentif subrogasi
+    - tambah item insentif subrogasi -> oke
+    - set kode akun insentif di 71714 -> oke
+    - tambah field no lkp di inputan item klaim insentif subro -> oke
+    - buat perhitungan by prosentase x nilai subro dari lkp terpilih
+        - insentif = % x nilai subrogasi (nett/bruto) -> oke
+    - tambah field tgl bayar subrogasi di form lks/klaim -> oke
+2. Pembahasan rencana kerjasama H2H Asuransi tanggung gugat named nakes dengan broker TIB
+3. Penyesuaian mekanisme approval polis Non AKS diatas kewenangan kantor operasional
+4. penambahan field metode transaksi di menu keuangan
+    - pembayaran premi -> ok , konversi excel -> ok
+    - realisasi titipan premi -> ok konversi excel -> ok
+    - pembayaran premi sentralisasi -> ok , konversi excel -> oke
+    - realisasi titipan premi sentralisasi -> oke , konversi excel ->
+
+agustus
+------------------
+1. buat scheduler sppa online kebakaran -> Done tinggal testing by data
+2. buat scheduler sppa online kendaraan -> Done tinggal testing by data
+3. buat scheduler polis H2H KBG -> Done tinggal testing by data
+3. buat scheduler polis H2H Tanggung Gugat -> Done tinggal testing by data
+4. buat scheduler sppa online cit cis
+
+
+okt
+----------------------------------
+1. approval masal -> skip polis yg sudah disetujui -> DONE
+2. centang otomatis polis yg belum siap disetujui -> DONE
+3. otomatis set tgl stnc sesuai tgl approval massal -> DONE
+
+
+PENYESUAIAN PPH PPN 2024
+--------------------------
+1. perubahan perhitungan pph atas komisi agen -> simulasi sedang disiapkan bagian pajak
+2. profiling agen & broker asuransi pada sistem web dengan mencantumkan npwp dan/nik yang terverifikasi
+3. perubahan tarif ppn feebase menjadi 11% -> done setting tabel ins_item
+4. pemberlakuan ppn komisi agen dengan tarif 1.1% -> done setting tabel ins_item
+
+
+subrogasi   30-10-2024
+------------------------------------
+1. otomatis isi potensi subro sesuai mappingan dr klaim -> bisa -> prioritas rabu depan -> DONE, SUDAH UPDATE TO PROD
+2. kasus keringanan -> buat tambahan field flaging untuk flag subrogasi yang sudah tidak bisa ditagih walaupun masih ada os subrogasi
+	-> endorse -> isi flaging tutup subrogasi -> tambah kode "tutup subrogasi" -> DONE
+3. buat fitur missal klaim tdnya tidak ada potensi subro, namum ternyata di perjalanan ada subro,
+   buat fitur utk klaim pusat bisa flaging klaim tertentu bisa di cabang(update status potensi subro no lkp tertentu)
+4. inject data potensi subrogasi per September ke system (data dari klaim -> no lkp, potensi subro (Y/N)) -> bisa
+5. untuk sumbis mandiri & bni otomatis isi ya utk potensi subrogasi kecuali meninggal -> bisa -> DONE, SUDAH UPDATE TO PROD
+6. penyebab klaim spesifik -> pilihan lainnya dihilangkan -> bisa -> DONE
+
+    update ins_clm_sub_cause set active_flag = 'N'
+    where upper(cause_desc) = 'LAINNYA'
+
+7. penyebab klaim sebab apapun -> pilihan penyebab spesifik ditambahkan sama dgn macet -> bisa -> DONE
+
+
+
+1. PAJAK PROGRESIF AGEN -> DONE, MINTA REVIEW KEUANGAN, BALAS MEMO
+2. REASURANSI -> DONE INJECT TREATY 2013-2022, MINTA REVIEW BAG REASURANSI
+3. SUBROGASI -> DONE
+4. CARE API STATUS PEMBAYARAN PREMI & OUTGO -> DONE INTEGRASI TO CARE
+5. CARE API STATUS PEMBAYARAN KLAIM -> DONE INTEGRASI TO CARE
+6. REVERSE VOUCHER DI CARE TECH ->
+7. BUAT EXPORT DATA CUSTOMER (PROFILE) UNTUK DI UPLOAD KE CARE -> DONE, SUDAH BISA UPLOAD
+
+8. setujui polis -> sudah auto create admlink premi ,tinggal jalan scheduler to care
+9. setujui klaim -> SUDAH auto create admlink klaim ,tinggal jalan scheduler to care
+10. reverse polis -> delete voucher dr care -> DONE
+11. reverse klim -> delete voucher dr care ?
+12. Setujui polis langsung bentuk voucher polis -> DONE
+12. Setujui klaim langsung bentuk voucher klaim -> 
+
+
+INTEGRASI CORE DENGAN PAJ KOALA
+---------------------------------------------
+1. KALKULATOR PREMI -> DONE
+2. PENGAJUAN POLIS -> DONE
+3. DOWNLOAD E-POLIS -> DONE
+
+metode coas leader zurich topas life
+
+nov 2024
+---------------------------
+1. Persiapan data saldo awal IFRS 17
+2. Pembahasan awal sistem asuransi pada BJBDigi (Personal Accident, Kebakaran, Kendaraan Bermotor)
+3. Pembahasan terkait sistem pengajuan asuransi dengan broker NIB (Asuransi Kebakaran)
+4. Simulasi final sistem SPPA online Bank Jateng (Kebakaran, Kendaraan Bermotor)
+5. Pembahasan awal terkait sistem e-cargo cabang Jakarta
+6. Pembahasan awal terkait sistem cit cis Bank DKI
+7. Buat modul upload split polis Konsorsium Pasar
+
+desember 2024
+------------------------------
+1. di menu klaim lks di bawah field nilai perkiraan, tambah field flag klaim cash call -> DONE
+2. buat menu limit klaim cash call ( cob, limit, masa aktif) spt menu treaty -> DONE
+3. jika nilai perkiraan > limit cash call cob, maka otomatis centang flag no 1, tp bs di edit oleh pusat -> DONE
+4. di menu klaim inward cash loss, tambah field upload dokumen : -> DONE
+    - dokumen disposisi klaim
+    - dokumen klaim
+
+januari 2025
+------------------------------
+1. Pembuatan modul input Polis Asuransi Kredit Non ND & Kredit Serbaguna
+2. Spreading reasuransi COB Asuransi Kredit Non ND & Kredit Serbaguna
+3. Pengembangan Input Klaim Asuransi Kredit Non ND & Kredit Serbaguna
+4. Pemisahan item Subrogasi pada laporan laba rugi
+5. Penambahan field Titipan Premi terkait COB Asuransi Kredit Non ND & Kredit Serbaguna
+6. Pembuatan scheduler otomatis polis H2H Asuransi Kredit Non ND & Kredit Serbaguna
+7. Inject treaty 2025
+
+
+7. Penyesuaian rate pajak PPN & PPh
+8. Penerapan penerima outgo wajib memiliki NPWP
+
+
+
+penambahan fitur klaim cash call
+penambahan upload dokumen pada menu klaim inward cash loss
+
+PERUBAHAN ASKRED SESUAI POJK 20
+---------------------------------------------------------
+mekanisme pencatatan polis secara manual gimana ?
+
+1. buat mekanisme/fitur pencatatan titipan premi kredit dgn coa baru
+misal : tenor 15 tahun dgn premi 15 jt
+        produksi di awal 5 tahun dgn premi 5 juta, 10 juta nya catat ke titipan premi dgn coa baru
+       - pencatatan titipan tsb tambahkan key/ referensi titipan misal dgn no rek pinjaman
+
+
+konsep/ide :
+
+1. input sistem core :
+
+- tambah field periode awal 100% -> DONE
+- tambah field periode akhir 100% -> DONE
+- tambah field premi 100% -> DONE
+- tambah field premi sisa -> DONE
+- dari premi sisa, bentuk titipan premi coa baru scr otomatis -> DONE
+    489400000000 Titipan Premi JW Kredit
+    489410000000 TP JW Kredit BPD
+    489420000000 TP JW Kredit Mandiri
+    489430000000 TP JW Kredit Mandiri Taspen
+    489440000000 TP JW Kredit BNI
+    489490000000 TP JW Kredit BPR
+- user input/upload tenor full, sistem otomatis spread per 5 tahun -> Buat menu simulasi polis -> DONE
+- penyesuaian format konversi askred utk kredit serbaguna -> DONE
+- buat parameter komposisi prosentase premi per 5 tahun -> DONE
+    rate_class = 'CREDIT_PROSENTASE'
+
+2. blocking system askred tenor maks 5 tahun -> DONE
+3. tambah jenis kredit "Kredit Serbaguna" -> DONE
+
+4. h2h :
+- data teks masuk tambah field
+- tambah field periode awal 100% -> DONE
+- tambah field periode akhir 100% -> DONE
+- tambah field premi 100% -> DONE
+- tambah field premi sisa -> untuk bentuk titipan premi coa baru scr otomatis
+
+5. no polis serbaguna tambah 1 digit counter polis 5 tahunan -> DONE
+
+    0488 6161 1224 0003 1 00
+    0488 6161 1224 0003 2 00
+    0488 6161 1224 0003 3 00
+
+ex: 0488202012240006100
+
+6. pasang tabel prosentase pengakuan premi -> DONE
+
+
+7. outgo gimana? dari premi 100% atau dari premi 5 tahunan ? spreading outgo nya gimana ?
+    PERHITUNGAN OUTGO SESUAI SHARE PREMI -> OKE
+8. pajak gimana? dari premi 100% atau dari premi 5 tahunan ?
+    PERHITUNGAN PAJAK SESUAI SHARE PREMI -> OKE
+9. spreading reasuransi nya gmn ?
+    sesuai premi direct
+
+10. Jika ada restitusi, bentuk dulu secara manual renewal polis sisa nya, baru bentuk endorse restitusi nya
+
+    BENTUK RENEWAL -> DONE
+    BENTUK RESTITUSI -> DONE
+
+    jurnal restitusi bukan ke 6131 tapi ke 791400000088  dengan deskripsi “Pengembalian premi-KSG” -> DONE
+        ?	Akun  791410000088 	Bank BPD
+        ?	Akun  791420000088 	Bank Mandiri
+        ?	Akun  791430000088 	Bank Mandiri Taspen
+        ?	Akun  791440000088 	Bank BNI
+        ?	Akun  791490000088 	Bank BPR
+
+
+11. jika ada klaim, bentuk klaim, lkp setujui maka otomatis bentuk juga sisa polis nya
+        BENTUK RENEWAL set void -> DONE
+        BENTUK LKP -> DONE
+
+
+12. buat scheduler utk otomatis perpanjang polis ksg yang mau expired
+
+
+perubahan set field utk kredit serbaguna
+--------------------------------------------------------------------
+pol_type_id = 88 (serbaguna) , 87 (macet only)
+tgl_awal timestamp without time zone -> tgl awal polis (5 tahunan)
+tgl_akhir timestamp without time zone -> tgl akhir polis (5 tahunan)
+premi_total -> premi 5 tahunan (sesuai tabel)
+premi_bank -> premi 5 tahunan (sesuai tabel)
+pol_no -> 0488 2020 1224 0007 1 00 (polis 1)  -> 0488 2020 1224 0007 2 00 (polis 2) -> 0488 2020 1224 0007 3 00 (polis 3) dst...
+outgo ???
+tgl_awal_100 timestamp without time zone -> tgl awal jk wkt kredit (keseluruhan)
+tgl_akhir_100 timestamp without time zone -> tgl akhir jk wkt kredit (keseluruhan)
+premi_100 numeric -> premi 100% dari total jk wkt kredit
+premi_sisa numeric -> premi sisa nya dari total jk wkt kredit
+sumber_pembayaran -> 1 : Gaji Payroll
+                    2 : Gaji Non Payroll
+                    3 : Tunjangan Payroll
+                    4 : Tunjangan Non Payroll
+pembayaran_premi -> 1 : Premi Sekaligus Sesuai Jk Waktu Kredit
+		    2 : Premi Sesuai Jk Waktu Polis
+
+
+konversi split fire
+-----------------------------------------------------
+1. split fire utk handling fee default 0 aja, jgn blank -> OKE
+2. klo error knp periode awal jd blank -> OKE
+3. periode awal ada 2 -> OKE
+4. kode okupasi belum terupdate seperti system -> DONE
+5. QQ jadi penggunaan rumah tinggal, harusnya dari QQ nama -> OKE
+6. konversi provinsi agar dibuat otomatis membaca kode pos (dari region map tambahkan field provinsi ke excel)
+
+
+feb 2025
+------------------------------------
+  Keuangan
+1. pembayaran premi jika polis serbaguna & pembayaran sekaligus, maka saat setujui pembayaran bentuk otomatis  sisa titipan premi pada akun rek pembayaran -> DONE
+2. realisasi titipan premi jika polis serbaguna & pembayaran sekaligus, maka saat setujui realisasi bentuk otomatis  sisa titipan premi pada akun rek pembayaran -> DONE
+3. saat penerbitan perpanjangan polis ke 2 dst, otomatis lakukan realisasi pembayaran premi dilawankan dgn sisa titipan premi nya -> DONE
+4. saat pembayaran restitusi/endorse, cek dulu polis sebelumnya/induk sudah dibayar/belum -> DONE
+
+
+1. Pengembangan Update Fitur Otomatis Pembentukan dan Realisasi Sisa Titipan Premi atas Asuransi Kredit Non ND dan Asuransi Kredit Serba Guna
+2.
+
+maret 2025
+------------------------------------
+1. perbaikan pembentukan titipan premi otomatis ksg jd termasuk ke status endorsemen -> DONE
+
+endorse
+
+0488454502250101101
+
+0488454502250101201	renewal 1	bentuk titipan premi otomatis
+
+0488454502250101301	renewal 2	bentuk titipan premi otomatis
+
+
+2. perbaikan perhitungan polis ksg jika ada extra premi -> DOne
+3. auto pembayaran feebase jika renewal
+
+maret 2025
+----------------------------------------------------------------------------------------------------------------------------
+1. Penyesuaian Sistem Webapss untuk Pertanggungan Asuransi KPR FLPP dan Tapera diluar Ketentuan POJK No. 20 Tahun 2023
+2. Pengembangan Sistem Program Mekanisme Ganti Rugi Indemnity Basis (Restrukturisasi Klaim) Pada Asuranasi Kredit Konsumtif
+3. Penambahan Menu Upload Excel Pembayaran Premi Outward
+4. Permohonan Sistem Web Konversi Polis Asuransi Kebakaran Askrida Cabang Surabaya
+5. Permohonan Penyesuaian Nama Jenis Asuransi Kredit pada Web Sistem
+6. Rencana Pengembangan Sistem Aplikasi Digital – Divisi Akseptasi & Reasuransi
+7. Permohonan Pembuatan Sistem Host to Host/Interkoneksi Cit & Cis Bank Sultra
+
+
+meeting klaim restruct 11-04-2025
+---------------------------------------------------
+1. restruck bisa 4x klaim, tambah field khusus untuk membedakan data restruct dgn yg lain -> DONE tambah centang flag klaim restruk
+2. untuk set jd void, di restruct ke 4 ato ke 5 input status klaim jadi "Kerugian Total"
+3. mekanisme cicilan restruct di jalankan dgn mekanisme endorsemen klaim
+4. tambah dokumen upload, list dokumen akan diserahkan oleh div klaim
+5. tambah mekanisme utk lock jumlah maks klaim endorse, tunggu simulasi dari div klaim
+
+meeting web 15-04-2025
+----------------------------------------------------
+1. format konversi EQ, kode pos buat jd inputan jgn select, buat spt fire -> DONE
+2. format konversi PAR buat jadi 5 TSI, 8/10  coverage -> DONE
+3. nonaktifkan coverage EQVET & Machinery breakdown (sub limit) pada polis PAR -> DONE
+4. tambah field diskon per coverage -> DONE
+5. tambah field sumber bisnis di input polis -> DONE
+6. ubah label sumber bisnis jadi tertanggung di input polis -> DONE
+7. field marketing officer jadi mandatory -> DONE
+8. tambahkan tampilan member koas di cetakan polis (format tunggu akseptasi)
+9. review klausula pada sistem, tunggu data dari teknik
+    tampilan klausula di rapihkan
+    - judul klausula (teks dari inputan di klausula) -> DONE
+    - jgn tampilkan lagi teks dr inputan klausula -> DONE
+10. tambah menu search di klausula
+11. buka locking cabang di menu data customer -> DONE
+12. buat field NPWP jd mandatory & tidak bs non numeric -> DONE
+
+to do keuangan
+-------------------------------------------------------------------------------------------
+1. pembayaran premi sentralisasi -> saat konversi jika "None" jangan cek list otomatis PPN -> DONE
+2. Pembayaran komisi sentralisasi -> tambah detail pilihan outgo disamakan dgn konversi pembayaran komisi -> DONE
+    - buat agar bisa bayarkan ppn di menu komisi sentralisasi
+3. cek jika bayar premi bruto, pembentukan utang ppn masih ke kode type 5 (os premi) harusnya ke 11 -> DONE
+4. buat perhitungan simulasi KSG ada angka netto (dikurangi outgo) - DONE
+5. tambah field di teknik, terkait pembayaran premi bruto/netto, terkait poin berikutnya -> DONE
+6. tambah field konversi split polis ksg -> DONE
+7. tambah field konversi split polis macet -> DONE
+6. jika pembayaran premi nya netto, maka bentuk titipan otomatis nya netto juga -> DONE
+    & realisasi otomatisnya juga dgn nilai netto
+7. jika pembayaran premi nya bruto, maka bentuk titipan otomatis nya bruto juga -> DONE
+    & realisasi otomatisnya juga dgn nilai bruto
+
+
+1. pembayaran premi buat ada spreading premi & outgo ksg, jika di centang maka bentuk titipan premi bruto dan titipan outgo minus atas outgo yg di centang -> DONE
+2. realisasi titipan premi buat ada spreading premi & outgo ksg, jika di centang maka bentuk titipan premi bruto dan titipan outgo minus atas outgo yg di centang -> DONE
+3. konversi pembayaran premi sesuaikan agar bs centang spreading outgo -> DONE
+4. konversi realisasi titipan premi sesuaikan agar bs centang spreading outgo -> DONE
+
+
+juli 2025
+----------------------
+1. penerapan perhitungan pajak progresif pph21 per agustus 2025 -> DONE
+2. buka proteksi input cob non aks pakai kode cabang  -> Done
+3. buat fitur utk RENEWAL polis dari non aks ke aks
+
+agustus 2025
+-----------------------------------
+1. D250700008937600284 NO BUKTI bayar reas, realisasi titipan lain nya harusnya  ada jurnal  D250700008937600285 nya aja, yg D250700008937600284 gak ada jurnal nya -> DONE
+2. D250700000000100289 kok jurnal nya nyasar ke cab 60 -> DONE
+
+
+1. cek utang reas ada kode broker re & reasuradur blm, jika blm ada maka tambahkan di keu -> DONE
+2. cek coa akun jurnal premi reas nya
+3. jika terjadi klaim atas polis lama, pakai treaty yg detail seperti di reasuransi -> DONE
+
+
+1. item komisi tetap muncul, pas di klik tambah jika status <> endorse maka protect, item sudah tidak bisa digunakan -> DONE

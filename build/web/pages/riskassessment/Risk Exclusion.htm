@@ -1,0 +1,371 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+
+<!--
+
+
+
+	//	Initialize class for Type and Style
+
+
+
+	function Type(id, type){
+
+		this.id = id;
+
+		this.type = type;
+
+	}
+
+
+
+	function Style(id, id_type, style){
+
+		this.id = id;
+
+		this.id_type = id_type;
+
+		this.style = style;
+
+	}
+
+
+
+    //	Initialize Array's Data for Type and Style
+
+	// PILIH JENIS ASURANSI
+
+	TypeArray = new Array(
+
+			new Type(1, "Cash In Safe"),
+			new Type(2, "Contractors All Risks"),
+			new Type(3, "Group Personal Accident"),
+			new Type(4, "Kebakaran"),
+			new Type(5, "Kebongkaran"),
+			new Type(6, "Marine Cargo"),
+			new Type(7, "Marine Cargo Open Policy"),
+			new Type(8, "Marine Hull"),
+			new Type(9, "Motor Vehicle"),
+			new Type(10, "Personal Accident"),
+			new Type(11, "Public Liability")
+
+	);
+
+	//	PILIH RISIKO
+
+	StyleArray = new Array(
+
+			new Style(1, 1, "Storage Only risks"),
+
+			new Style(1, 2, "Advance Profit insurance"),
+			new Style(1, 2, "Tunneling in urban areas"),
+			new Style(1, 2, "Work on or near a waterway"),
+			new Style(1, 2, "Chemical Plant processing hydrocarbons"),
+			new Style(1, 2, "Defective Design insurance"),
+			new Style(1, 2, "Harbourside work"),
+			new Style(1, 2, "Residual Value insurance"),
+			new Style(1, 2, "Satellite or Space Risks"),
+			new Style(1, 2, "Defective Design insurance"),
+			new Style(1, 2, "Nuclear Power Plant"),
+			new Style(1, 2, "Production Guarantee"),
+			new Style(1, 2, "Performance Guarantee"),
+			new Style(1, 2, "Tunneling more than 100 feet"),
+			new Style(1, 2, "Penalties Insurance"),
+			new Style(1, 2, "Dockside risks"),
+			new Style(1, 2, "Registered Motor Vehicles"),
+			new Style(1, 2, "Harbourside work"),
+
+			new Style(1, 3, "Sickness Insurance"),
+			new Style(1, 3, "Accident Cover forming part of Life Assurance"),
+			new Style(1, 3, "Accident Insurance covering school fees"),
+			new Style(1, 3, "Pilots"),
+			new Style(1, 3, "Accident Cover for drivers or passengers"),
+			new Style(1, 3, "Aircraft Cabin or other Crew"),
+			new Style(1, 3, "Underwater Activity"),
+			new Style(1, 3, "Non Cancellable Insurance"),
+			new Style(1, 3, "Racing of any kind"),
+			new Style(1, 3, "Flight Risk sold by airlines, agencies or vending "),
+			new Style(1, 3, "Car or Bike Racing - any activity"),
+			new Style(1, 3, "Flight Risk not on scheduled flights"),
+
+			new Style(1, 4, "Satellite or Space Risks"),
+			new Style(1, 4, "Advance Profit insurance"),
+			new Style(1, 4, "Offshore Platforms or Rigs"),
+			new Style(1, 4, "Oil or Gas Industry (except petrol stations)"),
+			new Style(1, 4, "Drilling Rigs"),
+			new Style(1, 4, "Insurance Pool"),
+
+			new Style(1, 5, "Jewelers"),
+			new Style(1, 5, "Furriers"),
+			new Style(1, 5, "Pawnbrokers"),
+			new Style(1, 5, "Traditional Medicine"),
+			new Style(1, 5, "Wine"),
+			new Style(1, 5, "Alcoholic Drinks"),
+			new Style(1, 5, "Tobacco Products"),
+
+			new Style(1, 6, "Stock Throughput Policies"),
+			new Style(1, 6, "Livestock"),
+			new Style(1, 6, "Loss of Profits"),
+			new Style(1, 6, "Container Hull insurance"),
+			new Style(1, 6, "Container Liability insurance"),
+			new Style(1, 6, "Storage Only risks"),
+			new Style(1, 6, "Rejection risks"),
+			new Style(1, 6, "Jewelers"),
+			new Style(1, 6, "Belize Flag"),
+			new Style(1, 6, "Honduras Flag"),
+			new Style(1, 6, "Panama Flag"),
+			new Style(1, 6, "Furriers"),
+			new Style(1, 6, "Liberia Flag"),
+			new Style(1, 6, "Confiscation Risk"),
+			new Style(1, 6, "Guaranteed Outturn cover"),
+			new Style(1, 6, "Ocean Tow"),
+			new Style(1, 6, "Fish Catch"),
+			new Style(1, 6, "Fishmeal"),
+			new Style(1, 6, "Freight Forwarders Liability"),
+			new Style(1, 6, "Carriers Liability"),
+			new Style(1, 6, "Time Guarantees"),
+			new Style(1, 6, "Overdue risks"),
+			
+			new Style(1, 7, "Jewelers"),
+			new Style(1, 7, "Furriers"),
+			new Style(1, 7, "Guaranteed Outturn cover"),
+			new Style(1, 7, "Liberia Flag"),
+			new Style(1, 7, "Confiscation Risk"),
+			new Style(1, 7, "Ocean Tow"),
+			new Style(1, 7, "Rejection risks"),
+			new Style(1, 7, "Fish Catch"),
+			new Style(1, 7, "Fishmeal"),
+			new Style(1, 7, "Freight Forwarders Liability"),
+			new Style(1, 7, "Time Guarantees"),
+			new Style(1, 7, "Panama Flag"),
+			new Style(1, 7, "Overdue risks"),
+			new Style(1, 7, "Honduras Flag"),
+			new Style(1, 7, "Container Liability insurance"),
+			new Style(1, 7, "Belize Flag"),
+			new Style(1, 7, "Container Hull insurance"),
+			new Style(1, 7, "Stock Throughput Policies"),
+			new Style(1, 7, "Livestock"),
+			new Style(1, 7, "Loss of Profits"),
+			new Style(1, 7, "Carriers Liability"),
+
+			new Style(1, 8, "Liner's Negligence"),
+			new Style(1, 8, "Belize Flag"),
+			new Style(1, 8, "Panama Flag"),
+			new Style(1, 8, "Liberia Flag"),
+			new Style(1, 8, "Offshore Platforms or Rigs"),
+			new Style(1, 8, "Container Liability insurance"),
+			new Style(1, 8, "Motorised Wooden Sailing Vessel"),
+			new Style(1, 8, "Ocean Tow"),
+			new Style(1, 8, "Honduras Flag"),
+			new Style(1, 8, "Container Hull insurance"),
+			new Style(1, 8, "Drilling Rigs"),
+
+			new Style(1, 9, "Tourist Buses"),
+			new Style(1, 9, "Long Distance Transport Vehicles"),
+			new Style(1, 9, "Military Vehicles"),
+			new Style(1, 9, "Explosives - any activity"),
+			new Style(1, 9, "Racing of any kind"),
+			new Style(1, 9, "Factory Stocks"),
+			new Style(1, 9, "Chemicals - any activity"),
+			new Style(1, 9, "Car or Bike Racing - any activity"),
+			new Style(1, 9, "Showroom Stocks"),
+			new Style(1, 9, "Oil or Gas Industry (except petrol stations)"),
+			new Style(1, 9, "Rental Cars"),
+			new Style(1, 9, "Airports - any activity"),
+			new Style(1, 9, "Taxis"),
+			new Style(1, 9, "Public Transport Vehicles"),
+
+			new Style(1, 10, "Racing of any kind"),
+			new Style(1, 10, "Flight Risk sold by airlines, agencies or vending "),
+			new Style(1, 10, "Sickness Insurance"),
+			new Style(1, 10, "Non Cancellable Insurance"),
+			new Style(1, 10, "Car or Bike Racing - any activity"),
+			new Style(1, 10, "Accident Cover for drivers or passengers"),
+			new Style(1, 10, "Pilots"),
+			new Style(1, 10, "Aircraft Cabin or other Crew"),
+			new Style(1, 10, "Underwater Activity"),
+			new Style(1, 10, "Accident Insurance covering school fees"),
+			new Style(1, 10, "Flight Risk not on scheduled flights"),
+			new Style(1, 10, "Accident Cover forming part of Life Assurance"),
+
+			new Style(1, 11, "Aircraft ownership, operation or maintenance"),
+			new Style(1, 11, "Vessels of any kind"),
+			new Style(1, 11, "Professional Indemnity"),
+			new Style(1, 11, "Pharmaceutical Products of any kind"),
+			new Style(1, 11, "Errors & Ommissions cover"),
+			new Style(1, 11, "Medical Malpractice"),
+			new Style(1, 11, "Directors and Officers Liability"),
+			new Style(1, 11, "Motor Vehicle Third Party Liability"),
+			new Style(1, 11, "Employers Liability"),
+			new Style(1, 11, "Tobacco Products"),
+			new Style(1, 11, "Drilling Rigs"),
+			new Style(1, 11, "Bridges"),
+			new Style(1, 11, "Quarries"),
+			new Style(1, 11, "Ammonia producing plants"),
+			new Style(1, 11, "Dockside risks"),
+			new Style(1, 11, "Dams"),
+			new Style(1, 11, "Coffer dams"),
+			new Style(1, 11, "Defective Design insurance"),
+			new Style(1, 11, "Harbourside work"),
+			new Style(1, 11, "Mines of any kind"),
+			new Style(1, 11, "Railways"),
+			new Style(1, 11, "Spare Parts Products"),
+			new Style(1, 11, "Motor Vehicle Products"),
+			new Style(1, 11, "Public Utilities"),
+			new Style(1, 11, "Public Authorities"),
+			new Style(1, 11, "Blood Products of any kind"),
+			new Style(1, 11, "Contaceptive Products"),
+			new Style(1, 11, "Underwater Activity"),
+			new Style(1, 11, "Bridge Operation or Repair"),
+			new Style(1, 11, "Cosmetics Products"),
+			new Style(1, 11, "Animal Feeds"),
+			new Style(1, 11, "Products Exported to North America"),
+			new Style(1, 11, "Production Guarantee"),
+			new Style(1, 11, "Waste disposal - any activity"),
+			new Style(1, 11, "Cable Cars"),
+			new Style(1, 11, "Explosives - any activity"),
+			new Style(1, 11, "Asbestos - any activity"),
+			new Style(1, 11, "Work on or near a waterway"),
+			new Style(1, 11, "Oil or Gas Industry (except petrol stations)"),
+			new Style(1, 11, "Airports - any activity"),
+			new Style(1, 11, "Atomic Energy Risks"),
+			new Style(1, 11, "Electricity Production, Distribution or Supply"),
+			new Style(1, 11, "Car or Bike Racing - any activity"),
+			new Style(1, 11, "Racing of any kind"),
+			new Style(1, 11, "Decennial Liability"),
+			new Style(1, 11, "Compressed Air or Gas - any activity"),
+			new Style(1, 11, "Nuclear Power Plant"),
+			new Style(1, 11, "Chemicals - any activity"),
+			new Style(1, 11, "Demolition Contractors"),
+			new Style(1, 11, "Products Guarantee"),
+			new Style(1, 11, "Product Recall")
+			
+	);
+
+
+	function init(sel_type, sel_style){
+
+
+
+		document.product.id_type.options[0]	= new Option("[ Type of Insurance ]");
+		document.product.id_style.options[0] = new Option("[ Risk Defined ]");
+
+		for(i = 1; i <= TypeArray.length; i++){
+
+			document.product.id_type.options[i]	= new Option(TypeArray[i-1].type, TypeArray[i-1].id);
+
+			if(TypeArray[i-1].id == sel_type)
+
+				document.product.id_type.options[i].selected = true;
+
+		}
+
+		OnChange(sel_style);
+
+
+
+	}
+
+
+
+	function OnChange(sel_style){
+
+
+
+		sel_type_index = document.product.id_type.selectedIndex;
+
+		sel_type_value = parseInt(document.product.id_type[sel_type_index].value);
+
+
+
+		for(i = document.product.id_style.length - 1; i > 0; i--)
+
+			document.product.id_style.options[i]	= null;
+
+
+
+		j=1;
+
+		for(i = 1; i <= StyleArray.length; i++){
+
+			if(StyleArray[i-1].id_type == sel_type_value){
+
+				document.product.id_style.options[j]	= new Option(StyleArray[i-1].style, StyleArray[i-1].id);
+
+				if(StyleArray[i-1].id == sel_style)	document.product.id_style.options[j].selected = true;
+
+				j++;
+
+			}
+
+		}
+
+
+
+	}
+
+//-->
+
+</SCRIPT>
+
+
+
+<form name="product">
+
+  <div align="left">
+    <table border="1" width="247" height="27" bgcolor="#FF9900" bordercolor="#CC9900">
+      <tr>
+        <td width="247" height="27">
+          <p align="center"><font face="Tahoma" size="4" color="#FFFFFF">Treaty Risk
+          Exclusion</font></td>
+      </tr>
+    </table>
+  </div>
+  <p>
+
+  <select name="id_type" size="1" style="width: 250px;" onChange="OnChange()">
+
+  </select>
+
+	     
+
+  <select name="id_style" size="1" style="width: 500px;">
+
+  </select>
+
+  </p>
+
+</form>
+
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+
+<!--
+
+//	init(5, 31);	// Initialize comboboxes by selected sel_type and sel_style
+
+	init();         // Default initialize comboboxes for Type and Style
+
+
+
+//-->
+
+</SCRIPT>
+
+
+
+</body>
+
+</html>

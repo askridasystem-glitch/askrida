@@ -1,0 +1,7 @@
+- currency maintenance
+- exchange rate mainenance
+
+- explore Postgres Triggers for ar balance implementation
+- implement ar balance
+- check ar post to gl
+- create ar report

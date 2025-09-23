@@ -1,0 +1,184 @@
+BODY {
+	MARGIN-TOP: 0px; MARGIN-LEFT: 0px; FONT-SIZE: 12px; BACKGROUND-COLOR: #f4f4f4; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}.menu_title {
+	font-size: 8pt;
+	font-weight: bold;
+	color: #f4f4f4;
+	BACKGROUND-COLOR: #000000;
+}
+A.menuitem {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #f4f4f4; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A.menu {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+a{
+	color: #150CCD;
+	text-decoration: none;
+	font-size: 12px;
+}
+a:visited{
+	color: #150CCD;
+	text-decoration: none;
+	font-size: 12px;
+}
+a:hover{
+	color: #da072a;
+	text-decoration: underline;
+	font-size: 12px;
+}
+a.toplink2{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+
+    color: #f4f4f4;
+	text-decoration: none;
+
+}
+a.toplink2:visited{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+
+    color: #f4f4f4;
+	text-decoration: none;
+}
+a.toplink2:hover{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+
+	color: #E7152E;
+	text-decoration: none;
+}
+.RINPUT
+{
+    BORDER-RIGHT: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none;
+    BORDER-TOP: medium none;
+    BACKGROUND-POSITION: center bottom;
+    FONT-SIZE: 12px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #f4f4f4;
+    border: solid 1px #000000;
+    TEXT-ALIGN : right;
+}
+.INPUT
+{
+    BORDER-RIGHT: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none;
+    BORDER-TOP: medium none;
+    BACKGROUND-POSITION: center bottom;
+    FONT-SIZE: 12px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #f4f4f4;
+    border: solid 1px #000000;
+}
+.SELECT
+{
+    BORDER-RIGHT: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none;
+    BORDER-TOP: medium none;
+    BACKGROUND-POSITION: center bottom;
+    FONT-SIZE: 12px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #f4f4f4;
+    border: solid 1px #000000;
+}
+TD
+{
+    FONT-SIZE: 12px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+}
+.title {
+	font-family: Verdana, Arial;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+.header
+{
+    FONT-SIZE: 12px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #033963;
+    color: #FFFFFF;
+}
+
+.row
+{
+	background-color: #f4f4f4;
+   font-size: 8pt;
+}
+.row0
+{
+	background-color: #f4f4f4;
+   font-size: 8pt;
+}
+
+.row1
+{
+	background-color: #BFDFF4;
+   font-size: 8pt;
+}
+
+TD.detail
+{
+    FONT-SIZE: 12px;
+    BACKGROUND-REPEAT: repeat-x;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #FFFFFF;
+    color: #000000;
+}
+.msg0, .msg1, .msg2, .msg3
+{
+	FONT-FAMILY : arial,verdana,helvetica;
+	FONT-SIZE : 9pt;
+	POSITION : absolute;
+	Z-INDEX : 1;
+	VISIBILITY : hidden;
+}
+.holder
+{
+	TEXT-ALIGN : left;
+	POSITION : absolute;
+	FONT-FAMILY : arial,verdana;
+	FONT-SIZE : 9pt;
+}
+.pos {
+	position: absolute;
+	visibility: visible;
+	left: 30px;
+	top: 100px;
+}
+.style3 {
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.style2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #f4f4f4;
+}
+
+#side a.side-link:link {
+  color: black;
+}
+
+#side a.side-link:visited {
+  color: blue;
+}
+
+#side a.side-link:hover {
+  color: white;
+}
+
+#side a.side-link:active {
+  color: green;
+} 

@@ -1,0 +1,14 @@
+<forms>
+   <form name="prod_report" class="com.webfin.insurance.form.ProductionReportForm" view="prodRPT.jsp" />
+   <form name="prod_marketing_report" class="com.webfin.insurance.form.ProductionMarketingReportForm" view="prodMarketingRPT.jsp" />
+   <form name="prod_reinsurance_report" class="com.webfin.insurance.form.ProductionReinsuranceReportForm" view="prodReinsuranceRPT.jsp" />
+   <form name="prod_claim_report" class="com.webfin.insurance.form.ProductionClaimReportForm" view="prodClaimRPT.jsp" />
+   <form name="prod_finance_report" class="com.webfin.insurance.form.ProductionFinanceReportForm" view="prodFinanceRPT.jsp" />
+   <form name="prod_utilities_report" class="com.webfin.insurance.form.ProductionUtilitiesReportForm" view="prodUtilitiesRPT.jsp" />
+   <form name="prod_rekap" class="com.webfin.insurance.form.ProductionRecapReportForm" view="prodRekapRPT.jsp" />
+   <form name="prod_biaop" class="com.webfin.insurance.form.ProductionFinanceReportForm" view="prodBiaopRPT.jsp" />
+   <form name="prod_rkap" class="com.webfin.insurance.form.ProductionFinanceReportForm" view="prodRkapRPT.jsp" />
+   <form name="rkap_report" class="com.webfin.insurance.form.ProductionFinanceReportForm" view="prodRkap2RPT.jsp" />
+   <form name="prod_validation_tools" class="com.webfin.insurance.form.ProductionValidationReportForm" view="prodValidationRPT.jsp" />
+       <form name="prod_statistik_report" class="com.webfin.insurance.form.ProductionStatistikReportForm" view="prodStatistikRPT.jsp" />
+</forms>  

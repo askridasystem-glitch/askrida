@@ -1,0 +1,6 @@
+<forms>
+   <form name="incoming_edit" class="com.webfin.incoming.forms.IncomingMasterForm" view="incomingletterform.jsp" return="INC_LIST"/>
+   <form name="incominglist" class="com.webfin.incoming.forms.IncomingListForm" view="incomingListform.jsp"/>
+   <form name="approvalbod_edit" class="com.webfin.incoming.forms.ApprovalBODMasterForm" view="approvalbodletterform.jsp" return="INC_LIST"/>
+   <form name="approvalbodlist" class="com.webfin.incoming.forms.ApprovalBODListForm" view="approvalbodListform.jsp"/>
+</forms>

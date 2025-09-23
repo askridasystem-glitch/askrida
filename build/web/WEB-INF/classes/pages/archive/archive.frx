@@ -1,0 +1,4 @@
+<forms>
+   <form name="archive_edit" class="com.webfin.archive.forms.ArchiveMasterForm" view="archiveform.jsp" return="INC_LIST"/>
+   <form name="archivelist" class="com.webfin.archive.forms.ArchiveListForm" view="archiveListform.jsp"/>
+</forms>

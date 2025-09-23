@@ -1,0 +1,37 @@
+/***********************************************************************
+ * Module:  ws.EchoTest
+ * Author:  Denny Mahendra
+ * Created: Mar 8, 2006 1:27:17 PM
+ * Purpose: 
+ ***********************************************************************/
+
+package ws;
+
+import java.util.HashMap;
+import java.util.Date;
+import java.math.BigDecimal;
+
+public class EchoTest {
+   public String test(String a) {
+      return a+" OK";
+   }
+
+   public HashMap [] testHash(String x) {
+      final HashMap m1 = new HashMap();
+
+      m1.put("FIELD1","Value1");
+      m1.put("FIELD2",new BigDecimal(22));
+      m1.put("FIELD2",new Date());
+
+      return new HashMap [] {m1};
+   }
+
+   public Object otorisasi(java.lang.String sUserName, java.lang.String sPassword) {
+      System.out.println("otorisasi("+sUserName+","+sPassword+")");
+
+      if (sUserName=="Hengky")
+      return new Boolean(true);
+
+      return new Boolean(false);
+   }
+}

@@ -1,0 +1,90 @@
+<events>
+   <event name="SY_GL_ENTRY">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="list"/>
+      <forward page="/pages/gl/entry/listsyariahGLEntry.jsp"/>
+   </event>
+   <event name="SY_GL_ENTRY_ADD">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="add"/>
+      <forward page="/pages/gl/entry/syariahGLEntry.jsp"/>
+   </event>
+   <event name="SY_GL_ENTRY_EDIT">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="edit"/>
+      <forward page="/pages/gl/entry/syariahGLEntry.jsp"/>
+   </event>
+   <event name="SY_GL_ENTRY_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="addline"/>
+      <forward page="/pages/gl/entry/syariahGLEntry.jsp"/>
+   </event>
+   <event name="SY_GL_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="delline"/>
+      <forward page="/pages/gl/entry/syariahGLEntry.jsp"/>
+   </event>
+   <event name="SY_GL_ENTRY_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="editrefresh"/>
+      <forward page="/pages/gl/entry/syariahGLEntry.jsp"/>
+   </event>
+   <event name="SY_GL_ENTRY_VIEW">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="view"/>
+      <forward page="/pages/gl/entry/syariahGLEntry.jsp"/>
+   </event>
+   <event name="SY_GL_ENTRY_CHG_CCY">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="changeCCy"/>
+      <forward page="/pages/gl/entry/syariahGLEntry.jsp"/>
+   </event>
+   <event name="SY_GL_ENTRY_SAVE">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="save"/>
+      <forward id="ERROR" event="SY_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   
+   <event name="SY_GL_ENTRY_APPROVE">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="approve"/>
+      <forward id="ERROR" event="SY_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="SY_GL_ENTRY_VIEW_APPROVE">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="clickApprove"/>
+      <forward page="/pages/gl/entry/syariahGLEntry.jsp"/>
+   </event>
+   <event name="SY_GL_ENTRY_ADD_LR">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="addLabaRugi"/>
+      <forward page="/pages/gl/entry/syariahGLEntry.jsp"/>
+   </event>
+
+   <event name="SY_ENTRY_REVERSE">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="reverse"/>
+      <forward page="/pages/gl/entry/syariahGLEntry.jsp"/>
+   </event>
+   <event name="SY_REVERSE">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="doReverse"/>
+      <forward id="ERROR" event="SY_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+
+   <event name="SY_GL_ENTRY_ADD_RKAP">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="addRKAP"/>
+      <forward page="/pages/gl/entry/syariahGLEntry.jsp"/>
+   </event>
+   <event name="REPORT_GL_ENTRY_ADD_RKAP">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="addReportRKAP"/>
+      <forward page="/pages/gl/entry/reportRKAPGLEntry.jsp"/>
+   </event>
+   <event name="REPORT_GL_ENTRY_EDIT">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="editReportRKAP"/>
+      <forward page="/pages/gl/entry/reportRKAPGLEntry.jsp"/>
+   </event>
+   <event name="REPORT_GL_ENTRY_VIEW">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="viewReportRKAP"/>
+      <forward page="/pages/gl/entry/reportRKAPGLEntry.jsp"/>
+   </event>
+   <event name="REPORT_GL_ENTRY_SAVE">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="saveReportRKAP"/>
+      <forward id="ERROR" event="REPORT_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="REPORT_GL_ENTRY_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.SyariahEntryHelper" method="editrefreshReportRKAP"/>
+      <forward page="/pages/gl/entry/reportRKAPGLEntry.jsp"/>
+   </event>
+</events>
+

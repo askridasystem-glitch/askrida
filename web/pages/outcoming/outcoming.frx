@@ -1,0 +1,6 @@
+<forms>
+   <form name="outcoming_edit" class="com.webfin.outcoming.forms.OutcomingMasterForm" view="outcomingletterform.jsp" return="OUT_LIST"/>
+   <form name="outcominglist" class="com.webfin.outcoming.forms.OutcomingListForm" view="outcomingListform.jsp"/>
+   <form name="uploadbod_edit" class="com.webfin.outcoming.forms.UploadBODMasterForm" view="uploadbodletterform.jsp" return="OUT_LIST"/>
+   <form name="uploadbodlist" class="com.webfin.outcoming.forms.UploadBODListForm" view="uploadbodListform.jsp"/>
+</forms>

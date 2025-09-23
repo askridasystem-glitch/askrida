@@ -1,0 +1,4 @@
+<forms>
+   <form name="risk_list" class="com.webfin.master.category.form.RiskListForm" view="risk_list.jsp"/>
+   <form name="risk_form" class="com.webfin.master.category.form.RiskMasterForm" view="risk_form.jsp"/>
+</forms>

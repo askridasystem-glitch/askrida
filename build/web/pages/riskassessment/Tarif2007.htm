@@ -1,0 +1,665 @@
+<html>
+
+<head>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+
+function HITUNG(form) {
+
+OKUPASI = eval(form.OKUPASI.value)
+CONDITIONS = eval(form.CONDITIONS.value)
+COST = eval(form.COST.value)
+RATE = eval(form.RATE.value)
+NEWRATE = eval(form.NEWRATE.value)
+
+
+//
+
+
+form.RATE.value = form.OKUPASI.value
+form.NEWRATE.value = 1/(1-COST)*OKUPASI*CONDITIONS
+
+}
+
+// End -->
+
+</SCRIPT>
+
+</head>
+
+<body>
+
+<FORM name="hitung"><b><font color="#FF0000" face="Tahoma" size="5">TARIF 2007</font>
+  </b>
+
+  <table border="0" width="71%">
+    <tr>
+      <td width="59%" bgcolor="#C0C0C0"><font face="Tahoma" size="2">Occupation</font></td>
+      <td width="70%" bordercolor="#0000FF" bgcolor="#808080">
+        <font face="Tahoma">
+        <select size="1" name="OKUPASI" style="border-style: solid; border-color: #0000FF">
+          <option value="0.12868">20 MINING, DRILLLING, INSTALATION, SALT MINES, PEAT EXTRACTION,</option>
+          <option value="0.0791697">200 Refining installations (gold, silver, platinum, etc.)</option>
+          <option value="0.1678471">201 Alumunium works (foundries)</option>
+          <option value="0">2021 Blast furnaces</option>
+          <option value="0.1059565">2022 Iron foundries</option>
+          <option value="0.5547782">2028 Mixed</option>
+          <option value="0.4123473">203 Steelworks and rolling mills</option>
+          <option value="0">2041 Drilling installation(explor. and production) for petroleum</option>
+          <option value="0.0812313">2042 Transport installations for petrolium (including pipelines )</option>
+          <option value="0.00897621">2044 Transport installastions for natural gas(including pipeline)</option>
+          <option value="0">2058 Mixed</option>
+          <option value="0.0417437">206 Foundries, reduction plant for metals(excl.iron aluminium)</option>
+          <option value="0.0837717">2074 Manufacture of hard coal briquittes</option>
+          <option value="0.0327147">2081 Open cast salt mines,underground slat mines,salt mines&brine</option>
+          <option value="0">2093 Manufacture of peat briquittes</option>
+          <option value="0">2094 Manufacture of peat dust and  peat litter</option>
+          <option value="0.0286598">21 STONE, EARTH, BONES OR SHELLS</option>
+          <option value="0.0472038">210 Stone, gravel and sand extraction instalations</option>
+          <option value="0.038873">2111 Chalk, lime and plaster work, kieselguhr kilns</option>
+          <option value="0.0226326">2112 Cement factories</option>
+          <option value="0.0968175">2113 Cement and plaster goods, unfired stoneware</option>
+          <option value="0.3116429">2114 False teeth production</option>
+          <option value="0.1438028">2118 Others</option>
+          <option value="0.0527861">2121 Asbestos board,asbestos fibre,stone slab,concrete slab</option>
+          <option value="0">21223 Producers of goods made of bones or shells using combustible</option>
+          <option value="0.0270833">2131 Factories which only have tunnel klins</option>
+          <option value="0.1239817">2132 Factories with other types of kilns (loadings if applicable)</option>
+          <option value="3.0971731">21331 Manufacture of transparent glaas: using electricity</option>
+          <option value="0.0397698">2141 Factories which only have tunnel kilns</option>
+          <option value="0.016928">2142 Factories with other types of kilns</option>
+          <option value="0.00876582">2148 Mixed (loadings if applicable)</option>
+          <option value="0.1180564">2151 Hollow glass bottles and glassfibres (loading if applicable)</option>
+          <option value="0.00667389">2152 Sheet and plate glass</option>
+          <option value="0.5423763">2158 Mixed</option>
+          <option value="0.0935938">216 Glass processing and mirro factories</option>
+          <option value="0">217 Precious stone workshops and processing plant</option>
+          <option value="0.1439701">218 Emery and abrasive materials factories</option>
+          <option value="0.022903">2199 Other industries in main category 21</option>
+          <option value="0.0742939">22 METAL</option>
+          <option value="0.0317246">2201 Sheet rolling mills and foil making plants, forging works</option>
+          <option value="0.3381384">2202 Metal powder factories</option>
+          <option value="0.2821003">2208 Mixed</option>
+          <option value="0.3596155">22111 Mechanical engineering withoutany melting of metals</option>
+          <option value="0.13583">22112 As per Kode 22111 but with melting of metal</option>
+          <option value="0.4116392">2212 Enamelling and zincing plants</option>
+          <option value="0.0238962">2213 Galvanising,anodising</option>
+          <option value="0.1426151">2214 Metal/Steel Furniture factories</option>
+          <option value="0.0704328">2215 Metal/steel mattresses manufacturing</option>
+          <option value="0.1456325">2218 Mixed</option>
+          <option value="0.0769471">2221 Manufacture, assembly and repair of electrical machines</option>
+          <option value="0.0661066">2222 Accumulator and dry battery factories</option>
+          <option value="0.020001">2223 Manufacture of measuring equipment, photographic apparatus</option>
+          <option value="0.0349938">2228 Mixed</option>
+          <option value="0">223 Cable and wire factories</option>
+          <option value="0.0365821">2231 Wire factories</option>
+          <option value="0.04446">2232 Cable factories</option>
+          <option value="0.00939322">2233 Nails,screws,bolts and nuts factories</option>
+          <option value="0.0215991">2238 Mixed</option>
+          <option value="0.0730497">2241 Vehicle constrution plants including bicycle and becak</option>
+          <option value="0">2242 Construction of railway carriages and locomotives</option>
+          <option value="0.0271823">2244 Ship construction,naval shipyards</option>
+          <option value="1.2271084">2245 Vehicle assembling plants</option>
+          <option value="0.026033">2251 Manufacture and or assembly of telecomunication apparatus</option>
+          <option value="0.00263018">2252 Manufacture and or assembly of computer apparatus</option>
+          <option value="0.00286504">2253 Manufacture  of Integrated (IC) from Chips</option>
+          <option value="0.0230152">2261 Radio and television receiver factories,audio video recorder</option>
+          <option value="0.0000507846">2262 Factories of parts for radio &TV receivers,audio or players</option>
+          <option value="0.0469594">227 Light bulb factories, manufacture of electronic tubes</option>
+          <option value="0">228 Watches and clocks and their component parts factories</option>
+          <option value="0.025071">229 Metal jewellery and precious metal goods factories</option>
+          <option value="0.4663213">2299 Other industries in main category 22</option>
+          <option value="0.081577">23 CHEMICAL/ OIL/GAS</option>
+          <option value="0.4112427">23001 General chemical product factories</option>
+          <option value="0.0808394">23002 Pharmaceutical products factories and medicated plaster</option>
+          <option value="0.6579087">23003 Natural (tradition) drugs (jamu)</option>
+          <option value="0.000105692">23004 Insecticide and herbicide factories</option>
+          <option value="0.4988945">23005 Paint and varnish factories</option>
+          <option value="0.0143204">23006 Acid, alkaline factories</option>
+          <option value="0.3561839">23008 Air separation ,gases,eg oxygen,nitrogen,hydrogen</option>
+          <option value="0.0857102">23012 Ink Factories</option>
+          <option value="0.5687697">23013 Stencil and printing ink factories using ignitable/materials</option>
+          <option value="0">23101 Distillation of hydrocarbons,atmospheric</option>
+          <option value="0">23109 Seperation processes. e.g desulphurization,extraction</option>
+          <option value="0">23111 Hydrogen generation from natural gas of liquid hydrocarbons</option>
+          <option value="0">231141 Other plants:workshops and stores</option>
+          <option value="0.044628">231142 Other Plants:Water treatment plants</option>
+          <option value="0.0000146568">2321 Petrochemical work with basic materials such as ethylene etc</option>
+          <option value="0.00455344">2322 Pertrochemical intermediate product(Vinyl chloride & others)</option>
+          <option value="0.000190979">2323 Polymerization on a large scale :manufacture of polyethylene</option>
+          <option value="0">23231 Polymerization on a large scale:manufacture of polyetylene</option>
+          <option value="0">23232 Polymerization on a large scale:manufacture of PVC</option>
+          <option value="0.00486113">23241 Ammonia production and or urea production</option>
+          <option value="0">23242 Production of melamine powder/melamine crystals using urea</option>
+          <option value="0.00126853">2325 Synthetic rubber</option>
+          <option value="0.119789">2331 Crude oil</option>
+          <option value="0.0350624">2332 Oil products in tanks located in harbour area</option>
+          <option value="0">2333 Liquefied gases</option>
+          <option value="0.000326363">2335 Other liquid chemicals (e.g ammonia)</option>
+          <option value="0.4084066">2341 Manufacture of plastic articles</option>
+          <option value="2.250842">2342 Manufacture and processing of foam plastics</option>
+          <option value="2.3599868">23432 Using liquid methanol,water and air continuous process</option>
+          <option value="0.0278166">235 Manufacture of artificial fibres (petrochemical feedstock)</option>
+          <option value="0.0425802">236 Manufacture of film, photo grafic paper and magnetic tape</option>
+          <option value="0.00408253">2371 Manufacture of soaps, detergents and polishes</option>
+          <option value="0.4111143">2372 Manufacture of etheric oils,essences,perfumes and cosmetic</option>
+          <option value="0.1801266">2373 Manufacture of glatine, non synthetic adhesives, starches</option>
+          <option value="0">23741 Using water or other non combustible solvent(s) as the sole</option>
+          <option value="0.0210085">2378 Mixed</option>
+          <option value="0.000906376">238 Chemical fertilizer factories (conventional)</option>
+          <option value="0.4158224">239 Powders, explosives, matches  and firework factories</option>
+          <option value="0.0511948">2399 Other industries in main category 23</option>
+          <option value="0.0742308">24 TEXTILES</option>
+          <option value="0.0713014">2401 Spinning mills,Pre-spinning : Animal Fibres</option>
+          <option value="0.0360845">2402 Spinning mills,Pre-spinning : Vegetable and cellulose fibres</option>
+          <option value="0.1543132">2403 Spinning mills,Pre-spinning : Synthetic fibres/mechanical pr</option>
+          <option value="0.1554331">2408 Spinning mills,Pre-spinning : Mixed (loadings if applicable)</option>
+          <option value="0.0261821">2411 Weaving,Pre-Weaving Processes:Animal fibres</option>
+          <option value="0.0486605">2412 Weaving,Pre-Weaving Processes:Vegetable and cellulose fibres</option>
+          <option value="0.0156941">2413 Weaving,Pre-Weaving Processes:Synthetic fibres</option>
+          <option value="0.2106173">2418 Weaving,Pre-Weaving Processes:Mixed (loadings if applicable)</option>
+          <option value="0.0426534">2421 Animal fibres</option>
+          <option value="0.0135734">2422 Vegetable and cellulose fibres (loadings if applicable)</option>
+          <option value="0.0890926">2423 Synthetic fibres</option>
+          <option value="0.1041724">2428 Mixed</option>
+          <option value="0.1714348">2431 Mixed processes(spinning,weaving):Animal fibres</option>
+          <option value="0.2681391">2432 Mixed processes(spinning,weaving) : Vegetable and cellulose</option>
+          <option value="0.00232639">2433 Mixed processes(spinning,weaving):Synthetic fibres</option>
+          <option value="0.1600347">2438 Mixed processes(spinning,weaving dres.&finis.): Mixed</option>
+          <option value="0.041083">2441 Processing of textile waste : Animal fibres</option>
+          <option value="0.0132703">2442 Processing of textile waste : Vegetable and cellulose fibres</option>
+          <option value="0.0915285">2443 Processing of textile waste : Synthetic fibres</option>
+          <option value="1.3297808">2448 Processing of textile waste : Mixed</option>
+          <option value="0.00360843">2451 Ropemakers, stringmakers and sackmakers</option>
+          <option value="0.0459625">24521 Blankets weaving mills</option>
+          <option value="0.335828">24522 Carpet manufacturers</option>
+          <option value="0.0809815">2458 Mixed</option>
+          <option value="0.2439373">2461 Kniting mills, knitwear factories, stocking factories</option>
+          <option value="0.1552243">2462 Clothing and underwear manufactures,sewing works,furriers</option>
+          <option value="0.5448358">2463 Umbrella factories, felt goods factories, lace factories</option>
+          <option value="1.5234287">24641 Batik tulis</option>
+          <option value="0.073148">24642 Batik cetak / Batik cap</option>
+          <option value="0">24643 Mixed</option>
+          <option value="0.2570817">2465 Garment factories (konpeksi)</option>
+          <option value="0.00578803">2466 Zipper Factories</option>
+          <option value="0.0621077">2468 Mixed</option>
+          <option value="0.00685765">247 Upsholstery, cushionmaker's and saddler's workshops</option>
+          <option value="0.7281221">248 Cotton wool and capoc factories</option>
+          <option value="1.1504113">2491 Laundries and pressers</option>
+          <option value="0.00567591">2492 Dry-(chemical) cleaning</option>
+          <option value="0">2498 Mixed</option>
+          <option value="0.2102345">25 PAPER, LEATHER, RUBBER</option>
+          <option value="0.00641651">2508 Mixed</option>
+          <option value="0.2738904">2511 Paper manufacture</option>
+          <option value="0.0103421">2512 Manufacture of cardboard and hardboard</option>
+          <option value="0.785133">2521 Carton manufacture (loadings if applicable)</option>
+          <option value="1.3634889">2522 Paper goods and or carton goods factories</option>
+          <option value="0.0273273">2523 Bookbinders</option>
+          <option value="0.085669">2528 Mixed</option>
+          <option value="0.2943703">2531 Newspaper printers</option>
+          <option value="0.5346107">2532 Other printers, art printing works,lithographers</option>
+          <option value="0.00558875">2533 Typeplate workshops,block workshops</option>
+          <option value="0.1618392">2534 Photogravure workshop</option>
+          <option value="0.5373742">2538 Mixed</option>
+          <option value="0.1330082">254 Coloured paper and wallpaper printing works</option>
+          <option value="0">255 Straw and rush goods factories</option>
+          <option value="0.0356186">256 Leather production and tanneries</option>
+          <option value="0.1328769">2571 Leather</option>
+          <option value="3.0155944">2572 Rubber and/or Canvas</option>
+          <option value="1.0981546">2578 Other materials or mixture of abovementioned materials&other</option>
+          <option value="0.110011">2581 Leather goods factories</option>
+          <option value="0.8067519">2582 Imitation leather goods factories</option>
+          <option value="0.2164309">2588 Mixed</option>
+          <option value="0.3831354">2591 Rubber goods factories (excluding foamed rubber)</option>
+          <option value="1.6006351">2592 Foamed rubber factories</option>
+          <option value="0.3375093">2593 Tyre factories, vulcanizing works rubber factories</option>
+          <option value="0">25931 Tyre cord manufacturers (using tyre yarn as basic material)</option>
+          <option value="0.5852702">2594 Remilling factories</option>
+          <option value="0.1034872">2596 Crumb rubber factories</option>
+          <option value="0.025332">2598 Mixed</option>
+          <option value="0.162533">26 WOOD, BAMBOO AND RATTAN</option>
+          <option value="0.4931277">2601 Sawmills, panglong (saw mills with manual manufacture only)</option>
+          <option value="0.578085">2602 Carpenter's shops, parquet factories, sawing and cutting</option>
+          <option value="0.5824546">2604 Obat nyamuk factories (discount/loading if applicable)</option>
+          <option value="0.0974189">2605 Toothpick,chopsticks factories</option>
+          <option value="0.0962347">2606 Rattan drying & peeling mills</option>
+          <option value="0.7402274">261 Furniture manufacture, cabinetmakers, woooden boat builders</option>
+          <option value="0.4009452">2621 Manufacture of fibreboard,harboard,masonite</option>
+          <option value="6.0532882">26221 Using synthetic adhesives other than formaldehyde synthetic</option>
+          <option value="0.1606351">26222 Using formaldehyde synthetic resin adhesives</option>
+          <option value="0.1319667">2623 Manufacture of playwood provided carried out in the plywood</option>
+          <option value="0.00598495">2628 Mixed (discount/loadings if applicable)</option>
+          <option value="1.3150037">263 Tuner's shop,coacbuilder's shaop,pipes,walking sticks</option>
+          <option value="0">265 Cork goods factories (discount/loading if applicable)</option>
+          <option value="0">266 Broom,brush and paintbrush factories (discount/loadings)</option>
+          <option value="0.0407489">267 Timber impregnation installations (discount/loadings)</option>
+          <option value="0.0479733">268 Wooden musical instruments factories</option>
+          <option value="1.1679451">269 Charcoal producers (discount/ loading if applicable)</option>
+          <option value="0.0428894">2699 Other industries in main category 26 (discounts/loadings)</option>
+          <option value="0.12487">27 NUTRITIONAL, DRINKS AND TOBACCO</option>
+          <option value="0.049427">2701 Corn mills</option>
+          <option value="3.8837914">2702 Fodder mills</option>
+          <option value="0.2593483">2703 Gaplek mills</option>
+          <option value="0.0886151">2704 Gambir factories</option>
+          <option value="0.4648863">2705 Flour Mills</option>
+          <option value="1.2021667">2708 Mixed</option>
+          <option value="0.1536256">2709 Paddy & Hulling Mills</option>
+          <option value="0.5280648">27111 Sugar mills excluding spontaneous cumbustion</option>
+          <option value="0.018097">27112 Sugar mills including spontaneous combustion</option>
+          <option value="0.1015925">27113 Chocolate and sweets factories</option>
+          <option value="0.0542243">2721 Alimentary paste producers</option>
+          <option value="0.1002636">2722 Bakeries and biscuit works</option>
+          <option value="0.3429309">2723 Processed food factories (bihun,mie,lomie,kerupuk) atc</option>
+          <option value="0.3603768">2728 Mixed</option>
+          <option value="0.0762849">2731 Preserve factories (jam etc),pabrik sari gula,MSG producers</option>
+          <option value="0.3871104">2732 Meat,meat products and fish products factories</option>
+          <option value="0.0342693">2733 Soya bean,tomato and hot pepper sauce</option>
+          <option value="0.0370817">27341 Poultry farms: using electrical lighting</option>
+          <option value="0.0643085">2735 Other farms</option>
+          <option value="0.0419677">2736 Hatcheries</option>
+          <option value="0.1097335">2741 Edible fats producers</option>
+          <option value="0.1437775">2742 Edible oil and other plants produc edible palmoil or other</option>
+          <option value="0.0237958">2743 Storage of crude palm oil(CPO)outside estates incl.storage</option>
+          <option value="0.1104793">2748 Mixed</option>
+          <option value="0.0100667">2751 Dairies and dairy products</option>
+          <option value="0.00114561">2752 Dairies and dairy products including desiccated milk</option>
+          <option value="0.0523255">2761 Coffee roasting plants,coffee extract factories</option>
+          <option value="0.1113707">2763 Tea sheds and tea factories</option>
+          <option value="0">2768 Mixed</option>
+          <option value="0.0169484">2771 Cold stores and ice factories</option>
+          <option value="0">2772 Abattoirs and butchers</option>
+          <option value="0">2773 Drying installations</option>
+          <option value="0.0054404">2781 Breweries</option>
+          <option value="0.1570603">2782 Producers of wines,fruit juices and mineral water</option>
+          <option value="0.0413697">27831 Producers of spirits and liquors</option>
+          <option value="0.2666158">27832 Distileries producing alcohol from non petrochemical</option>
+          <option value="0.00512719">2784 Vinager (Acid liquor) factories</option>
+          <option value="0">2788 Mixed</option>
+          <option value="0.0892343">2790 Tobacco,cigars and cigarettes manufacture</option>
+          <option value="0.2052649">2791 Drying sheds/smoke houses</option>
+          <option value="3.7900391">27921 Oven(dapur pengering tembakau)dengan pengapian tdk langsung</option>
+          <option value="0.1524911">2793 Tobbacco Establishment</option>
+          <option value="0.0266743">28 POWER AND HEATING</option>
+          <option value="0.0000913106">280 Hydro electric power stations (discounts if applicable)</option>
+          <option value="0.000726183">281 Conventional power station, buildings with boiler houses</option>
+          <option value="0">283 Overhead power transmission lines and net works</option>
+          <option value="3.6546259">284 Voltage & current transformer stations in the open</option>
+          <option value="0.2559334">2861 Lighting gas and generator gas installations</option>
+          <option value="0">2862 Liquefied gas installations,gas decomposition</option>
+          <option value="0.0245344">2863 Carbon dioxide extraction plants (loading if applicable)</option>
+          <option value="0.00687709">287 Waterworks, pumping stations, sewage works, ice rinks</option>
+          <option value="0.0142032">290 TRANSPORT & TRAFFIC</option>
+          <option value="0">2903 Jetties (dermaga)</option>
+          <option value="0.0396072">2905 Airport : Hangars</option>
+          <option value="0.072273">2906 Airport : Workshops,spare parts depots</option>
+          <option value="0.0291906">2908 Airport : General airport services</option>
+          <option value="0.0498898">2909 Airport : Others</option>
+          <option value="0.0234138">291 CONSTRUCTION FIRMS</option>
+          <option value="0.0125664">2911 Construction firm, road construction and construction sites</option>
+          <option value="0">2912 Cranes,excavators,elevators,road building machines excluding</option>
+          <option value="0.0470723">29151 Electrical (diesel generated and/or PLN) welding plants</option>
+          <option value="0.1507727">29152 Acetylene (karbit) welding plants</option>
+          <option value="0.0464123">292 MASS COMMUNICATION</option>
+          <option value="0.2839227">2921 Film television and recording on magnetic tape studios</option>
+          <option value="0.1512148">2922 Film reproduction (prints) and photo treatment</option>
+          <option value="0.2904259">2923 Cinemas, assembly rooms and concert halls</option>
+          <option value="0.1757529">2924 Theatres, variety theatres and circuses housed in permanent</option>
+          <option value="0.1208417">2925 Circuses with a big top, show and exhibition tents</option>
+          <option value="0.000101036">2926 Others</option>
+          <option value="0.1204011">2927 Radio broadcasting, television broadcasting & relay stations</option>
+          <option value="0.089222">2928 Kantor telpon sentral otomat dan warung pos/telekomunikasi</option>
+          <option value="0.114084">293 TRADING & STORAGE</option>
+          <option value="0.0991433">2930 Dispensaries (apotik)</option>
+          <option value="0.4727081">29311 Departemen,supermaket,shoppingcentres subject to Warranty A</option>
+          <option value="0.0322297">29312 Departemen store,supermaket,shopping centres to Warranty B</option>
+          <option value="0.4231995">29313 Departemen stores,supermakets ,shopping centre to Warranty C</option>
+          <option value="0">29314 MAKRO stores</option>
+          <option value="0.00333119">2932 Mail order houses,subject to Warranty A</option>
+          <option value="0.8659207">2933 Chain stores, Grocer stores,  subject to Warranty A</option>
+          <option value="0.2742893">29341 Shops :subject to Warranty A</option>
+          <option value="0.452702">29342 Shops :subject to Warranty B</option>
+          <option value="0.3523201">29343 Shops :subject to Warranty C</option>
+          <option value="0.4227005">2935 Pasar risk</option>
+          <option value="0">2936 Others</option>
+          <option value="0.1623299">29371 - subject to Warranty A</option>
+          <option value="0.0650481">293711 Private warehouses & storehouses terbatas dalam Warranty A</option>
+          <option value="0.211252">29372 - subject to Warranty B</option>
+          <option value="0.1185287">293721 Private warehouses & storehouses terbatas dalam Warranty B</option>
+          <option value="0.3196016">29373 - subject to Warranty C</option>
+          <option value="0.0401466">293731 Private warehouses & storehouses terbatas dalam Warranty C</option>
+          <option value="6.63571">29374 Private highracked warehouse & private highbay to Warranty A</option>
+          <option value="0">29376 Private highracked warehouse & private highbay to Warranty C</option>
+          <option value="0.2933359">29378 Public Warehouses,subject to Warranty C</option>
+          <option value="0">29379 Cold Storage Public Warehouses</option>
+          <option value="0">29382 Storage tanks :surface storage tanks(including barrels)</option>
+          <option value="0.0682662">29383 Petrol/diesel fuel stations</option>
+          <option value="0.00133806">29384 LNG stations for automobiles</option>
+          <option value="0.1520101">29385 Others</option>
+          <option value="0.00719096">29391 Storage of goods in the open ,private or public warranty A</option>
+          <option value="0">29392 Storage of goods in the open  ,private or public Warranty B</option>
+          <option value="0">29393 Storage of goods in the open,private or public to Warranty C</option>
+          <option value="0">293941 Veem and bonded warehouse :</option>
+          <option value="0.0214673">293942 Veem and bonded warehouse :</option>
+          <option value="1.5036033">293943 Veem and bonded warehouse :</option>
+          <option value="0.0624361">293951 Show rooms(permanent show roomi thout repair) for NEW motor</option>
+          <option value="0.00375378">293952 Show rooms(permanent show rooms without repair) GUARANTEED</option>
+          <option value="0.0082315">293953 Show rooms(permanent show rooms without repair) used cars</option>
+          <option value="0">29397 Contents during the exhibition or in the course of erection</option>
+          <option value="0">29398 Storage of logs in ponds</option>
+          <option value="0.0422037">294 HOTEL, ENTERTAINMENT, SPORTS & SERVICES</option>
+          <option value="0.067907">29411 Hotels,motels,inss & the like:-certified below 3 starts</option>
+          <option value="0.0391996">29412 Hotels,motels,inss & the like:-certified as 3 starts or high</option>
+          <option value="0.7137595">2942 Night clubs, dance halls, ball rooms,discotheques, bars</option>
+          <option value="0.0568318">29431 Swimming pools or complex of swimming pools not forming</option>
+          <option value="0.0159128">29432 Sport stadia, sports centres, fitness centres,gymns atc</option>
+          <option value="0.0389126">29433 Private(members only) club houses and golf club houses</option>
+          <option value="0.7151935">2944 Others</option>
+          <option value="0.1449997">2945 Restorants</option>
+          <option value="0.2651771">2946 Stall,kedai,warung makan and the like</option>
+          <option value="0.0882014">2947 Beauty salon/Hair dresser/Barber shops</option>
+          <option value="0.4540469">29491 Recreatin areas</option>
+          <option value="0.0278782">29493 Cultural centres</option>
+          <option value="0.0165062">295 THE CARING SERVICES</option>
+          <option value="0.0378253">2951 Sanatorium, hospitals, doctor's consulting rooms old peoples</option>
+          <option value="0.1398022">2952 Regilious facilities such as mosques,temples,churches</option>
+          <option value="0.0253729">2953 Schools, universities and training colleges</option>
+          <option value="0">2954 Museums</option>
+          <option value="0.000439207">2955 Psychiatric clinics</option>
+          <option value="0.0451737">296 MOTOR VEHICLE REPAIR SHOP</option>
+          <option value="0.1064198">2961 Motor vehicle repairshops with facilities for body repair</option>
+          <option value="0">2962 As above and also operating a petrol/diesel fuel station</option>
+          <option value="0.2144328">2963 Motor vehicle service stations (refer to code 2961) only</option>
+          <option value="0.00258172">2964 Motor vehicle pools without ANY body repair work/service</option>
+          <option value="0.0322242">2965 Motor vehicle pools with service station under code 2961</option>
+          <option value="0.0241776">2966 Motor vehicle pools with body repair,service under code 2961</option>
+          <option value="0">2967 Motor vehicle pools with a petrol/diesel fuel station</option>
+          <option value="0.00102894">2968 Motor vehicle pools with body repair work & service station</option>
+          <option value="0">2969 Rust protection / paint protection workshops</option>
+          <option value="0.0154257">297 PRIVATE BUILDINGS</option>
+          <option value="0.0408369">2971 Appartements/condominuiums,offices not exceeding 6 storeys</option>
+          <option value="0.0129216">2972 Appartements/condominiums,offices exceeding 6-18 storeys</option>
+          <option value="0.00465575">2973 Appartements/condominiums,offices exceeding 18 storeys</option>
+          <option value="0.0054568">2974 Convention halls and other multi purpose buildings</option>
+          <option value="0">2975 -exceeding 24 storeys above ground</option>
+          <option value="0.025702">2976 Dwelling houses not classified as shop houses / 3 storeys</option>
+          <option value="0.00244611">2977 Dwelling houses buildings floating on the river/sea shore</option>
+          <option value="0.00545813">2978 Independent analytical laboratories</option>
+          <option value="0.0161601">298 PROPERTY OF PUBLIC BODIES</option>
+          <option value="0.0477676">2981 Public buildings</option>
+          <option value="0">2982 Police barracks and police stations</option>
+          <option value="0.00344727">2984 Others</option>
+          <option value="0.0261641">299 SPECIAL COVERS FOR BUILDING</option>
+          <option value="0.0645222">2991 Buildings in course of construction</option>
+          <option value="0">2992 Rents</option>
+          <option value="0.0420624">3010 Coklat</option>
+          <option value="0.0163838">3020 Coca</option>
+          <option value="0.00389046">3040 Teh</option>
+          <option value="0.0433021">3081 Semua gedung tidak termasuk rumah asap</option>
+          <option value="0.0951718">3082 Rumah asap di perkebunan karet</option>
+          <option value="0.2980021">3110 Pabrik tapioka di perkebunan</option>
+          <option value="0">3120 Damar dan terpentin</option>
+          <option value="0">3140 Padi, tanpa pengerjaan termasuk padi di tempat terbuka</option>
+          <option value="0">3150 Hortikultura,sayur-sayuran,kentang dan tidak ada pengering</option>
+          <option value="0.1637049">3160 Minyak kelapa sawit tanpa pemakaian bensin dalam pengerjaan</option>
+          <option value="0.0257247">32411 Penyimpanan gula(semua gedung dan isinya)</option>
+          <option value="0.2727906">3260 Pertanggungan kerugian pertama untuk pabrik gula</option>
+          <option value="0.2719118">4012 Palm Oil/Kelapa Sawit</option>
+        </select>
+        </font>
+ </td>
+    </tr>
+    <tr>
+      <td width="59%" bgcolor="#C0C0C0"><font face="Tahoma" size="2">Conditions</font></td>
+      <td width="70%" bgcolor="#808080">
+        <font face="Tahoma">
+        <select size="1" name="CONDITIONS">
+          <option value="0.75">Excellent</option>
+          <option value="0.875">Above Average</option>
+          <option value="1">Average</option>
+          <option value="1.25">Below Average</option>
+          <option value="1.5">Inferior</option>
+        </select>
+        </font>
+ </td>
+    </tr>
+    <tr>
+      <td width="59%" bgcolor="#C0C0C0"><font face="Tahoma" size="2">Total Cost</font></td>
+      <td width="70%" bgcolor="#808080">
+        <select size="1" name="COST">
+          <option value="0.05">5%</option>
+          <option value="0.055">5.5%</option>
+          <option value="0.06">6%</option>
+          <option value="0.065">6.5%</option>
+          <option value="0.07">7%</option>
+          <option value="0.075">7.5%</option>
+          <option value="0.08">8%</option>
+          <option value="0.085">8.5%</option>
+          <option value="0.09">9%</option>
+          <option value="0.095">9.5%</option>
+          <option value="0.1">10%</option>
+          <option value="0.105">10.5%</option>
+          <option value="0.11">11%</option>
+          <option value="0.115">11.5%</option>
+          <option value="0.12">12%</option>
+          <option value="0.125">12.5%</option>
+          <option value="0.13">13%</option>
+          <option value="0.135">13.5%</option>
+          <option value="0.14">14%</option>
+          <option value="0.145">14.5%</option>
+          <option value="0.15">15%</option>
+          <option value="0.155">15.5%</option>
+          <option value="0.16">16%</option>
+          <option value="0.165">16.5%</option>
+          <option value="0.17">17%</option>
+          <option value="0.175">17.5%</option>
+          <option value="0.18">18%</option>
+          <option value="0.185">18.5%</option>
+          <option value="0.19">19%</option>
+          <option value="0.195">19.5%</option>
+          <option value="0.2">20%</option>
+          <option value="0.205">20.5%</option>
+          <option value="0.21">21%</option>
+          <option value="0.215">21.5%</option>
+          <option value="0.22">22%</option>
+          <option value="0.225">22.5%</option>
+          <option value="0.23">23%</option>
+          <option value="0.235">23.5%</option>
+          <option value="0.24">24%</option>
+          <option value="0.245">24.5%</option>
+          <option value="0.25">25%</option>
+          <option value="0.255">25.5%</option>
+          <option value="0.26">26%</option>
+          <option value="0.265">26.5%</option>
+          <option value="0.27">27%</option>
+          <option value="0.275">27.5%</option>
+          <option value="0.28">28%</option>
+          <option value="0.285">28.5%</option>
+          <option value="0.29">29%</option>
+          <option value="0.295">29.5%</option>
+          <option value="0.3">30%</option>
+          <option value="0.305">30.5%</option>
+          <option value="0.31">31%</option>
+          <option value="0.315">31.5%</option>
+          <option value="0.32">32%</option>
+          <option value="0.325">32.5%</option>
+          <option value="0.33">33%</option>
+          <option value="0.335">33.5%</option>
+          <option value="0.34">34%</option>
+          <option value="0.345">34.5%</option>
+          <option value="0.35">35%</option>
+          <option value="0.355">35.5%</option>
+          <option value="0.36">36%</option>
+          <option value="0.365">36.5%</option>
+          <option value="0.37">37%</option>
+          <option value="0.375">37.5%</option>
+          <option value="0.38">38%</option>
+          <option value="0.385">38.5%</option>
+          <option value="0.39">39%</option>
+          <option value="0.395">39.5%</option>
+          <option value="0.4">40%</option>
+          <option value="0.405">40.5%</option>
+          <option value="0.41">41%</option>
+          <option value="0.415">41.5%</option>
+          <option value="0.42">42%</option>
+          <option value="0.425">42.5%</option>
+          <option value="0.43">43%</option>
+          <option value="0.435">43.5%</option>
+          <option value="0.44">44%</option>
+          <option value="0.445">44.5%</option>
+          <option value="0.45">45%</option>
+          <option value="0.455">45.5%</option>
+          <option value="0.46">46%</option>
+          <option value="0.465">46.5%</option>
+          <option value="0.47">47%</option>
+          <option value="0.475">47.5%</option>
+          <option value="0.48">48%</option>
+          <option value="0.485">48.5%</option>
+          <option value="0.49">49%</option>
+          <option value="0.495">49.5%</option>
+          <option value="0.5">50%</option>
+          <option value="0.505">50.5%</option>
+          <option value="0.51">51%</option>
+          <option value="0.515">51.5%</option>
+          <option value="0.52">52%</option>
+          <option value="0.525">52.5%</option>
+          <option value="0.53">53%</option>
+          <option value="0.535">53.5%</option>
+          <option value="0.54">54%</option>
+          <option value="0.545">54.5%</option>
+          <option value="0.55">55%</option>
+          <option value="0.555">55.5%</option>
+          <option value="0.56">56%</option>
+          <option value="0.565">56.5%</option>
+          <option value="0.57">57%</option>
+          <option value="0.575">57.5%</option>
+          <option value="0.58">58%</option>
+          <option value="0.585">58.5%</option>
+          <option value="0.59">59%</option>
+          <option value="0.595">59.5%</option>
+          <option value="0.6">60%</option>
+          <option value="0.605">60.5%</option>
+          <option value="0.61">61%</option>
+          <option value="0.615">61.5%</option>
+          <option value="0.62">62%</option>
+          <option value="0.625">62.5%</option>
+          <option value="0.63">63%</option>
+          <option value="0.635">63.5%</option>
+          <option value="0.64">64%</option>
+          <option value="0.645">64.5%</option>
+          <option value="0.65">65%</option>
+          <option value="0.655">65.5%</option>
+          <option value="0.66">66%</option>
+          <option value="0.665">66.5%</option>
+          <option value="0.67">67%</option>
+          <option value="0.675">67.5%</option>
+          <option value="0.68">68%</option>
+          <option value="0.685">68.5%</option>
+          <option value="0.690000000000001">69%</option>
+          <option value="0.695000000000001">69.5%</option>
+          <option value="0.700000000000001">70%</option>
+          <option value="0.705000000000001">70.5%</option>
+          <option value="0.710000000000001">71%</option>
+          <option value="0.715000000000001">71.5%</option>
+          <option value="0.720000000000001">72%</option>
+          <option value="0.725000000000001">72.5%</option>
+          <option value="0.730000000000001">73%</option>
+          <option value="0.735000000000001">73.5%</option>
+          <option value="0.740000000000001">74%</option>
+          <option value="0.745000000000001">74.5%</option>
+          <option value="0.750000000000001">75%</option>
+          <option value="0.755000000000001">75.5%</option>
+          <option value="0.760000000000001">76%</option>
+          <option value="0.765000000000001">76.5%</option>
+          <option value="0.770000000000001">77%</option>
+          <option value="0.775000000000001">77.5%</option>
+          <option value="0.780000000000001">78%</option>
+          <option value="0.785000000000001">78.5%</option>
+          <option value="0.790000000000001">79%</option>
+          <option value="0.795000000000001">79.5%</option>
+          <option value="0.800000000000001">80%</option>
+          <option value="0.805000000000001">80.5%</option>
+          <option value="0.810000000000001">81%</option>
+          <option value="0.815000000000001">81.5%</option>
+          <option value="0.820000000000001">82%</option>
+          <option value="0.825000000000001">82.5%</option>
+          <option value="0.830000000000001">83%</option>
+          <option value="0.835000000000001">83.5%</option>
+          <option value="0.840000000000001">84%</option>
+          <option value="0.845000000000001">84.5%</option>
+          <option value="0.850000000000001">85%</option>
+          <option value="0.855000000000001">85.5%</option>
+          <option value="0.860000000000001">86%</option>
+          <option value="0.865000000000001">86.5%</option>
+          <option value="0.870000000000001">87%</option>
+          <option value="0.875000000000001">87.5%</option>
+          <option value="0.880000000000001">88%</option>
+          <option value="0.885000000000001">88.5%</option>
+          <option value="0.890000000000001">89%</option>
+          <option value="0.895000000000001">89.5%</option>
+          <option value="0.900000000000001">90%</option>
+          <option value="0.905000000000001">90.5%</option>
+          <option value="0.910000000000001">91%</option>
+          <option value="0.915000000000001">91.5%</option>
+          <option value="0.920000000000001">92%</option>
+          <option value="0.925000000000001">92.5%</option>
+          <option value="0.930000000000001">93%</option>
+          <option value="0.935000000000001">93.5%</option>
+          <option value="0.940000000000001">94%</option>
+          <option value="0.945000000000001">94.5%</option>
+          <option value="0.950000000000001">95%</option>
+          <option value="0.955000000000001">95.5%</option>
+          <option value="0.960000000000001">96%</option>
+          <option value="0.965000000000001">96.5%</option>
+          <option value="0.970000000000001">97%</option>
+          <option value="0.975000000000001">97.5%</option>
+          <option value="0.980000000000001">98%</option>
+          <option value="0.985000000000001">98.5%</option>
+          <option value="0.990000000000001">99%</option>
+          <option value="0.995000000000001">99.5%</option>
+          <option value="1">100%</option>
+        </select>
+    </tr>
+    <tr>
+      <td width="59%" bgcolor="#C0C0C0"><font face="Tahoma" size="2">Basic Rate</font></td>
+      <td width="70%" bgcolor="#808080"><input type="number" size=20 name="RATE"><font face="Tahoma" size="2" color="#FFFFFF">%</font></td>
+    </tr>
+    <tr>
+      <td width="59%" bgcolor="#C0C0C0"><font face="Tahoma" size="2">Your Rate</font></td>
+      <td width="70%" bgcolor="#808080"><input type "number" name="NEWRATE" size=20><font face="Tahoma" size="2" color="#FFFFFF">%</font></td>
+    </tr>
+    <tr>
+      <td width="59%"></td>
+      <td width="70%" bgcolor="#808080"><input type="button" value="Proceed" 
+	onClick="HITUNG(this.form)"></td>
+    </tr>
+  </table>
+
+</FORM>
+
+<p>&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+<p>&nbsp;
+</p>
+
+<p align="center"><b><font size="1" face="Tahoma">copyright 2008</font></b>
+</p>
+
+<p align="center"><font face="Tahoma" size="1"><b>Chairudiansyah, AAAI-K</b></font><br>
+</p>
+
+</body>
+
+</html>
+
+
+
+

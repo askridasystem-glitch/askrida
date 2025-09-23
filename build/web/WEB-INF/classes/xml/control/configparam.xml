@@ -1,0 +1,10 @@
+<events>
+   <event name="CONFIGURE">
+      <helper class="com.crux.configure.helper.ParameterHelper" method="editParam"/>
+      <forward page="/pages/params/Params.jsp"/>
+   </event>
+   <event name="CONFIGURE_SAVE">
+      <helper class="com.crux.configure.helper.ParameterHelper" method="saveParams"/>
+      <forward page="/pages/params/ParamsAck.jsp"/>
+   </event>
+</events>

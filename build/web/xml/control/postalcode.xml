@@ -1,0 +1,9 @@
+<events>
+   <event name="CREATE_POSTALCODE">
+      <helper class="com.webfin.postalcode.helper.PostalCodeHelper" method="createPostalCode"/>
+      <forward page="/pages/postcode/PostCode.jsp"/>
+   </event>
+   <event name="POSTCODE_SAVE">
+      <helper class="com.webfin.postalcode.helper.PostalCodeHelper" method="savePostalCode"/>
+   </event>
+</events>

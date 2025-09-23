@@ -1,0 +1,386 @@
+<%@ page import="com.webfin.ar.model.*,  
+         com.webfin.ar.forms.FRRPTrptArAPDetailForm,
+         com.crux.ff.model.FlexFieldHeaderView,
+         com.crux.ff.model.FlexFieldDetailView,
+         com.webfin.insurance.model.InsurancePolicyInwardView,
+         com.crux.util.*,
+         com.crux.util.Tools,
+         com.crux.util.fop.FOPUtil,
+         java.math.BigDecimal,
+         com.crux.web.form.FormManager,
+         com.crux.web.controller.SessionManager,
+         java.util.Date"%><?xml version="1.0" encoding="utf-8"?>
+<%
+
+            final DTOList l = (DTOList) request.getAttribute("RPT");
+
+            final FRRPTrptArAPDetailForm form = (FRRPTrptArAPDetailForm) SessionManager.getInstance().getCurrentForm();
+
+            BigDecimal IDRPremi = null;
+            BigDecimal IDRComm = null;
+            BigDecimal IDRClaim = null;
+            BigDecimal IDRProfitComm = null;
+            BigDecimal IDRFee = null;
+
+            BigDecimal nonIDRPremi = null;
+            BigDecimal nonIDRComm = null;
+            BigDecimal nonIDRClaim = null;
+            BigDecimal nonIDRProfitComm = null;
+            BigDecimal nonIDRFee = null;
+
+%> 
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format"> 
+
+    <!-- defines page layout --> 
+    <fo:layout-master-set> 
+
+        <!-- layout for the first page --> 
+        <fo:simple-page-master master-name="first" 
+                               page-height="21.5cm"
+                               page-width="38cm"
+                               margin-top="1cm"
+                               margin-bottom="1cm"
+                               margin-left="0.5cm"
+                               margin-right="0.5cm">
+
+            <fo:region-body margin-top="0cm" margin-bottom="0cm"/> 
+            <fo:region-before extent="0cm"/> 
+            <fo:region-after extent="0.5cm"/> 
+        </fo:simple-page-master> 
+
+    </fo:layout-master-set> 
+    <!-- end: defines page layout --> 
+
+    <!-- actual layout --> 
+    <fo:page-sequence master-reference="first"> 
+
+        <!-- usage of page layout --> 
+        <fo:flow flow-name="xsl-region-body"> 
+
+            <fo:block font-size="8pt"> 
+                <fo:table table-layout="fixed">  
+                    <fo:table-column column-width="10mm"/><!-- No -->
+                    <fo:table-column column-width="30mm"/><!-- Entry Date -->
+                    <fo:table-column column-width="10mm"/><!-- Entry Date -->
+                    <fo:table-column column-width="15mm"/><!-- Policy Date--> -
+                    <fo:table-column column-width="60mm"/><!-- Policy No -->
+                    <fo:table-column column-width="10mm"/><!-- The Insured -->-
+                    <fo:table-column column-width="30mm"/><!-- Premium --> 
+                    <fo:table-column column-width="20mm"/><!-- Biaya Polis --> 
+                    <fo:table-column column-width="30mm"/><!-- Biaya Polis -->
+                    <fo:table-column column-width="30mm"/><!-- Biaya Materai -->
+                    <fo:table-column column-width="15mm"/><!-- Biaya Polis -->
+                    <fo:table-column column-width="30mm"/><!-- Biaya Materai -->
+                    <fo:table-column column-width="30mm"/><!-- Biaya Materai -->
+                    <fo:table-column column-width="30mm"/><!-- Biaya Materai -->
+                    <fo:table-column column-width="15mm"/><!-- Broker Fee -->
+                    <fo:table-header>          
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block font-weight="bold">             
+                                    LAPORAN PER REASURADUR PREMI REASURANSI INWARD KESELURUHAN
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block  font-weight="bold">
+                                    <% if (form.getPolicyDateFrom() != null || form.getPolicyDateTo() != null) {%>
+                                    BULAN : <%=DateUtil.getDateStr(form.getPolicyDateFrom(), "^^ yyyy")%> s/d <%=DateUtil.getDateStr(form.getPolicyDateTo(), "^^ yyyy")%>
+                                    <% }%>
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block  font-weight="bold">
+                                    <% if (form.getPolicyDateFrom() != null || form.getPolicyDateTo() != null) {%>
+                                    TANGGAL : <%=JSPUtil.printX(form.getPolicyDateFrom())%> S/D <%=JSPUtil.printX(form.getPolicyDateTo())%>
+                                    <% }%>
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block  font-weight="bold">
+                                    <% if (form.getStPolicyTypeName() != null) {%>
+                                    JENIS PENUTUPAN : <%=JSPUtil.printX(form.getStPolicyTypeName().toUpperCase())%>
+                                    <% }%>
+                                </fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+
+                        <fo:table-row>   
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block border-width="0.25pt" border-style="solid" line-height="0.25pt" space-before.optimum="3pt" space-after.optimum="3pt"></fo:block>   
+                            </fo:table-cell>   
+                        </fo:table-row>  
+
+                        <fo:table-row>   
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG No.-L}{L-INA No.-L}</fo:block></fo:table-cell>  
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Inward -L}{L-INA Inward -L}</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Bussiness -L}{L-INA Bisnis -L}</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Date -L}{L-INA Tanggal -L}</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Invoice -L}{L-INA Uraian -L}</fo:block></fo:table-cell>  
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Kd. -L}{L-INA Kd. -L}</fo:block></fo:table-cell>  
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Company -L}{L-INA Perusahaan -L}</fo:block></fo:table-cell> 
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"><fo:inline color="grey">.</fo:inline></fo:block></fo:table-cell>  
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Premium -L}{L-INA Premium -L}</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Profit Comm  -L}{L-INA Profit Comm -L}</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Share -L}{L-INA Share -L}</fo:block></fo:table-cell> 
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Commission -L}{L-INA Komisi -L}</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Fee -L}{L-INA Fee -L}</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Claim -L}{L-INA Klaim -L}</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">{L-ENG Kurs -L}{L-INA Kurs -L}</fo:block></fo:table-cell> 
+                        </fo:table-row>    
+
+                        <fo:table-row>   
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block border-width="0.15pt" border-style="solid" line-height="0.15pt" space-before.optimum="3pt" space-after.optimum="3pt"></fo:block>   
+                            </fo:table-cell>   
+                        </fo:table-row> 
+
+                    </fo:table-header>   
+
+                    <fo:table-body>   
+
+                        <%
+
+                                    int pn = 0;
+                                    int norut = 0;
+
+                                    BigDecimal jumlahIDRPremi = null;
+                                    BigDecimal jumlahIDRComm = null;
+                                    BigDecimal jumlahIDRClaim = null;
+                                    BigDecimal jumlahIDRProfitComm = null;
+                                    BigDecimal jumlahIDRFee = null;
+
+                                    BigDecimal jumlahnonIDRPremi = null;
+                                    BigDecimal jumlahnonIDRComm = null;
+                                    BigDecimal jumlahnonIDRClaim = null;
+                                    BigDecimal jumlahnonIDRProfitComm = null;
+                                    BigDecimal jumlahnonIDRFee = null;
+
+                                    for (int i = 0; i < l.size(); i++) {
+                                        InsurancePolicyInwardView invoic = (InsurancePolicyInwardView) l.get(i);
+
+                                        norut++;
+
+                                        if (invoic.getStCurrencyCode().equalsIgnoreCase("IDR")) {
+                                            IDRPremi = BDUtil.add(IDRPremi, invoic.getDbPremi());
+                                            IDRComm = BDUtil.add(IDRComm, invoic.getDbComm());
+                                            IDRClaim = BDUtil.add(IDRClaim, invoic.getDbClaim());
+                                            IDRProfitComm = BDUtil.add(IDRProfitComm, invoic.getDbProfitComm());
+                                            IDRFee = BDUtil.add(IDRFee, invoic.getDbFee());
+                                        } else {
+                                            nonIDRPremi = BDUtil.add(nonIDRPremi, invoic.getDbPremi());
+                                            nonIDRComm = BDUtil.add(nonIDRComm, invoic.getDbComm());
+                                            nonIDRClaim = BDUtil.add(nonIDRClaim, invoic.getDbClaim());
+                                            nonIDRProfitComm = BDUtil.add(nonIDRProfitComm, invoic.getDbProfitComm());
+                                            nonIDRFee = BDUtil.add(nonIDRFee, invoic.getDbFee());
+                                        }
+
+                                        if (i > 0) {
+                                            InsurancePolicyInwardView inv2 = (InsurancePolicyInwardView) l.get(i - 1);
+                                            String inward = invoic.getStDescription();
+                                            String inward2 = inv2.getStDescription();
+                                            if (!inward.equalsIgnoreCase(inward2)) {
+                                                pn++;
+
+                                                norut = 1;
+
+                        %>
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block border-width="0.15pt" border-style="solid" line-height="0.15pt" space-before.optimum="3pt" space-after.optimum="3pt"></fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="7"><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">SUBTOTAL</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">IDR</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahIDRPremi, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahIDRProfitComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"><fo:inline color="grey">.</fo:inline></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahIDRComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahIDRFee, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahIDRClaim, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block></fo:block></fo:table-cell>
+                        </fo:table-row> 
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="7"><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"><fo:inline color="grey">.</fo:inline></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">non IDR</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahnonIDRPremi, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahnonIDRProfitComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"><fo:inline color="grey">.</fo:inline></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahnonIDRComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahnonIDRFee, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahnonIDRClaim, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block></fo:block></fo:table-cell>
+                        </fo:table-row>  
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block border-width="0.15pt" border-style="solid" line-height="0.15pt" space-before.optimum="3pt" space-after.optimum="10pt"></fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+                        <%--
+                        <fo:table-row break-after="page">
+                            <fo:table-cell />
+                        </fo:table-row>
+                        --%>
+                        <%
+                                                            jumlahIDRPremi = null;
+                                                            jumlahIDRComm = null;
+                                                            jumlahIDRClaim = null;
+                                                            jumlahIDRProfitComm = null;
+                                                            jumlahIDRFee = null;
+
+                                                            jumlahnonIDRPremi = null;
+                                                            jumlahnonIDRComm = null;
+                                                            jumlahnonIDRClaim = null;
+                                                            jumlahnonIDRProfitComm = null;
+                                                            jumlahnonIDRFee = null;
+                                                        }
+                                                    }
+                        %>
+
+                        <fo:table-row>   
+                            <fo:table-cell ><fo:block text-align="center"><%=JSPUtil.printX(String.valueOf(norut))%></fo:block></fo:table-cell>    <!-- No --><!-- No --> 
+                            <fo:table-cell ><fo:block text-align="center"><%=JSPUtil.printX(invoic.getStDescription())%></fo:block></fo:table-cell> 
+                            <fo:table-cell ><fo:block text-align="center"><%=JSPUtil.printX(invoic.getStAttrPolicyTypeID())%></fo:block></fo:table-cell> 
+                            <fo:table-cell ><fo:block text-align="center"><%=JSPUtil.printX(invoic.getDtInvoiceDate())%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block text-align="center"><%=JSPUtil.printX(invoic.getStTransactionNoReference())%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block text-align="center"><%=JSPUtil.printX(invoic.getStARCustomerID())%></fo:block></fo:table-cell> 
+                            <fo:table-cell ><fo:block text-align="center"><%=JSPUtil.printX(invoic.getStCreateWho())%></fo:block></fo:table-cell> 
+                            <fo:table-cell ><fo:block text-align="center"><%=JSPUtil.printX(invoic.getStCurrencyCode())%></fo:block></fo:table-cell> 
+                            <fo:table-cell ><fo:block text-align="end"><%=JSPUtil.printX(invoic.getDbPremi(), 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block text-align="end"><%=JSPUtil.printX(invoic.getDbProfitComm(), 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block text-align="end"><%= JSPUtil.printX(new BigDecimal(0), 2)%> %</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block text-align="end"><%=JSPUtil.printX(invoic.getDbComm(), 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block text-align="end"><%=JSPUtil.printX(invoic.getDbFee(), 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block text-align="end"><%=JSPUtil.printX(invoic.getDbClaim(), 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block text-align="end"><%=JSPUtil.printX(invoic.getDbCurrencyRate(), 0)%></fo:block></fo:table-cell>
+                        </fo:table-row>			
+
+                        <%
+
+                                        if (invoic.getStCurrencyCode().equalsIgnoreCase("IDR")) {
+                                            jumlahIDRPremi = BDUtil.add(jumlahIDRPremi, invoic.getDbPremi());
+                                            jumlahIDRComm = BDUtil.add(jumlahIDRComm, invoic.getDbComm());
+                                            jumlahIDRClaim = BDUtil.add(jumlahIDRClaim, invoic.getDbClaim());
+                                            jumlahIDRProfitComm = BDUtil.add(jumlahIDRProfitComm, invoic.getDbProfitComm());
+                                            jumlahIDRFee = BDUtil.add(jumlahIDRFee, invoic.getDbFee());
+                                        } else {
+                                            jumlahnonIDRPremi = BDUtil.add(jumlahnonIDRPremi, invoic.getDbPremi());
+                                            jumlahnonIDRComm = BDUtil.add(jumlahnonIDRComm, invoic.getDbComm());
+                                            jumlahnonIDRClaim = BDUtil.add(jumlahnonIDRClaim, invoic.getDbClaim());
+                                            jumlahnonIDRProfitComm = BDUtil.add(jumlahnonIDRProfitComm, invoic.getDbProfitComm());
+                                            jumlahnonIDRFee = BDUtil.add(jumlahnonIDRFee, invoic.getDbFee());
+                                        }
+
+                                    }
+                        %>   
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block border-width="0.15pt" border-style="solid" line-height="0.15pt" space-before.optimum="3pt" space-after.optimum="3pt"></fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="7"><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">SUBTOTAL</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">IDR</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahIDRPremi, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahIDRProfitComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"><fo:inline color="grey">.</fo:inline></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahIDRComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahIDRFee, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahIDRClaim, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"></fo:block></fo:table-cell>
+                        </fo:table-row> 
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="7"><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"><fo:inline color="grey">.</fo:inline></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">non IDR</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahnonIDRPremi, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahnonIDRProfitComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"><fo:inline color="grey">.</fo:inline></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahnonIDRComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahnonIDRFee, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(jumlahnonIDRClaim, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"></fo:block></fo:table-cell>
+                        </fo:table-row>  
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block border-width="0.15pt" border-style="solid" line-height="0.15pt" space-before.optimum="3pt" space-after.optimum="10pt"></fo:block>
+                            </fo:table-cell>
+                        </fo:table-row>
+
+                        <fo:table-row>   
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block border-width="0.15pt" border-style="solid" line-height="0.15pt" space-before.optimum="3pt" space-after.optimum="3pt"></fo:block>   
+                            </fo:table-cell>   
+                        </fo:table-row>  
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="7"><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">TOTAL</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">IDR</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(IDRPremi, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(IDRProfitComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"><fo:inline color="white">.</fo:inline></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(IDRComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(IDRFee, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(IDRClaim, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"></fo:block></fo:table-cell>
+                        </fo:table-row> 
+
+                        <fo:table-row>
+                            <fo:table-cell number-columns-spanned="7"><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"><fo:inline color="grey">.</fo:inline></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold">non IDR</fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(nonIDRPremi, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(nonIDRProfitComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"><fo:inline color="white">.</fo:inline></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(nonIDRComm, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(nonIDRFee, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="end" font-size="10pt" font-weight="bold"><%=JSPUtil.printX(nonIDRClaim, 2)%></fo:block></fo:table-cell>
+                            <fo:table-cell ><fo:block background-color="#C0C0C0" text-align="center" font-size="10pt" font-weight="bold"></fo:block></fo:table-cell>
+                        </fo:table-row>  
+
+                        <fo:table-row>   
+                            <fo:table-cell number-columns-spanned="15">
+                                <fo:block border-width="0.25pt" border-style="solid" line-height="0.25pt" space-before.optimum="3pt" space-after.optimum="3pt"></fo:block>   
+                            </fo:table-cell>   
+                        </fo:table-row>  
+
+                    </fo:table-body>
+                </fo:table>   
+            </fo:block> 
+
+            <fo:block font-size="8pt">
+                {L-ENG Print Date-L}{L-INA Tanggal Cetak-L} : <%=DateUtil.getDateStr(new Date(), "d-MMM-yyyy hh:mm:ss")%>
+            </fo:block>      
+
+            <fo:block text-align="start">
+                <fo:instream-foreign-object>
+                    <barcode:barcode
+                        xmlns:barcode="http://barcode4j.krysalis.org/ns"
+                        message="<%=DateUtil.getDateStr(new Date(), "d-MMM-yyyy hh:mm:ss")%>_<%=JSPUtil.printX(IDRPremi, 0)%>" orientation="0">
+                        <barcode:datamatrix> 
+                            <barcode:height>40pt</barcode:height>
+                            <barcode:module-width>3pt</barcode:module-width> <barcode:min-symbol-size>22x22</barcode:min-symbol-size> <barcode:max-symbol-size>24x24</barcode:max-symbol-size>
+                        </barcode:datamatrix>
+                    </barcode:barcode>
+                </fo:instream-foreign-object>                                    
+            </fo:block>
+
+        </fo:flow> 
+    </fo:page-sequence>   
+</fo:root>   

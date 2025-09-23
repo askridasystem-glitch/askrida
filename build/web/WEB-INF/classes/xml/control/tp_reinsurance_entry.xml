@@ -1,0 +1,80 @@
+<events>
+   <event name="TP_REINS_GL_ENTRY">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="list"/>
+      <forward page="/pages/gl/entry/listGLEntry.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_ENTRY_ADD">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="addCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_ENTRY_EDIT">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="edit"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_ENTRY_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="addlineCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="dellineCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_ENTRY_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="editrefreshCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_ENTRY_VIEW">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="view"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_ENTRY_CHG_CCY">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="changeCCy"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_ENTRY_SAVE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="saveTP"/>
+      <forward id="ERROR" event="TP_REINS_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="TP_REINS_GL_EDIT_SAVE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="save"/>
+      <forward id="ERROR" event="TP_REINS_GL_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="TP_REINS_GL_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="editrefreshCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEdit.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_EDIT_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="addlineCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEdit.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_EDIT_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="dellineCashBank"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_ENTRY_APPROVE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="approve"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_ENTRY_REVERSE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="reverse"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+   <event name="TP_REINS_GL_REVERSE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="doReverse"/>
+      <forward id="ERROR" event="TP_REINS_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="TP_REINS_GL_ENTRY_CHG_YEAR">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="changeYear"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+
+   <event name="TP_REINS_GL_ENTRY_DELETE">
+      <helper class="com.webfin.gl.entry.helper.TitipanPremiReinsuranceEntryHelper" method="delete"/>
+      <forward page="/pages/gl/entry/titipanPremiReinsuranceEntry.jsp"/>
+   </event>
+
+</events>
+

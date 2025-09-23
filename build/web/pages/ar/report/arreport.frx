@@ -1,0 +1,9 @@
+<forms>
+   <form name="arreport" class="com.webfin.ar.forms.ARReportForm" view="arreport.jsp" />
+   <form name="rptOutstandingARAP" class="com.webfin.ar.forms.DefaultReportForm" view="frptOutstandingARAP.jsp" />
+   <form name="rptArAPDetail" class="com.webfin.ar.forms.FRRPTrptArAPDetailForm" view="rptArAPDetailfr.jsp" />
+   <form name="rptSOAReinsurance" class="com.webfin.ar.forms.FRRPTrptSOAInsuranceForm" view="rptSOAReinsurancefr.jsp" />
+   <form name="prod_inward" class="com.webfin.ar.forms.FRRPTrptArAPDetailForm" view="prodRPT.jsp" />
+   <form name="prod_deposito" class="com.webfin.ar.forms.DepositoReportForm" view="depositoRPT.jsp" />
+   <form name="prod_biapem" class="com.webfin.ar.forms.PemasaranRPTForm" view="pemasaranRPT.jsp" />
+</forms>

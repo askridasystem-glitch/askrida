@@ -1,0 +1,234 @@
+<events>
+   <event name="GL_ENTRY">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="list"/>
+      <forward page="/pages/gl/entry/listGLEntry.jsp"/>
+   </event>
+   <event name="GL_ENTRY_ADD">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="add"/>
+      <forward page="/pages/gl/entry/glentry.jsp"/>
+   </event>
+   <event name="GL_ENTRY_EDIT">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="edit"/>
+      <forward page="/pages/gl/entry/glentry.jsp"/>
+   </event>
+   <event name="GL_ENTRY_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addline"/>
+      <forward page="/pages/gl/entry/glentry.jsp"/>
+   </event>
+   <event name="GL_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="delline"/>
+      <forward page="/pages/gl/entry/glentry.jsp"/>
+   </event>
+   <event name="GL_ENTRY_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="editrefresh"/>
+      <forward page="/pages/gl/entry/glentry.jsp"/>
+   </event>
+   <!--<event name="GL_ENTRY_DETAIL">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="detailedit"/>
+      <forward page="/pages/gl/entry/glentrydetail.jsp"/>
+   </event>
+   <event name="GL_ENTRY_DETAIL_SAVE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="detailsave"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>-->
+   <event name="GL_ENTRY_VIEW">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="view"/>
+      <forward page="/pages/gl/entry/glentry.jsp"/>
+   </event>
+   <event name="GL_ENTRY_CHG_CCY">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="changeCCy"/>
+      <forward page="/pages/gl/entry/glentry.jsp"/>
+   </event>
+   <event name="GL_ENTRY_SAVE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="save"/>
+      <forward id="ERROR" event="GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   
+   <event name="GL_ENTRY_APPROVE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="approve"/>
+      <forward id="ERROR" event="GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   
+   <event name="CB_GL_ENTRY">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="list"/>
+      <forward page="/pages/gl/entry/listGLEntry.jsp"/>
+   </event>
+   <event name="CB_GL_ENTRY_ADD">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addCashBank"/>
+      <forward page="/pages/gl/entry/cashbankGLEntry.jsp"/>
+   </event>
+   <event name="CB_GL_ENTRY_EDIT">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="edit"/>
+      <forward page="/pages/gl/entry/cashbankGLEdit.jsp"/>
+   </event>
+   <event name="CB_GL_EDIT_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addlineCashBank"/>
+      <forward page="/pages/gl/entry/cashbankGLEdit.jsp"/>
+   </event>
+   <event name="CB_GL_EDIT_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="dellineCashBank"/>
+      <forward page="/pages/gl/entry/cashbankGLEdit.jsp"/>
+   </event>
+   <event name="CB_GL_ENTRY_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addlineCashBank"/>
+      <forward page="/pages/gl/entry/cashbankGLEntry.jsp"/>
+   </event>
+   <event name="CB_GL_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="dellineCashBank"/>
+      <forward page="/pages/gl/entry/cashbankGLEntry.jsp"/>
+   </event>
+   <event name="CB_GL_ENTRY_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="editrefreshCashBank"/>
+      <forward page="/pages/gl/entry/cashbankGLEntry.jsp"/>
+   </event>
+   <!--<event name="GL_ENTRY_DETAIL">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="detailedit"/>
+      <forward page="/pages/gl/entry/glentrydetail.jsp"/>
+   </event>
+   <event name="GL_ENTRY_DETAIL_SAVE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="detailsave"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>-->
+   <event name="CB_GL_ENTRY_VIEW">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="view"/>
+      <forward page="/pages/gl/entry/cashbankGLEntry.jsp"/>
+   </event>
+   <event name="CB_GL_ENTRY_CHG_CCY">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="changeCCy"/>
+      <forward page="/pages/gl/entry/cashbankGLEntry.jsp"/>
+   </event>
+   <event name="CB_GL_ENTRY_SAVE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="saveCBGL"/>
+      <forward id="ERROR" event="CB_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="CB_GL_EDIT_SAVE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="saveEditCBGL"/>
+      <forward id="ERROR" event="CB_GL_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="CB_GL_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="editrefreshCashBank"/>
+      <forward page="/pages/gl/entry/cashbankGLEdit.jsp"/>
+   </event>
+   <event name="CB_GL_GEN_NO">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="tesGenNo"/>
+      <forward page="/pages/gl/entry/cashbankGLEntry.jsp"/>
+   </event>
+   
+   <event name="AR_TITIPAN_ENTRY_ADD">
+      <helper class="com.webfin.ar.helper.ARTitipanPremiHelper" method="add"/>
+      <forward page="/pages/ar/receipt/titipanPremiForm.jsp"/>
+   </event>
+   <event name="AR_TITIPAN_ADD_LINE">
+      <helper class="com.webfin.ar.helper.ARTitipanPremiHelper" method="addline"/>
+      <forward page="/pages/ar/receipt/titipanPremiForm.jsp"/>
+   </event>
+   <event name="GL_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="delline"/>
+      <forward page="/pages/gl/entry/glentry.jsp"/>
+   </event>
+   
+   <event name="FREE_GL_ENTRY">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="list"/>
+      <forward page="/pages/gl/entry/freegllist.jsp"/>
+   </event>
+   <event name="FREE_GL_ENTRY_ADD">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addCashBank"/>
+      <forward page="/pages/gl/entry/freeGLEntry.jsp"/>
+   </event>
+   <event name="FREE_GL_ENTRY_EDIT">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="edit"/>
+      <forward page="/pages/gl/entry/freeGLEntry.jsp"/>
+   </event>
+   <event name="FREE_GL_ENTRY_VIEW">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="view"/>
+      <forward page="/pages/gl/entry/freeGLEntry.jsp"/>
+   </event>
+   <event name="FREE_GL_ENTRY_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="editrefreshCashBank"/>
+      <forward page="/pages/gl/entry/freeGLEntry.jsp"/>
+   </event>
+    <event name="FREE_GL_ENTRY_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addlineCashBank"/>
+      <forward page="/pages/gl/entry/freeGLEntry.jsp"/>
+   </event>
+   <event name="FREE_GL_ENTRY_SAVE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="saveUangMuka"/>
+      <forward id="ERROR" event="FREE_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="FREE_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="dellineCashBank"/>
+      <forward page="/pages/gl/entry/freeGLEntry.jsp"/>
+   </event>
+   
+   <event name="PREMI_GL_ENTRY_ADD">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addCashBank"/>
+      <forward page="/pages/gl/entry/premiGLEntry.jsp"/>
+   </event>
+   <event name="PREMI_GL_ENTRY_SAVE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="saveUangMukaPremi"/>
+      <forward id="ERROR" event="PREMI_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="PREMI_GL_ENTRY_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addlineCashBank"/>
+      <forward page="/pages/gl/entry/premiGLEntry.jsp"/>
+   </event>
+   <event name="PREMI_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="dellineCashBank"/>
+      <forward page="/pages/gl/entry/premiGLEntry.jsp"/>
+   </event>
+   <event name="PREMI_GL_ENTRY_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="editrefreshCashBank"/>
+      <forward page="/pages/gl/entry/premiGLEntry.jsp"/>
+   </event>
+   
+   <event name="COMIS_GL_ENTRY_ADD">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addCashBank"/>
+      <forward page="/pages/gl/entry/comissionGLEntry.jsp"/>
+   </event>
+   <event name="COMIS_GL_ENTRY_SAVE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="saveUangMukaKomisi"/>
+      <forward id="ERROR" event="FREE_GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="COMIS_GL_ENTRY_ADD_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="addlineCashBank"/>
+      <forward page="/pages/gl/entry/comissionGLEntry.jsp"/>
+   </event>
+   <event name="COMIS_ENTRY_DEL_LINE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="dellineCashBank"/>
+      <forward page="/pages/gl/entry/comissionGLEntry.jsp"/>
+   </event>
+   <event name="GL_ENTRY_REVERSE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="reverse"/>
+      <forward page="/pages/gl/entry/glentry.jsp"/>
+   </event>
+   <event name="GL_REVERSE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="doReverse"/>
+      <forward id="ERROR" event="GL_ENTRY_EDIT_REFRESH"/>
+      <forward event="DLG_AUTOCLOSE"/>
+   </event>
+   <event name="CB_GL_ENTRY_DELETE">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="delete"/>
+      <forward page="/pages/gl/entry/cashbankGLEdit.jsp"/>
+   </event>
+   <event name="CB_GL_ENTRY_CHG_YEAR">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="changeYear"/>
+      <forward page="/pages/gl/entry/cashbankGLEntry.jsp"/>
+   </event>
+   <event name="CB_GL_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="refresh"/>
+      <forward page="/pages/gl/entry/cashbankGLEntry.jsp"/>
+   </event>
+   <event name="CB_GL_EDIT_REFRESH">
+      <helper class="com.webfin.gl.entry.helper.GLEntryHelper" method="refresh"/>
+      <forward page="/pages/gl/entry/cashbankGLEdit.jsp"/>
+   </event>
+   
+</events>
+

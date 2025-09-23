@@ -1,0 +1,4 @@
+<forms>
+   <form name="distribution_edit" class="com.crux.distribution.form.DistributionForm" view="distributionletterform.jsp"/>
+   <form name="distribution_list" class="com.crux.distribution.form.DistributionListForm" view="distributionListform.jsp"/>
+</forms>

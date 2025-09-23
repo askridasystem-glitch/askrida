@@ -1,0 +1,4 @@
+<forms>
+   <form name="zone_list" class="com.webfin.master.zone.form.ZoneListForm" view="zone_list.jsp"/>
+   <form name="zone_form" class="com.webfin.master.zone.form.ZoneMasterForm" view="zone_form.jsp"/>
+</forms>

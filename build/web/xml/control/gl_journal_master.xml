@@ -1,0 +1,22 @@
+<events>
+   <event name="GL_J_MASTER">
+      <helper class="com.webfin.gl.journalmaster.helper.JournalMasterHelper" method="listJournalMaster"/>
+      <forward page="/pages/gl/journal_master/listJournalMaster.jsp"/>
+   </event>
+   <event name="GL_J_MASTER_ADD">
+      <helper class="com.webfin.gl.journalmaster.helper.JournalMasterHelper" method="add"/>
+      <forward page="/pages/gl/journal_master/JournalMaster.jsp"/>
+   </event>
+   <event name="GL_J_MASTER_EDIT">
+      <helper class="com.webfin.gl.journalmaster.helper.JournalMasterHelper" method="edit"/>
+      <forward page="/pages/gl/journal_master/JournalMaster.jsp"/>
+   </event>
+   <event name="GL_J_MASTER_VIEW">
+      <helper class="com.webfin.gl.journalmaster.helper.JournalMasterHelper" method="view"/>
+      <forward page="/pages/gl/journal_master/JournalMaster.jsp"/>
+   </event>
+   <event name="GL_J_MASTER_SAVE">
+      <helper class="com.webfin.gl.journalmaster.helper.JournalMasterHelper" method="save"/>
+      <forward event="GL_J_MASTER"/>
+   </event>
+</events>

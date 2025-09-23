@@ -1,0 +1,22 @@
+<events>
+   <event name="GL_DEPT_LIST">
+      <helper class="com.webfin.gl.department.helper.DepartmentHelper" method="list"/>
+      <forward page="/pages/gl/gl_dept/listDepts.jsp"/>
+   </event>
+   <event name="GL_DEPT_ADD">
+      <helper class="com.webfin.gl.department.helper.DepartmentHelper" method="add"/>
+      <forward page="/pages/gl/gl_dept/GLDepts.jsp"/>
+   </event>
+   <event name="GL_DEPT_EDIT">
+      <helper class="com.webfin.gl.department.helper.DepartmentHelper" method="edit"/>
+      <forward page="/pages/gl/gl_dept/GLDepts.jsp"/>
+   </event>
+   <event name="GL_DEPT_VIEW">
+      <helper class="com.webfin.gl.department.helper.DepartmentHelper" method="view"/>
+      <forward page="/pages/gl/gl_dept/GLDepts.jsp"/>
+   </event>
+   <event name="GL_DEPT_SAVE">
+      <helper class="com.webfin.gl.department.helper.DepartmentHelper" method="save"/>
+      <forward event="GL_DEPT_LIST"/>
+   </event>
+</events>

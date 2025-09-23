@@ -1,0 +1,110 @@
+<events>
+   <event name="USER_LIST">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="listUser"/>
+      <forward page="/pages/user/listUser.jsp"/>
+   </event>
+   <event name="USER_LIST_DISPLAY">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="listUserDisplay"/>
+      <forward page="/pages/user/listUser.jsp"/>
+   </event>
+   <event name="USER_CREATE">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="createUser"/>
+      <forward page="/pages/user/User.jsp"/>
+   </event>
+   <event name="USER_ADD_ROLE">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="addRole"/>
+      <forward page="/pages/user/User.jsp"/>
+   </event>
+   <event name="USER_ADD_VENDOR">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="addVendor"/>
+      <forward page="/pages/user/User.jsp"/>
+   </event>
+   <event name="USER_DEL_VENDOR">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="delVendor"/>
+      <forward page="/pages/user/User.jsp"/>
+   </event>
+   <event name="USER_DEL_ROLE">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="delRole"/>
+      <forward page="/pages/user/User.jsp"/>
+   </event>
+   <event name="USER_EDIT">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="editUser"/>
+      <forward page="/pages/user/User.jsp"/>
+   </event>
+   <event name="USER_VIEW">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="viewUser"/>
+      <forward page="/pages/user/ViewUser.jsp"/>
+   </event>
+   <event name="USER_SAVE">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="save"/>
+      <forward page="/pages/user/UserAck.jsp"/>
+      <forward id="ERROR" page="/pages/user/User.jsp"/>
+   </event>
+   <event name="USER_SEL_BRANCH">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="selBranch"/>
+      <forward page="/pages/user/User.jsp"/>
+   </event>
+   <event name="REFRESH_USER">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="showVendor"/>
+      <forward page="/pages/user/User.jsp"/>
+   </event>
+   <event name="USER_DELETE">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="delUser"/>
+      <forward page="/pages/user/UserAck.jsp"/>
+      <forward id="ERROR" event="USER_LIST"/>
+   </event>
+
+   <event name="ROLE_LIST">
+      <helper class="com.crux.login.helper.RoleHelper" method="listRoles"/>
+      <forward page="/pages/roles/listRole.jsp"/>
+   </event>
+   <event name="ROLE_LIST_DISPLAY">
+      <helper class="com.crux.login.helper.RoleHelper" method="listRolesDisplay"/>
+      <forward page="/pages/roles/listRole.jsp"/>
+   </event>
+   <event name="ROLE_CREATE">
+      <helper class="com.crux.login.helper.RoleHelper" method="createRole"/>
+      <forward page="/pages/roles/Role.jsp"/>
+   </event>
+   <event name="ROLE_ADD_RESOURCE">
+      <helper class="com.crux.login.helper.RoleHelper" method="addResource"/>
+      <forward page="/pages/roles/Role.jsp"/>
+   </event>
+   <event name="ROLE_DEL_RESOURCE">
+      <helper class="com.crux.login.helper.RoleHelper" method="delResource"/>
+      <forward page="/pages/roles/Role.jsp"/>
+   </event>
+   <event name="ROLE_SAVE">
+      <helper class="com.crux.login.helper.RoleHelper" method="save"/>
+      <forward page="/pages/roles/RoleAck.jsp"/>
+   </event>
+   <event name="ROLE_EDIT">
+      <helper class="com.crux.login.helper.RoleHelper" method="editRole"/>
+      <forward page="/pages/roles/Role.jsp"/>
+   </event>
+   <event name="ROLE_VIEW">
+      <helper class="com.crux.login.helper.RoleHelper" method="viewRole"/>
+      <forward page="/pages/roles/Role.jsp"/>
+   </event>
+
+   <event name="CHANGE_PASSWORD">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="changePassword" />
+      <forward page="/pages/user/changePassword.jsp"/>
+   </event>
+   <event name="SET_PASSWORD">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="setPassword" />
+      <forward page="/pages/user/setPassword.jsp"/>
+   </event>
+   <event name="CHANGE_PASSWORD_SAVE">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="savePassword" />
+      <forward page="/pages/user/UserAck.jsp"/>
+   </event>
+   <event name="SET_PASSWORD_SAVE">
+      <helper class="com.crux.login.helper.UserMaintenanceHelper" method="savePassword" />
+      <forward page="/pages/user/UserAck.jsp"/>
+   </event>
+   
+   <event name="ACCOUNTING">
+      <forward page="/pages/user/changePassword.jsp"/>
+   </event>
+</events>

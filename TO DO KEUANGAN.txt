@@ -1,0 +1,364 @@
+1. jika pembayaran belum di approve buat checking agar tidak bisa di input pembayaran lagi pada no bukti lain -> sudah
+2. JIKA POLIS SUDAH DI BAYARKAN MAKA TIDAK BISA DIINPUT UANG MUKA PREMI
+3. searching klaim di uang muka klaim bisa search pakai no polis juga
+4. uang muka klaim jika lks sudah ada dan lkp sudah ada tp belum disetujui, tetap bisa membuat uang muka klaim pd lks tetapi nanti membentuk uang muka klaim ketika lkp di setujui
+5. jurnal harus ada approval nya
+
+TERMIN 2
+---------------------------------------------------------------------
+1. deskripsi pembayaran jumlah polis masih salah kalau di delete -> udah
+2. BUAT DATA CUSTOMER MASIH BISA DOUBLE NO GL CODE KALAU BERBARENGAN BUATNYA -> UDAH
+3. TAMBAHKAN TOMBOL RECALCULATE DI TIAP INVOICE AGAR TIDAK PERLU NAIK TURUN/SCROLL WINDOWS JIKA INGIN RECALCULATE -> udah
+4. jika sudah di retur pembatalan masih bisa lolos klaim -> sudah
+5. waktu buat klaim lks ambil nilai TSI SAJA TIDAK PERLU DI ENTRY -> sudah
+6. checking di pembuatan polis jika polis koas maka harus ada member  -> SUDAH
+7. BUAT KONVERSI UNTUK ENTRY DATA RESTITUSI VIA EXCEL
+8. check lagi di setiap menu pembayaran untuk pol_id apakah sudah selalu tersimpan -> pembayaran koas -> sudah
+9. jurnal ganti entry date dengan tanggal transaksi
+10. uang muka klaim sama harus tolak hanya bisa 1 x saja
+11. uang muka klaim nanti ketika di setujui lkp nya harus sudah otomatis realisasi pembayaran klaim
+13. menu jurnal set kode cabang nya otomatis saja
+14. jika klaim sudah di bayar maka ketika input uang muka klaim sudah sudah tidak bisa
+15. klausula bank ketika di cetak masih salah tampilan nya
+16. bank garansi nilai kontrak nya di buat bisa input rate otomatis sehingga bisa hitung otomatis
+17. persetujuan prinsip cetakan saat sppa tidak ada specimen mark -> SUDAH
+18. di KBG/SB jika periode akhir lebih kecil dari periode awal maka blok
+19. pengembalian premi ketika cari no polis yang sudah di bayarkan pengembalian nya masih masih muncul -> sudah
+20. untuk semua transaksi AR dan AP pembayaran nya harus bisa dalam 1 transaksi -> sudah tinggal reas saja
+21. buat piutang ke invoice utk realisasi titipan premi
+
+
+-----------------------------------------------------
++                REVIEW SISTEM KEUANGAN             +
+-----------------------------------------------------
+    MODUL YANG ADA
+--------------------------------------
+1. Penerimaan Premi 
+2. Pembayaran Hutang Komisi 
+3. Pembayaran Pajak 
+4. Pembayaran Reasuransi 
+5. Pembayaran Klaim 
+6. Penerimaan Klaim Reas / Coas 
+7. Pengembalian Premi 
+8. Pembayaran Coas 
+9. Penerimaan Premi Via Titipan 
+ 
+    HASIL REVIEW
+--------------------------------------
+1. Penerimaan Premi [x] Sudah
+2. Pembayaran Hutang Komisi [x] Sudah
+3. Pembayaran Pajak [x] Sudah
+4. Pembayaran Reasuransi 
+5. Pembayaran Klaim [x] Sudah
+6. Penerimaan Klaim Reas / Coas [x] Sudah
+7. Pengembalian Premi 
+8. Pembayaran Coas [x] Sudah
+9. Penerimaan Premi Via Titipan 
+
+
+1. Pembayaran polis realisasi titipan premi harus lunasi otomatis juga piutang coas nya
+2. tambah field di gl_je_detail utk account_id_header dan account_no_header
+3.
+
+-----------------------------------------------------------------------
+NEW TO DO
+-----------------------------------------------------------------------
+1. Buat pengecekan ketika login agar jika yg konek pake modem, trs ganti IP dan nyangkut bs
+    auto kill sendiri -> udah
+2. bugs endorse pa kreasi jika manual premi n line 1 maka premi di detil = di coverage
+3. tambahin file lampiran di setting limit 
+4. untuk jenis fire n par jika kode resiko 29313, maka kode akumulasi harus di input -> udah
+5. buat persetujuan by direksi n hrs lampirkan image persetujuan by direksi, tolak jika tidak
+    dilampirkan -> udah
+6. buat blocking maximum attachment size n buat setting di menu web -> udah
+7. bugs di posting claim endorse blm ke jurnal, invoice ?
+8. item klaim suka ilang sendiri -> udah
+9. Buat menu Arsip -> udah
+
+KEUANGAN
+-----------------------------
+1. PEMBAYARAN PREMI KOAS MASIH SALAH DI JURNAL
+2. PEMBAYARAN PREMI MASIH BINGUNG YANG AMOUNT SETTLED
+
+----------------------------------------------------------
+REVIEW PENERIMAAN PREMI DGN BAG KEU & AKUN
+3. buat total per polis di pembayaran premi, tampilkan -> udah
+4. buat filter pembayaran yang belum di approve dan sudah approve -> udah
+5. tampilkan kolom nomor polis di list jurnal umum -> udah
+6. JURNAL PEMBAYARAN PREMI JIKA > 1 POLIS MASIH SALAH AKUN SALAH 1 POLIS -> udah, tapi cek lagi
+7. LOCK ENTRY RATE PAJAK JANGAN BISA DI EDIT -> udah
+
+8. semua pembayaran pastikan pol_id di receipt_line 
+
+
+TO DO MIGRASI DATA KEUANGAN AKUNTANSI
+-------------------------------------------------
+1. Migrasikan data foxpro Outstanding premi >= tahun 2011 agar bisa dibayar di sistem web
+2. Migrasikan data foxpro Outstanding komisi >= tahun 2011 agar bisa dibayar di sistem web
+3. Lakukan pelunasan /pembayaran secara otomatis dengan membaca data pembayaran foxpro u/ polis tahun >=2011
+4. Migrasikan data jurnal/mutasi foxpro >= tahun 2011
+
+        Langkah proses 1 & 2
+------------------------------------------------
+1. Update ar_invoice_id dan ar_invoice_dtl_id pada data dbf mulai dr id terakhir di tabel database web
+2. update ref_invoice_dtl pada data hutang komisi dbf bahwa pajak harus menunjuk ke header komisi
+2. import dbf files ke ms access
+3. export dari ms access ke postgresql pakai odbc
+4. ubah struktur tabel nya, samakan dengan tabel ar_invoice dan ar_invoice_details existing
+
+
+===================================
+SISTEM KEUANGAN
+===================================
+
+1. JURNAL PEMBAYARAN PREMI -> PAJAK, MASIH SALAH, CEK LAGI -> sudah
+2. FILTRASI DATA ENT_MASTER PILIHAN BANK TAMPILKAN PILIHAN Jenis Perusahaan -> sudah
+3. BUat input jurnal penyesuaian untuk uang muka klaim atau kurang bayar premi]
+4. Ketika pembuatan LKP lakukan checking jika ada uang muka maka bentuk line ins_item lagi uang muka klaim
+1. jika pembayaran belum di approve buat checking agar tidak bisa di input pembayaran lagi pada no bukti lain -> sudah
+2. JIKA POLIS SUDAH DI BAYARKAN MAKA TIDAK BISA DIINPUT UANG MUKA PREMI
+3. searching klaim di uang muka klaim bisa search pakai no polis juga
+4. uang muka klaim jika lks sudah ada dan lkp sudah ada tp belum disetujui, tetap bisa membuat uang muka klaim pd lks tetapi nanti membentuk uang muka klaim ketika lkp di setujui
+5. jurnal harus ada approval nya
+1. deskripsi pembayaran jumlah polis masih salah kalau di delete -> udah
+2. BUAT DATA CUSTOMER MASIH BISA DOUBLE NO GL CODE KALAU BERBARENGAN BUATNYA -> UDAH
+3. TAMBAHKAN TOMBOL RECALCULATE DI TIAP INVOICE AGAR TIDAK PERLU NAIK TURUN/SCROLL WINDOWS JIKA INGIN RECALCULATE -> udah
+4. jika sudah di retur pembatalan masih bisa lolos klaim -> sudah
+5. waktu buat klaim lks ambil nilai TSI SAJA TIDAK PERLU DI ENTRY -> sudah
+6. checking di pembuatan polis jika polis koas maka harus ada member  -> SUDAH
+7. BUAT KONVERSI UNTUK ENTRY DATA RESTITUSI VIA EXCEL
+8. check lagi di setiap menu pembayaran untuk pol_id apakah sudah selalu tersimpan -> pembayaran koas -> sudah
+9. jurnal ganti entry date dengan tanggal transaksi
+10. uang muka klaim sama harus tolak hanya bisa 1 x saja
+11. uang muka klaim nanti ketika di setujui lkp nya harus sudah otomatis realisasi pembayaran klaim
+13. menu jurnal set kode cabang nya otomatis saja
+14. jika klaim sudah di bayar maka ketika input uang muka klaim sudah sudah tidak bisa
+15. klausula bank ketika di cetak masih salah tampilan nya
+16. bank garansi nilai kontrak nya di buat bisa input rate otomatis sehingga bisa hitung otomatis
+17. persetujuan prinsip cetakan saat sppa tidak ada specimen mark -> SUDAH
+18. di KBG/SB jika periode akhir lebih kecil dari periode awal maka blok
+19. pengembalian premi ketika cari no polis yang sudah di bayarkan pengembalian nya masih masih muncul -> sudah
+20. untuk semua transaksi AR dan AP pembayaran nya harus bisa dalam 1 transaksi -> sudah tinggal reas saja
+21. buat piutang ke invoice utk realisasi titipan premi
+
+22. buat menu input jurnal syariah -> udah
+23. buat menu input jurnal 791/biaya pembinaan bisnis
+24. buat konsep no urut object -> udah
+25. TAMBAHIN FIELD AR_TRX_LINE_ID DI 
+26. klo buat renewal sering salah ambil treaty
+27. JANGAN LUPA BENERIN PROGRAM GENERATE NO LKP COUNTER NYA SALAH GA PER CABANG
+
+28. Tambah Flag Siap Untuk Disetujui Pimpinan pada form u/w, selama flag <> 'Y' maka tidak bisa di approve -> sudah
+29. Tambahkan tombol reverse untuk user u/w dan buat setting role nya -> sudah
+30. tambah tombol setujui by kadiv di menu klaim, buat sama degn setujui by direksi -> udah
+31. tambah ent master di polis co member sebagai leader -> udah
+32. buat konversi by excel untuk asuransi kredit -> sudah
+33. buat cetakan polis asuransi kredit -> sudah
+
+
+REVIEW SISTEM KEUANGAN SESSION 2
+-------------------------------------------------------------------------
+1. Pisahkan antara jurnal ketika approval dengan proses posting secara manual
+2. cek modul titipan premi
+3. ubah format no bukti counter menjadi per buku bank
+4. tambah kolom jumlah polis dalam 1 no bukti pembayaran
+5. saldo titipan premi masih tidak muncul di menu realisasi titipan premi
+6. protect saldo titipan premi pd saat realisasi titipan premi tidak boleh > saldo titipan premi
+7. ada bugs ketika delete details tapi ga kedelete di tabel
+8. lock mata uang sesuai entry an di teknik -> sudah
+
+I.MODUL PENERIMAAN PREMI
+    1. Penambahan menu untuk input data selisih bayar(lebih bayar,kurang bayar, dan selisih kurs) -> sudah
+    2. Penambahan menu input transaksi menggunakan konversi excel 
+    3. Buat settingan blocking tanggal entry/transaksi bahwa transaksi yang bisa di lakukan 
+       hanya CURRENT DAN 1 bulan ke belakang -> sudah
+    4. Buat settingan untuk nilai maksimal dan minimal untuk fasilitas selisih bayar menggunakan amount
+       atau prosentase -> sudah menggunakan amount
+    5. buat modul otomatis pembuatan titipan premi jika di 1 pembayaran ada yg harus masuk titipan premi
+    
+II. MODUL PEMBAYARAN KOMISI
+    1. tidak boleh ada selisih bayar komisi -> sudah
+    2. bahas lagi masalah jika kurang bayar komisi -> URGENT (tidak boleh kurang)
+    3. lebih bayar komisi tidak boleh -> sudah
+
+III. MODUL PEMBAYARAN PAJAK
+    1. Format No SHP jangan pakai kode jenis asuransi -> sudah
+    2. 1 no bukti pembayaran hanya boleh untuk membayarkan 1 jenis pajak saja tidak boleh campur -> sudah
+    3. Dalam 1 no SHP/1 no bukti pembayaran tidak boleh dilakukan pemilihan/penghapusan salah 1 polis dari pembayaran -> sudah
+    4. Bahas mengenai metode case bases dan acrual bases -> TIDAK USAH
+    5. Pastikan blocking tanggal bayar di komisi sudah betul
+    6. Buat tabel pembentukan hutang pajak dgn customer Dirjen Pajak Per Daerah -> sudah
+
+IV . MODUL PEMBAYARAN KLAIM
+    1. Cek lagi konsep uang muka klaim -> sudah, tinggal ujicoba
+    2. Konsultasikan ke bag klaim mengenai pph jasa bengkel -> URGENT
+    3. Jurnal produksi dan pembayaran klaim tambah no LKP/LKS
+
+V. PEMBAYARAN REAS
+    1. TAMBAH KOLOM REASURADUR PADA LAPORAN DETIL PRODUKSI REAS PER TREATY & TAMBAHKAN JUGA FILTER LAPORAN NYA -> sudah
+    2. TAMBAH FIELD JENIS TREATY PADA PEMBAYARAN REAS -> sudah
+    3. SEARCH FAC DGN RI SLIP/REASURANDUR -> sudah 
+    4. TAMBAHKAN MENU SELISIH BAYAR/KURS REAS -> Sudah
+    5. BETULKAN FORMAT NO SOA -> sudah
+    6. NO SOA PER BULAN UNTUK BPPDAN & MAIPARK, BEDAKAN DENGAN TREATY YANG PER TRIWULAN
+    7. Buat modul pembayaran treaty inward -> sudah
+
+VI. PEMBAYARAN KOAS
+    1. BUAT FILTER JIKA ORG PUSAT BISA ENTRY BY NO SURAT HUTANG DAN SATUAN, UTK CABANG JGN BISA ENTRY POLIS PAKREASI + Sipanda -> sudah
+    2. BUANG KODE CABANG SPT PEMBAYARAN REAS -> tidak perlu, org pusat pakai kode 00 saja 
+    3. BUAT DESCRIPTION OTOMATIS + NO SURAT HUTANG (pake enter)-> sudah
+
+VII. PENERIMAAN KLAIM KOAS
+    1. TAMBAH PILIHAN BY NO SURAT HUTANG -> sudah
+    2. BUAT FILTER JIKA ORG PUSAT BISA ENTRY BY NO SURAT HUTANG DAN SATUAN, UTK CABANG JGN BISA ENTRY POLIS PAKREASI -> sudah
+    
+1. SALDO TITIPAN PREMI DIHILANGKAN SAJA DARI MENU ENTRY TITIPAN PREMI
+2. WAKTU TAMBAH LINE AKUN NYA OTOMATIS IKUT DARI HEADER
+3. FILTERING JENIS AKUN BPD DAN NON BPD MASIH SALAH -> sudah
+4. JURNAL KAS BANK SET SECURITY HARUS BULAN DAN TAHUN YANG SAMA DI DETAIL NYA
+5. UBAH KONSEP PAJAK DARI CASE BASES MENJADI ACRUAL BASES (HIGH) -> udah, tp belum di implementasi menunggu instruksi lanjut
+6. REALISASI TITIPAN PREMI BISA 1 POLIS 2X REALISASI -> sudah 
+
+----------------------------------------------------------------------------
+*                       REVIEW UAT                                          *
+----------------------------------------------------------------------------
+A. Titipan Premi & Realisasi Titipan Premi
+   1. Belum bisa cetak titipan premi -> UDAH
+   2. Penomoran no bukti jgn dari entry date -> UDAH
+   3. Tambah counter no -> UDAH
+   4. Buat otomatis cari outstanding premi u/ titipan premi yang punya nopol -> UDAH
+   5. Tambahkan selisih bayar -> UDAH
+   6. Tambahkan check format no polis ketika save -> UDAH
+   7. Tambahkan tampilan subtotal titipan premi pada menu realisasi -> UDAH
+   8. Pada realisasi tambahkan menu untuk add akun bebas untuk membuang/melawankan titipan premi 
+      ,hrs bisa bergabung dgn realisasi titipan yang betul -> UDAH
+   9. Jurnal realisasi titipan yang lebih dari 1 jumlahnya ambil dr detail jgn dari subtotal outstanding -> UDAH
+   10. Tambahkan field penyebab titipan premi -> UDAH
+
+B. Jurnal Cash Bank
+    1. Deskripsi kosongin saja  -> UDAH
+
+C. Pembayaran Komisi
+    1. Blocking tanggal masih salah, buka saja -> UDAH
+    2. Cetakan laporan hutang komisi belum muncul -> UDAH
+    3. Jurnal salah 441 seharusnya 431 -> UDAH
+    
+D. Pembayaran Klaim
+    1. Jurnal pembayaran  -> Byr Klm nopol + no LKP -> UDAH
+    2. Buat menu pembayaran panjar klaim, jadi 1 form dengan pembayaran klaim -> UDAH
+    3. Pajak jasa bengkel cek lagi
+
+E. Pembayaran Koas
+    1. Kode akun jurnal pembayaran harus sesuai kode cabang polis di buat -> UDAH
+    2. Tiap jurnal per polis tambahkan jurnal lawan bank dan rekening antar kantor -> UDAH
+    3. Masih kurang jurnal kantor pusatnya
+
+F. Pembayaran Pajak
+    1. Pastikan pembentukan hutang pajak sudah bisa acrual bases
+    2. Pastikan pembentukan No SHP sudah betul
+    3. Bedakan antara SHP pph 21 dengan pph23 -> udah
+    4. SHP Jasa bengkel juga bedakan -> udah
+
+G. Penerimaan Klaim Koas
+    1. Jurnal -> TRM KLM nopol + LKP -> udah
+    2. Jurnal bank terbalik posisi, seharusnya di debet
+    3. Jurnal dibuat per cabang seperti konsep pembayaran premi koas
+    4. Jurnal klaim berubah no akun nya dari 1650000 menjadi 14910000 -> udah
+    5. Tambah tombol delete all details -> udah
+
+- Tambahkan program limit kewenangan akseptasi keuangan
+- tambahkan setting menu approval
+
+- BUAT PROGRAM REVERSE
+ 1. PEMBAYARAN PREMI -> UDAH
+ 2. REALISASI TITIPAN PREMI -> UDAH
+ 3. PEMBAYARAN KOMISI -> UDAH
+ 4. REALISASI TITIPAN KOMISI -> UDAH
+
+-CEK PEMBENTUKAN SURAT HUTANG PAJAK -> URGENT
+
+
+
+---------------------------------------------------------------------------------------------------
+|||||||||||||||||||||||||||        TO DO LIST PELATIHAN WEB BANDUNG          ||||||||||||||||||||||
+---------------------------------------------------------------------------------------------------
+1. BLOCK ENTRY TITIPAN PREMI YANG TGL DETIL NYA BEDA DGN BULAN & TAHUN HEADER -> udah
+2. REKENING TITIPAN BISA DIPISAH PER JENIS ASURANSI (LOW)
+3. REALISASI TITIPAN LAINNYA TIDAK USAH CARI AKUN LAWAN, LANGSUNG LAWANKAN SAJA DENGAN BANK/METODE -> udah
+4. CEK SEARCHING AKUN TITIPAN PREMI
+5. CEK KONSEP PENGECEKAN DOUBLE ENTRY POLIS
+6. TAMBAH FIELD SELISIH DI PEMBENTUKAN TITIPAN PREMI -> udah
+7. CEK REVERSE MASIH BELUM SEMPURNA -> udah
+
+------------------------------------------------------------------------------------------------
+            HARI KE 2
+------------------------------------------------------------------------------------------------
+8. PEMBAYARAN KLAIM BISA KURANG DARI HUTANG KLAIM, SISA NYA BENTUK HUTANG KLAIM LAGI
+
+9. PERMASALAHAN POLIS HANYA TAGIHAN BIAYA POLIS MATERAI TIDAK BISA JURNAL SAAT PEMBAYARAN NYA, HRSNYA BANK LAWAN 1331(AKUN PREMI)
+10. PERMASALAHAN BLOCKING DATA SEARCHING LKS/LKP SAAT PANJAR KLAIM -> tunggu keputusan tim UAT
+11. TAMBAH ITEM PENYEBAB TITIPAN PREMI -> PANJAR KOMISI -> udah
+12. REALISASI TITIPAN KOMISI
+    - BUANG TOMBOL LAINNYA -> udah
+    - MUNCULKAN TITIPAN PREMI YANG MINUS SAJA -> udah
+    - DAN FILTER HARUS PADA BANK YG SAMA -> bisa untuk data web, untuk foxpro tidak bisa
+    - TOMBOL TITIPAN DGN NO POLIS HARUS CEK LINK DULU KE TABLE HUTANG KOMISI APAKAH SUDAH ADA HUTANG -> sudah di link ke table hutang komisi
+    - TOMBOL TITIPAN DGN NO POLIS HARUS BETUL AMBIL DATA HUTANG KOMISI JGN TAGIHAN PREMI -> sudah
+
+13. selisih titipan hanya muncul jika di pilih kurang bayar premi penyebab nya
+14. subtotal realisasi titipan premi lain nya langsung terisi ke invoice nya secara otomatis -> SUDAH,CEK ULANG LAGI
+
+HARI 3
+1. LAPORAN OUTSTANDING PREMI TAMBAH FILTER KODE PEMASAR/MARKETER -> pras
+2.MASALAH ROUNDED ANGKA PADA ENTRY MENU KEUANGAN DAN JURNAL
+3. tambah filter print data titipan premi, tambah filter per bank -> udah
+
+3. tambah tanggal bayar per polis -> udah
+4. ubah searching invoice query agar data tampil semua yang blm dibayar, jgn di blok tanggal nya, 
+   hilangkan saja tombolnya -> udah
+5. blocking double entry titipan premi saat realisasi dgn no bukti sama dan konter sama -> sudah
+6. waktu pilih hutang komisi jika dlm 1 polis ada lebih dari 1 hutang komisi maka lsg tampilkan semua ke pembayaran, jika
+   ada yg tidak dibayarkan maka di (-) kan saja secara manual -> udah
+7. waktu memilih titipan / hutang cukup klik trs jgn berulang kali/jgn tutup pop up dulu
+8. buat menu reverse pada modul deposito
+9. form pajak buat list nya jadi per halaman list nya -> sudah
+10. waktu searching SHP pajak kadang masih blm ke lock pph21 dan pph23 nya -> sudah
+11. jasa bengkel otomatis harus terbentuk di data lkp/lks jika klaim kendaraan, jika jasa bgkel nya tidak diisi
+    maka lsg hitung pajak nya = rate pajak x jumlah klaim netto -> sudah tp konsul lagi ke bag klam mengenai perhitungan nya
+12. CEK LAGI PASTIKAN AKUN BANK JGN DOBEL2X LAGI KARENA BANYAK YANG JADI SALAH BANK -> di kantor saja
+13. Titipan premi jika pada detil 1 sudah dibuat waktu buat yg seterusnya sudah otomatis isi kode bank -> sudah
+14. klo realisasi titipan premi, totalkan jumlah titipan di realisasi lalu masukkan angka nya jadi jumlah di bayar
+15. betulin pembayaran premi yg hanya polis materai saja -> udah
+16. buat menu pembayaran klaim secara cicilan, sisa nya bentuk hutang klaim lagi
+17. menu pembayaran koas tambah field journal type offset/non offset, jika offset tambah jurnal rekening antar kantor -> udah
+18. protect tgl detail pembayaran jgn lari dari 
+
+19. adjuster fee pisahkan hutang klaim nya dari klaim bruto -> sudah, bentuk 2 hutang terpisah -> hutang 4893 tambah ent master utk adjuster nya
+20. bayar hutang klaim maka yg sudah ada panjar jgn tampil -> sudah
+21. bentuk panjar klaim maka yg sudah bayar jgn tampil -> sudah
+22. pembayaran klaim buat 1 pintu saja, nanti sistem yg otomatis mencari hutang jika ada maka pembayaran hutang klaim, jika tidak ada maka panjar klaim
+23. posting hanya bisa sekali tiap bulan per daerah, jika cabang sudah terlanjur posting maka hanya user kantor pusat
+    yg bisa membuka postingan bulan tsb. user kantor pusat punya flag posting tersendiri untuk inject jurnal mutasi
+    sendiri.-> sudah
+24. subrogasi pisahkan hutang klaim nya dari klaim bruto -> sudah, bentuk 2 hutang terpisah -> hutang 4893 tambah ent master utk adjuster nya
+25. waktu simpan jurnal kas bank cek dulu apakah balance atau tidak -> sudah
+26. jika org cabang pembayaran koas/klaim koas, default saja ke non offset -> sudah
+27. cek shp koas no . 0009/js.20/ak.21/ix/2012,  0001/js.20/ak.21/i/2013, 0002/js.20/ak.21/ii/2013,
+                      0010/js.20/ak.21/x/2012
+28. tambah menu jurnal umum & jurnal memorial utk input jurnal secara bebas
+29. betulkan jurnal pembayaran koas jiwa
+    jurnal pembayaran koas yg kantor pusat di desc tambahin karakter *
+    no bukti pasang kode cabang/per cabang
+30. counter no bukti buat per bank
+31. di tombol cek balance tambah pengecekan balancing by kode akun 2100000 (r.a.k) -> sudah
+32. buat laporan keuangan seperti monitoring pembayaran namun bisa ditarik dgn parameter2x spt laporan produksi
+33. cek data outstanding foxpro & web
+34. buat untuk buka blockingan akun per cabang -> sudah
+35. deskripsi jurnal pembayaran klaim tambah nama objek klaim -> sudah
+35. tambah kolom keterangan menu transaksi pada menu export to excel buku harian -> sudah
+36. tambah kolom bank di flexible search -> sudah
+37. di menu u/w tambah filter no polis rujukan -> sudah
+38. cek SHP sudah dibayar masih muncul wkt di panggil
+39. cek efisiensi upload konversi realisasi titipan premi -> sudah
+40. cek realisasi titipan komisi msh bs double entry titipan
+41. buat menu konversi pembayaran koas dan klaim koas

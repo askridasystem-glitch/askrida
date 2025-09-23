@@ -1,0 +1,7 @@
+<forms>
+   <form name="contact_edit" class="com.webfin.contact.forms.ContactMasterForm" view="contactForm.jsp" return="CONT_LIST"/>
+   <form name="contact_list" class="com.webfin.contact.forms.ContactListForm" view="contactList.jsp" return="CONT_LIST"/>
+   <form name="contact_search" class="com.webfin.contact.forms.ContactSearchForm" view="contactSearch.jsp"/>
+   <form name="master_bussrc" class="com.webfin.contact.forms.MasterBusinessSourceForm" view="master_bussrc.jsp"/>
+   <form name="master_marktr" class="com.webfin.contact.forms.MasterMarketterForm" view="master_marktr.jsp"/>
+</forms>

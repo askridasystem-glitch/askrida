@@ -1,0 +1,6 @@
+<events>
+	<report name="INS_POL1">
+      <datasource ds="primary" class="com.webfin.insurance.reportds.InsurancePolicyReportDS"/>
+      <jasper file="/pages/insurance/report/inspol.jrxml"/>
+   </report>
+</events>
