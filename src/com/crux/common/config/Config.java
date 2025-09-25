@@ -11,7 +11,7 @@ import com.crux.common.parameter.Parameter;
 
 import java.math.BigDecimal;
 
-
+//ini kerjaan thomi
 public class Config {
    public final static transient int dealerPriceLevel = 4;
 
