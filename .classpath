@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="web"/>
 	<classpathentry kind="lib" path="build/web/WEB-INF/lib/activation.jar"/>
@@ -197,5 +197,6 @@
 	<classpathentry kind="lib" path="lib/xalan.jar"/>
 	<classpathentry kind="lib" path="lib/xBaseJ.jar"/>
 	<classpathentry kind="lib" path="lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="E:/Sistem/SIstem Core/FIN/lib/gson-2.10.1.jar"/>
 	<classpathentry kind="output" path="build/web/WEB-INF/classes"/>
 </classpath>
